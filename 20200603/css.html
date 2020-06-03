@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>css</title>
+	<!-- link:css -->
+	<style>
+		/*@import url("style.css");*/
+		@import "style.css";
+		ul{color:red;}
+		#nav{color:white;}
+		.menu{color:orange;}
+		ul#nav1>li{color:darkblue;}
+		ul#nav1 a{color:yellow;}
+		.menu2{color:black;}
+	</style>
+</head>
+<body>
+<!-- 
+	항상 바디에 문장을 먼저 잡고 스타일시트를 시작할것!
+	맨 마지막 스타일시트에서는 세미콜로니 삭제해도 무방하다
+	주석은 해당 영역에 대한 설명을 할때 사용한다
+	부모태그에 스타일시트를 입히면 자식태그에도 그 영향이 그대로 들어간다
+	*css 우선 순위 
+	낮은 순위 > 높은 순위
+	브라우저 디폴트 스타일 > external.css(외부스타일시트) > style(내부스타일시트) > style 속성(인라인 스타일시트) > !important
+	* < tag name < class name < id name < inline style < !important 중요!!!!
+	셀렉터(프린트물참고)
+	id는 body에서 한번만 사용 가능 여러번 사용해야할 경우 class를 이용해서 사용
+	부모자식 관계에 대한 이해 높이기(후손일 경우 띄어쓰기 한번으로 연결가능)
+ -->
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, sunt architecto fugiat officia dolorum consectetur ducimus aperiam sed repellendus nihil quos illo. Dolor, non excepturi, mollitia iure distinctio hic nam.</p>
+	<p>Perspiciatis, accusamus, fugiat! Dolorem facere nostrum rerum cumque deleniti reprehenderit sequi sit hic dolor. Sint, quas! Aspernatur ipsam id, reiciendis, impedit nihil cupiditate? Saepe necessitatibus sequi doloremque ut quisquam, ab!</p>
+	<p style="color:skyblue">Itaque ut dolorum, quibusdam consequatur, officia eos eum doloribus mollitia reiciendis est debitis dolor, quisquam corporis nam cum iste ex. Totam esse modi iste, ipsum, ut obcaecati maiores sed a!</p>
+	<p style="color:green; font-size:30px">In quo minima vel totam culpa tempore nisi provident velit id, laudantium ratione amet similique perferendis quasi suscipit facilis, fugiat quisquam debitis, ipsa, sit itaque voluptatum? Quam excepturi voluptas voluptatibus.</p>
+
+
+
+	<!-- ul#nav>li.menu*5>{menu} -->
+	<ul id="nav">
+		<li class="menu">menu</li>
+		<li class="menu">menu</li>
+		<li class="menu">menu</li>
+		<li class="menu">menu</li>
+		<li class="menu">menu</li>
+	</ul>
+	<ul id="nav">
+		<li>menu</li>
+		<li>menu</li>
+		<li>menu</li>
+		<li>menu</li>
+		<li>menu</li>
+	</ul>
+	<ul>
+		<li>menu</li>
+		<li>menu</li>
+		<li>menu</li>
+		<li>menu</li>
+		<li>menu</li>
+	</ul>
+	<!-- ul#nav1>li.menu1*5>{menu} -->
+	<ul id="nav1">
+		<li class="menu1">menu</li>
+		<li class="menu1">menu</li>
+		<li class="menu1">menu</li>
+		<li class="menu1">menu</li>
+		<li class="menu1">menu</li>
+	</ul>
+	<!-- ul#nav1>li.menu1*5>{menu} -->
+	<ul id="nav1">
+		<li class="menu1"><a href="#">test</a></li>
+		<li class="menu1">menu</li>
+		<li class="menu1">menu</li>
+		<li class="menu1">menu</li>
+		<li class="menu1">menu</li>
+	</ul>
+
+	<header id="header">
+		<h1>logo</h1>
+		<nav id="nav">
+			<ul>
+				<li class="menu2">menu</li>
+				<li class="menu2">menu</li>
+				<li class="menu2">menu</li>
+				<li class="menu2">menu</li>
+				<li class="menu2">menu</li>
+			</ul>
+		</nav>
+	</header>
+</body>
+</html>
