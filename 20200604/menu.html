@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>menu 만들기</title>
+	<style>
+		/*reset*/
+		*{margin: 0; padding: 0;}
+		a:visited,a:link{color:#333; text-decoration:none;}
+		li{list-style:none;}
+
+		body{background-color: #eee;}
+
+		/*nav*/
+		#nav{background-color: #aaa; width: 1000px; height: 50px;margin: auto;}
+
+		/*{margin:auto;},{margin:0 auto;}>마진으로 가운데정렬시킬때 사용*/
+
+		#nav>ul>li{float:left; width:200px; height:50px; background-color: #f00;}
+		#nav>ul>li>a{display:block; line-height:50px; text-align:center;}
+		#nav>ul>li>a:hover{background-color: darkorange; color:#ff0;}
+		/*#nav a:hover{background-color: #00f; color:#fff;}*/
+
+	</style>
+</head>
+<body>
+	<!-- 
+		메뉴일때는 무조건 ul,li사용!!
+		인라인 블록 >나중에 다시 설명
+		line-height 줄간격!
+		마진값 네 개를 다 줄 경우
+		상우하좌 순서로 입력
+		세개를 줄경우
+		상 좌우 하 순서로 입력
+		두개를 줄경우
+		상하 좌우 순서로 입력
+		하나를 줄경우
+		네곳 모두 같은 값 입력
+	 -->
+	<nav id="nav">
+		<!-- ul>li*5>a[#]>{menu$} -->
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>		
+	</nav> 
+</body>
+</html>

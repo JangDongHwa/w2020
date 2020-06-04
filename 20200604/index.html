@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>selecter</title>
+	<style>
+		/*h3{color:brown;}*/
+		/*h3,li{color:darkblue;}*/
+		/**{padding:0; margin:0;}*/
+		/*reset*/
+		*{padding: 0;margin: 0; }
+		/*a:visited{color: #000;} 밑에 있는 것과 합쳐진거*/
+		a:visited,a:link{color: #000; text-decoration:none;}
+		
+		
+		/*body*/ 
+		.main{background-color: #ff0;}
+		.warning{color: #f00;}
+		#list{background-color:mistyrose;}
+		#list>li{color:gray;}
+		#list .active{color:blue;}
+		div>strong{background-color: white;}
+		ul strong{background-color:pink;}
+		#list>li:hover{background-color: #ddd;}
+		#list>li:active{background-color: #f00; color:#fff;}
+	</style>
+</head>
+<body class="main">
+	<!--
+		 ctrl + , 를 누르면 커서가 있는 곳이 선정된다
+		 bgc > background-color
+		 초기값설정할때 * 전체선택자 사용
+		 padding 설정시 px 입력 꼭 하기(0일 경우는 생략가능)
+		 단축키 p+숫자 m+숫자 tab치면 패딩 마진값 설정
+		 active는 잘 사용하지 않고 hover 많이 사용
+		 *리겟값
+		*{padding: 0;margin: 0; }
+		a:visited{color: #000;}
+		a:link{color: #000;}
+		a{text-decoration:none;}
+	 -->
+	<h3>Web Programming</h3>
+	<hr>
+	<div>
+		<div>2학기<strong>학습내용</strong></div>
+		<ul>
+			<li>HTML5</li>
+			<li><strong>CSS</strong></li>
+			<li>JAVASCRIPT</li>
+		</ul>
+		<div>60점 이하는 F!</div>
+	</div>
+	<h3>Lorem ipsum dolor.</h3>
+	<hr>
+	<div>
+		<div>Lorem <strong>ipsum</strong> dolor.</div>
+		<ul id="list">
+			<li>
+				<a href="http://www.naver.com">네이버</a>
+			</li>
+			<li class="active">
+				<a href="http://www.korea.com">코리아</a>
+			</li>
+			<li>Java script</li>
+		</ul>
+		<div class="warning">Lorem ipsum dolor sit.</div>
+	</div>
+</body>
+</html>
