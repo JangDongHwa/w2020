@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		/*reset*/
+		*{padding: 0; margin: 0;}
+		body{background-image: url(../images/bg_grid.gif);}
+		.wrap{background-color: orange; width: 200px;}
+		div.wrap>div.box1{background-color: #ff0; width: 100px; height: 100px; float:left;}
+		div.wrap>div.box2{background-color: #0ff; width: 100px; height: 100px; float:left;}
+		.testImg{width: 200px; height: 200px; float:left;}
+		div.wrap>div.clear{clear:both;}
+
+	</style>
+</head>
+<body>
+	<!-- 
+		낙타법(카멜법) 두번째 단어 첫 시작단어를 대문자로 표시 첫단어는 소문자
+		ex> div.divWrapperAside
+		스타일시트 작성시 순서 정하기
+		반응형 메뉴 만들때 %많이 사용 에밋 사용시 숫자 뒤에 p로 표시
+		ex> w90p
+		숫자 뒤에서 ctrl 누른 후 키보드 위방향키 누르면 숫자 올라감
+		%사용시 부모태그의 값에서 적용됨
+		float의 상위개념 > flex,grid
+		float는 비어있는 공간을 채워주는 성질이 있음
+		그래서 해지하는 clear:both;를 입력(위치는 다음 태그)
+	 	
+	 -->
+	
+	<div class="wrap">
+		<!-- div.box$*2>{box$} -->
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<div class="clear">clear</div>
+	</div>
+	ddddd
+</body>
+</html>
