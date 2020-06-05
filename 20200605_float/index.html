@@ -9,10 +9,18 @@
 		*{padding: 0; margin: 0;}
 		body{background-image: url(../images/bg_grid.gif);}
 		.wrap{background-color: orange; width: 200px;}
-		div.wrap>div.box1{background-color: #ff0; width: 100px; height: 100px; float:left;}
-		div.wrap>div.box2{background-color: #0ff; width: 100px; height: 100px; float:left;}
-		.testImg{width: 200px; height: 200px; float:left;}
-		div.wrap>div.clear{clear:both;}
+		div.wrap>div.box1{background-color: #ff0; width: 100px; height: 100px; 
+						  float:left; text-align:center; 
+						 }
+		div.wrap>div.box2{background-color: #0ff; width: 100px; height: 100px;
+						  float:left; text-align:center;
+						 }
+		/*div.wrap>div.clear{clear:both;}*/
+		.test{background-color: #f00; width: 200px; height: 100px;}
+		.after{width: 200px; height: 200px; background-color: skyblue;}
+		.after:after{content:"안녕하세요";}
+		.after:before{content:"장동화님!!";}
+		.wrap:after{content:"";display: block; clear: both;}
 
 	</style>
 </head>
@@ -27,7 +35,9 @@
 		%사용시 부모태그의 값에서 적용됨
 		float의 상위개념 > flex,grid
 		float는 비어있는 공간을 채워주는 성질이 있음
-		그래서 해지하는 clear:both;를 입력(위치는 다음 태그)
+		그래서 해지하는 clear:both;를 입력(위치는 float이 있는 위치에서 다음 태그)
+		after는 텍스트나 그 태그 안의 내용물 뒤에 붙여지고 before을 넣으면 그 태그 안의
+		내용물 앞에 붙여진다.
 	 	
 	 -->
 	
@@ -35,8 +45,10 @@
 		<!-- div.box$*2>{box$} -->
 		<div class="box1">box1</div>
 		<div class="box2">box2</div>
-		<div class="clear">clear</div>
 	</div>
-	ddddd
+	<div class="test"></div>
+	<div class="after">
+		center
+	</div>
 </body>
 </html>
