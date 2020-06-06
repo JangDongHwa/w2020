@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>box model & box sizing</title>
+	<style>
+		p{border:10px solid red;
+		  padding:20px;
+		  margin:40px;
+		}
+
+
+
+		div{
+			margin:10px;
+			width:150px;
+			/*box-sizing:content-box; 기본 값*/
+			box-sizing:border-box;
+		}
+
+		#small{
+			   border:10px solid black;
+		}
+		#large{
+			   border:30px solid black;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, voluptates.
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, voluptates.
+	</p>
+
+
+
+
+	<div id="small">Hello</div>
+	<div id="large">Hello</div>
+
+
+
+
+</body>
+</html>
