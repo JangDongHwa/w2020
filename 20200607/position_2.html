@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>position(absolute)</title>
+	<style>
+		#other,#parent,#grand{
+				border:5px solid darkblue;
+				
+		}
+		#grand{
+			position:relative;
+		}
+		#parent{
+			position:static;
+		}
+		#me{background-color: black;
+			color:white;
+			position:absolute;
+			/*widows:200px;*/
+			left:0;
+			top:0;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="other">other</div>
+	<div id="grand">
+		grand	
+		<div id="parent">
+			parent
+		<div id="me">me</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

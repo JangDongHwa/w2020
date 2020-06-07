@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>menu 연습</title>
+	<style>
+		*{
+			padding: 0; margin: 0;
+		}
+		body{
+			background-color: gray;
+		}
+		a:visited,a:link{color:black;}
+		li{list-style:none;}
+		a{text-decoration:none;}
+		#nav{
+			 background-color: darkblue;
+			 width:100%;  height:70px;
+			 position:fixed; 
+			 left:0;
+			 top:0;
+		}
+		#nav>ul>li.menu{
+			float:left;
+			font-size:30px; margin:0 40px;
+		}
+		#nav>ul>li>a{
+			line-height:70px;
+			display:block;
+		}
+		#nav>ul>li>a:hover{
+			background-color: blue; color:white;
+		}
+		#large{
+			height:1000px;
+		}
+		#alone{
+			margin-top:70px;
+		}
+	</style>
+</head>
+<body>
+	<div id="nav">
+		<ul>
+			<li class="menu"><a href="#">청년정책</a></li>
+			<li class="menu"><a href="#">청년공간</a></li>
+			<li class="menu"><a href="#">청년상담실</a></li>
+			<li class="menu"><a href="#">청년소식</a></li>
+			<li class="menu"><a href="#">구직활동지원금</a></li>
+			<li class="menu"><a href="#">소개</a></li>
+			<li style="clear:both;"></li>
+		</ul>
+	</div>
+	
+	<ul id="alone">
+		<li>Lorem ipsum dolor.</li>
+		<li>Lorem ipsum.</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, non.</li>
+		<li>Lorem ipsum dolor sit.</li>
+		<li>Lorem ipsum dolor.</li>
+	</ul>
+	<div id="large"></div>
+</body>
+</html>
