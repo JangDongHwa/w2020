@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		/*reset*/
+		*{margin: 0; padding: 0;}
+		a:link, a:visited{
+			color:black; text-decoration:none;
+		}
+		li{
+			list-style:none;
+		}
+
+		body{background-image: url(../images/bg_grid.gif);}
+		/*wrap*/
+		div.wrap{
+			width: 400px; /*height: 200px;*/ background-color: #f00;	
+		}
+		div.wrap>div.box1{
+			width: 200px; height: 200px; float:left;
+			background-color: #ff0;
+		}
+		 div.wrap>div.box2{
+			width: 200px; height: 200px; float:left;
+			background-color: #0ff;
+		 }
+		 div.wrap:after{
+			content:""; display:block; clear:both;
+		 }
+		 div.box3{
+		 	width: 200px; height: 200px; background-color: #f00;
+		 }
+	</style>
+</head>
+<body>
+	<!-- 
+		float를 사용하면 부모태그에 clear를 사용해서 마무리지어 준다.(After 활용)
+	 -->
+	<div class="wrap">
+		<div class="box1">text1</div>
+		<div class="box2">text2</div>
+	</div>
+	<div class="box3">box3</div>
+</body>
+</html>

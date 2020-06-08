@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float_menu</title>
+	<style>
+		/*reset*/
+		*{
+			padding: 0; margin: 0;
+		}
+		a:link, a:visited{
+			color:black; text-decoration:none;
+		}
+		li{list-style:none;}
+
+		body{
+			/*background-image: url(../images/bg_grid.gif);*/
+		}
+		/*menu*/
+		nav.navWrap{
+			width: 1000px; background-color: skyblue; margin:0 auto;
+			margin-bottom:20px;
+		}
+		.navWrap>ul:after{
+			content:""; display:block; clear:both;
+		}
+		.navWrap>ul>li{
+			float:left; width: 20%;
+		}
+		.navWrap>ul>li>a{
+			display: block; line-height:50px; text-align:center;
+		}
+		.navWrap>ul>li>a:hover{
+			background-color: darkblue; color: white;
+		}
+		/*visual Wrap*/
+		div.visualWrap{
+			height:400px; background-color: orange;
+		}
+		div.visualWrap>img{
+			width: 100%; height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+		계산법 ctrl shift y
+	 -->
+	<nav class="navWrap">
+		<!-- ul>li*5>a[#]>{MENU$} -->
+		<ul>
+			<li><a href="#">MENU1</a></li>
+			<li><a href="float_menu_alone.html">MENU2</a></li>
+			<li><a href="float_menu_3.html">MENU3</a></li>
+			<li><a href="float_menu_4.html">MENU4</a></li>
+			<li><a href="float_menu_5.html">MENU5</a></li>
+		</ul>
+	</nav>
+	<div class="visualWrap">
+		<img src="../images/img4.jpg" alt="바이킹">
+	</div>
+	
+</body>
+</html>

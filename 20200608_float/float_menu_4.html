@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>menu_alone</title>
+	<style>
+		/*reset*/
+		*{
+			padding: 0; margin: 0;
+		}
+		a:link,a:visited{
+			color: darkblue; text-decoration:none;
+		}
+		li{
+			list-style:none;
+		}
+
+		/*hWrap*/
+		nav.hWrap{
+			width: 1500px; background-color: powderblue; margin:0 auto;
+			margin-bottom:25px;
+		}
+		nav.hWrap>ul:after{
+			content:""; display: block; clear: both;
+		}
+		nav.hWrap>ul>li{
+			float:left; width: 300px; line-height: 50px; text-align:center;
+		}
+		nav.hWrap>ul>li>a{
+			display:block;
+		}
+		nav.hWrap>ul>li>a:hover{
+			background-color: skyblue; color: white;
+		}
+		/*visual Wrap*/
+		div.visualWrap{
+			height:400px; background-color: green;
+		}
+		div.visualWrap>img{
+			 width: 100%; height: 100%;
+	</style>
+</head>
+<body>
+	<nav class="hWrap">
+		<ul>
+			<li><a href="float_menu.html">MENU1</a></li> 
+			<li><a href="float_menu_alone.html">MENU2</a></li>
+			<li><a href="float_menu_3.html">MENU3</a></li>
+			<li><a href="#">MENU4</a></li>
+			<li><a href="float_menu_5.html">MENU5</a></li>
+		</ul>
+	</nav>
+	<div class="visualWrap">
+		<img src="../images/img1.jpg" alt="flower">
+	</div>
+</body>
+</html>
