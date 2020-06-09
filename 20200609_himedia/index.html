@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>HIMEDIA</title>
+	<style>
+		/*reset*/
+		*{
+			padding: 0; margin: 0; box-sizing:border-box; 
+		}
+		a:link,a:visited{
+			color:black; text-decoration:none;
+		}
+		li{
+			list-style:none;
+		}
+
+		/*header*/
+		div.hTop{
+			width: 980px; height: 75px; margin:0 auto;
+			margin-top:25px;
+		}
+		div.hTop>h1.logo{
+			 text-align:center; line-height: 75px;
+		}
+		div.gnbWrap{
+			background-color: #1d5da4;
+		}
+		div.gnbWrap>nav.gnbMenu{
+			width:980px; margin:0 auto;
+		}
+		div.gnbWrap>nav.gnbMenu>ul:after{
+			content:""; display: block; clear: both;
+		}
+		div.gnbWrap>nav.gnbMenu>ul>li{
+			float:left; width: 163.3333px; border-right:1px solid #316faa;
+		}
+		div.gnbWrap>nav.gnbMenu>ul>li:nth-child(1){
+			border-left:1px solid #316faa;
+		}
+		div.gnbWrap>nav.gnbMenu>ul>li>a{
+			color:white; display: block; line-height:45px;
+			text-align:center;
+		}
+		div.gnbWrap>nav.gnbMenu>ul>li>a:hover{
+			background-color: #233e6f;
+		}
+
+		/*visualWrap*/
+		div.visualWrap{
+			height: 400px; background-color: #233e6f;
+			background-image: url(images/visual_bg01.jpg); background-repeat:no-repeat;
+			background-position: center;
+		}
+		div.visualWrap>img.light{
+			position:absolute;
+			right:550px;
+			top:180px;
+		}
+		div.visualWrap>img.text{
+			position:absolute;
+			left:470px;
+			top:250px;
+		}
+
+		/*section*/
+		div.section{
+			height: 195px; background-color: #ddd;
+		}
+		div.section>ul.card{
+			width: 980px; margin: 0 auto;
+		}
+		ul.card:after{
+			content:""; display: block; clear: both;
+		}
+		ul.card>li{
+			float:left; width: 20%; height: 195px;
+			color:white; text-align:center; padding:20px;
+		}
+		ul.card>li:nth-child(1){
+			background-color: #7c99b9;
+		}
+		ul.card>li:nth-child(2){
+			background-color: #4f74a1;
+		}
+		ul.card>li:nth-child(3){
+			background-color: #4b8ce0;
+		}
+		ul.card>li:nth-child(4){
+			background-color: #3db5f3;
+		}
+		ul.card>li:nth-child(5){
+			background-color: #95c8ff;
+		}
+		ul.card>li>img{
+			margin-bottom:15px;
+		}
+		ul.card>li>h3{
+			margin-bottom:5px;
+		}
+		ul.card>li>p{
+			font-size:11px;
+		}
+		/*content*/
+		div.content1{
+			width: 980px; margin: 0 auto;
+			background-color: #ccc; 
+		}
+	
+	</style>
+</head>
+<body>
+	<!-- 
+		로고는 h1으로 작성 bgi는 패턴형식으로 입력
+		마크업 한 부분 접는 법 ctrl shift [ >>>접기
+		ctrl shift ] 열기
+		마진은 top보다 bottom으로 사용해라 top은 오류가 종종 생김
+	 -->
+	<div class="hTop">
+		<h1 class="logo"><a href="#">HIMEDIA</a></h1>
+	</div>
+	<div class="gnbWrap">
+		<nav class="gnbMenu">
+			<ul>
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">제품소개</a></li>
+				<li><a href="#">사업영역</a></li>
+				<li><a href="#">고객센터</a></li>
+				<li><a href="#">사회공헌</a></li>
+				<li><a href="#">인재채용</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="visualWrap">
+		<img class="light" src="images/light01.png" alt="">
+		<img class="text" src="images/title01.png" alt="">
+	</div>
+	<div class="section">
+		<ul class="card">
+			<li>
+				<img src="images/icon01.png" alt="">
+				<h3>사회공헌</h3>
+				<p>소외된 이웃과 함께합니다.</p>
+			</li>
+			<li>
+				<img src="images/icon02.png" alt="">
+				<h3>윤리경영</h3>
+				<p>공정한 경쟁을 추구합니다.</p>
+			</li>
+			<li>
+				<img src="images/icon03.png" alt="">
+				<h3>인재채용</h3>
+				<p>열정 넘치는 인재를 모십니다.</p>
+
+			</li>
+			<li>
+				<img src="images/icon04.png" alt="">
+				<h3>기업문화</h3>
+				<p>유자의 가치를 소개합니다.</p>
+			</li>
+			<li>
+				<img src="images/icon05.png" alt="">
+				<h3>비전</h3>
+				<p>유자는 미래를 선도합니다.</p>
+			</li>
+		</ul>
+	</div>
+	<div class="content1">
+		<div>
+			<div>
+				<img src="images/banner01.jpg" alt="">
+			</div>
+			<div>
+				<h3>회사개요</h3>
+				<p>유자에너지는 태양열발전 등 그린에너지와<br>
+				   바이오 사업을 통해 신성장동력을 강화하고 있습...
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

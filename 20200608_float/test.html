@@ -7,31 +7,105 @@
 	<style>
 		/*reset*/
 		*{
-			margin: 0; padding: 0;
+			margin: 0; padding: 0; box-sizing:border-box;
 		}
 		a:link,a:visited{
 			color:white; text-decoration:none;
 		}
-		li{list-style:none;}
-		nav.hwrap{
-			
+		li{
+			list-style:none;
 		}
+		/*header*/
+		header{
+			margin:0 auto; margin-top:25px;
+		}
+		h2{
+			color:#203662; margin-bottom:15px; text-align:center;
+		}
+		div.hWrap{
+			width: 100%; background-color: blue; 
+		}
+		div.hWrap>div{
+			 width: 980px; background-color: blue; margin:0 auto;
+		}
+		div.hWrap>div>ul:after{
+			content: ""; display: block; clear: both; 
+		}
+		div.hWrap>div>ul>li{
+			float: left; width: 163.33px;
+		}
+		div.hWrap>div>ul>li>a{
+			line-height:45px; display:block; text-align:center;
+		}
+		div.hWrap>div>ul>li>a:hover{
+			background-color: skyblue; color:black;
+		}
+		/*visual Wrap*/
+		div.visualWrap{
+			width: 100%; 
+		}
+		div.visualWrap>img.visual_bg{
+			width: 100%;
+		}
+		/*content*/
+		div.content{
+			width:980px; margin:0 auto; text-align:center;
+		}
+		div.content>ul:after{
+			content:""; display: block; clear: both;
+		}
+		div.contet>ul>li{
+			float:left; width:196px;
+		}
+		div.content>ul>li.contentDetail1{
+			background-color: #7c99b9; float:left;
+		}
+		div.content>ul>li.contentDetail2{
+			background-color: #4f74a1; float:left;
+		}
+		div.content>ul>li.contentDetail3{
+			background-color: #4b8ce0; float:left;
+		}
+		div.content>ul>li.contentDetail4{
+			background-color: #3db5f3; float:left;
+		}
+		div.content>ul>li.contentDetail5{
+			background-color: #95c8ff; float:left;
+		}
+		
 	</style>
 </head>
 <body>
 	<header>
 		<h2>하이미디어</h2>
+		<div class="hWrap">
+			<div>
+			<ul>
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">제품소개</a></li>
+				<li><a href="#">사업영역</a></li>
+				<li><a href="#">고객센터</a></li>
+				<li><a href="#">사회공헌</a></li>
+				<li><a href="#">인재채용</a></li>
+			</ul>
+			</div>
+	</div>
 	</header>
-	<nav class="hWrap">
+	<article>
+		<div class="visualWrap">
+			<img class="visual_bg" src="../../../design/20200603_컬러/images/visual_bg.jpg" alt="하이미디어">
+		</div>
+		<div class="content">
 		<ul>
-			<li><a href="#">회사소개</a></li>
-			<li><a href="#">제품소개</a></li>
-			<li><a href="#">사업영역</a></li>
-			<li><a href="#">고객센터</a></li>
-			<li><a href="#">사회공헌</a></li>
-			<li><a href="#">인재채용</a></li>
+			<li class="contentDetail1"><a href="#"><img src="../../../design/20200603_컬러/images/icon01.png" alt="이미지1"><br><h3>사회공헌</h3><br>소외된 이웃과함께 합니다.</a></li>
+			<li class="contentDetail2"><a href="#"><img src="../../../design/20200603_컬러/images/icon02.png" alt=""><br><h3>윤리경영</h3><br>공정한 경쟁을 추구합니다.</a></li>
+			<li class="contentDetail3"><a href="#"><img src="../../../design/20200603_컬러/images/icon03.png" alt=""><br><h3>인재채용</h3><br>열정 넘치는 인재를 모십니다.</a></li>
+			<li class="contentDetail4"><a href="#"><img src="../../../design/20200603_컬러/images/icon04.png" alt=""><br><h3>기업문화</h3><br>유자의 가치를 소개합니다.</a></li>
+			<li class="contentDetail5"><a href="#"><img src="../../../design/20200603_컬러/images/icon05.png" alt=""><br><h3>비전</h3><br>유자는 미래를 선도합니다.</a></li>
 		</ul>
-	</nav>
+	</div>
+	</article>
+	
 
 </body>
 </html>
