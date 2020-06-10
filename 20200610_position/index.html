@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>position</title>
+	<style>
+		/*reset*/
+		*{margin: 0; padding: 0; box-sizing:border-box;}
+		a:link,a:visited{color:#000; text-decoration: none;}
+		li{list-style: none;}
+		/*body*/
+		body{background-image: url(../images/bg_grid.gif); height: 1000px;}
+		div.box1,.box2,.box3,.box4,.box5,.box6{width: 100px; height: 100px; }
+		div.box1{background-color: skyblue;}
+		div.box2{background-color: red; position:absolute; top:0; left:50%; margin-left:-50px;}
+		div.box3{background-color: blue; position:absolute; right: 0; top:0;}
+		div.box4{background-color: lightgreen; position:absolute; bottom:0;}
+		div.box5{background-color: magenta; position:absolute; left:50%; margin-left: -50px; bottom:0;}
+		div.box6{background-color: green; position:absolute; right: 0; bottom:0;}
+		div.boxWrap{
+			width: 500px; height: 300px; background-color: orange; margin: 0 auto;
+			position:relative;
+		}
+		div.fixed{
+			background-color: silver; position: fixed; width: 100%; height: 70px; bottom:0;
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+		포지션 relative를 쓰는 순간 마진은 되도록이면 이용 금지+
+		포지션을 사용하면 좌표값을 사용가능(-도 사용가능)
+		포지션 적용 후 z-index 사용가능
+	 -->
+	 <div class="boxWrap">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<div class="box3">box3</div>
+		<div class="box4">box4</div>
+		<div class="box5">box5</div>
+		<div class="box6">box6</div>
+	</div>
+	<div class="fixed">fixed</div>
+
+</body>
+</html>
