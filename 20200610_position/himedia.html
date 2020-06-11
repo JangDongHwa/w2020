@@ -4,8 +4,127 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
 	<title>HIMEDIA</title>
+	<style>
+		/*reset*/
+		*{ padding: 0; margin: 0; box-sizing: border-box; }
+		a:link,a:visited{ color:gray; text-decoration: none; }
+		li{list-style: none;}
+		.clearfix:after{ content:""; display: block; clear: both;}
+		
+		/*header*/
+		.tWrap{margin: auto;}
+		.tHeader{width: 980px; margin: 0 auto;height: 25px;position:relative;}
+		.tHeader>ul{position:absolute; right:0; top:0;}
+		.tHeader>ul>li{float:left; margin-right: 10px;}
+		.theader>ul>li>a{font-size:7px;}
+		.tWrap .tLogo{height: 75px; margin: 0 auto; text-align: center; color:#203662; border-top: 1px solid #ddd;}
+		.tWrap>.tLogo>ul>li{border-right: 1px solid #ddd;}
+		.tWrap>.tMenu{background-color: #1c5da3;}
+		.tMenuBox{width: 980px;margin: auto;}
+		.tMenu>.tMenuBox>ul>li{float:left; width: 16.666%; text-align: center;}
+		.tMenu>.tMenuBox>ul>li>a{display: block; line-height: 45px; color:white;}
+		.tMenu>.tMenuBox>ul>li>a:hover{background-color: #1f3767;color:white; }
+		/*visual*/
+		.visualWrap{height: 400px; background-color: #233e6f; background-image: url(../20200609_himedia/images/visual_bg01.jpg); background-repeat: no-repeat; background-position: center; position:relative;}
+		.light{position: absolute; right:920px; top:20px;}
+		.title{position: absolute; left:470px; top:30px;}
+		/*section*/
+		.section{width: 980px; margin: auto; position:relative;}
+		ul.card>li{
+			float:left; width: 20%; height: 195px;
+			color:white; text-align:center; padding:20px; 
+			margin-bottom:30px;
+		}
+		ul.card>li:nth-child(1){
+			background-color: #7c99b9;
+		}
+		ul.card>li:nth-child(2){
+			background-color: #4f74a1;
+		}
+		ul.card>li:nth-child(3){
+			background-color: #4b8ce0;
+		}
+		ul.card>li:nth-child(4){
+			background-color: #3db5f3;
+		}
+		ul.card>li:nth-child(5){
+			background-color: #95c8ff;
+		}
+		ul.card>li>img{
+			margin-bottom:10px;
+		}
+		ul.card>li>h3{
+			margin-bottom:10px;
+		}
+		ul.card>li>p{
+			font-size:11px;
+		}
+	</style>
 </head>
 <body>
-	
+	<header>
+		<div class="tWrap">
+			<div class="tHeader">
+				<ul class="clearfix">
+					<li><a href="#">Login</a></li>
+					<li><a href="#">Join</a></li>
+					<li><a href="#">Contact us</a></li>
+					<li><a href="#">English</a></li>
+				</ul>
+			</div>
+			<div class="tLogo">
+				<h1>하이미디어</h1>
+			</div>
+			<div class="tMenu">
+				<div class="tMenuBox">
+					<ul class="clearfix">
+						<li><a href="#">회사소개</a></li>
+						<li><a href="#">제품소개</a></li>
+						<li><a href="#">사업영역</a></li>
+						<li><a href="#">고객센터</a></li>
+						<li><a href="#">사회공헌</a></li>
+						<li><a href="#">인재채용</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<article class="visual">
+		<div class="visualWrap">
+			<img class="light" src="../20200609_himedia/images/light01.png" alt="">
+			<img class="title" src="../20200609_himedia/images/title01.png" alt="">
+		</div>
+	</article>
+	<article class="section">
+		<ul class="card">
+			<li>
+				<img src="../20200609_himedia/images/icon01.png" alt="">
+				<h3>사회공헌</h3>
+				<p>소외된 이웃과 함께합니다.</p>
+			</li>
+			<li>
+				<img src="../20200609_himedia/images/icon02.png" alt="">
+				<h3>윤리경영</h3>
+				<p>공정한 경쟁을 추구합니다.</p>
+			</li>
+			<li>
+				<img src="../20200609_himedia/images/icon03.png" alt="">
+				<h3>인재채용</h3>
+				<p>열정 넘치는 인재를 모십니다.</p>
+
+			</li>
+			<li>
+				<img src="../20200609_himedia/images/icon04.png" alt="">
+				<h3>기업문화</h3>
+				<p>유자의 가치를 소개합니다.</p>
+			</li>
+			<li>
+				<img src="../20200609_himedia/images/icon05.png" alt="">
+				<h3>비전</h3>
+				<p>유자는 미래를 선도합니다.</p>
+			</li>
+		</ul>
+	</article>
 </body>
 </html>
