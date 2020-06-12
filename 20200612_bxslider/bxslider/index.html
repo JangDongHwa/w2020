@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			var mySlider = $('#slider').bxSlider({
+				auto:true, mode:'fade',controls:false, pager:false
+			});
+
+			$(".nextBtn").click(function(){
+				mySlider.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+				mySlider.goToPrevSlide();
+			});
+
+
+		});
+	</script>
+	<style>
+		#sliderWrap{width: 1200px; margin: 0 auto; position:relative;}
+		#slider img{width: 100%;}
+		.nextBtn,.prevBtn{
+			position: absolute; top:50%;
+			margin-top: -50px; cursor:pointer;
+		}
+		.prevBtn{left:10px;}
+		.nextBtn{right:10px;}
+	</style>
+</head>
+<body>
+	<!-- 
+		검사창에서 엑스박스가 생성
+		auto는 슬라이드 자동 mode는 슬라이드 방향 controls는 pre next 버튼
+		pager는 하단 이동버튼
+	 -->
+	<div id="sliderWrap">
+		<ul id="slider">
+			<li><img src="images/img01.jpg" alt="img01"></li>
+			<li><img src="images/img02.jpg" alt="img02"></li>
+		</ul>
+		<div class="nextBtn">
+			<img src="images/next.png" alt="button">
+		</div>
+		<div class="prevBtn">
+			<img src="images/prev.png" alt="button">
+		</div>
+	</div>
+</body>
+</html>
