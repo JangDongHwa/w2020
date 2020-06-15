@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float4</title>
+	<link rel="stylesheet" href="../20200615/bxslider/css/reset.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../20200615/bxslider/css/jquery.bxslider.css">
+	<script src="../20200615/bxslider/js/jquery-3.1.1.min.js"></script>
+	<script src="../20200615/bxslider/js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({
+				auto:true, controls:false, pager:false
+			});
+		});
+	</script>
+	<style>
+		/*header*/
+		.hWrap{
+			width: 1000px; margin: 0 auto;
+			border: 3px solid gray; margin-bottom: 20px;
+		}
+		.hWrap .logo{
+			text-align: center; font-size: 2em; font-weight: bold;
+			margin-bottom: 20px;
+		}
+		.hWrap .mWrap{margin-left: 50px;margin-bottom: 20px;} 
+		.hWrap li{
+			float:left; width: 180px; line-height: 50px;
+			border: 3px solid #000; text-align: center;
+		}
+		.mWrap a{display: block; background-color: powderblue;}
+		/*visual*/
+		.vSlider{margin-bottom: 20px; border: 3px solid gray;}
+		.vSlider img{margin: 0 auto; width: 100%;}
+		.bx-wrapper {
+		    -moz-box-shadow: none;
+		    -webkit-box-shadow: none;
+		    box-shadow: none;
+		    border: 0 none;
+		    margin-bottom: 0;
+		}
+		/*article*/
+		.artWrap{
+			width: 1000px; height: 600px;margin: 0 auto; border: 3px solid gray;
+			margin-bottom: 20px;
+		}
+		.artWrap .aside{
+			float:left; border: 1px solid #000; width: 300px;height: 500px;
+			margin-left: 30px; margin-top: 50px; text-align: center; line-height: 500px;
+			font-size:30px; background-color: #ddd;
+		}
+		.artWrap .content{
+			float:right; border: 1px solid #000; width: 600px;height: 500px;
+			margin-right: 30px; margin-top: 50px; text-align: center; line-height: 500px;
+			font-size:30px; background-color: #ccc;
+		}
+		/*footer*/
+		.footer{
+			width: 1000px; height: 80px; margin: 0 auto; text-align: center;
+			border: 3px solid gray; line-height: 80px; font-size: 30px
+		}
+	</style>
+</head>
+<body>
+	<div class="hWrap">
+		<div class="logo">logo</div>
+		<div class="mWrap">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="vSliderWrap">
+		<div class="vSlider">
+			<ul class="slider">
+				<li>
+					<img src="../images/images01.jpg" alt="img">
+				</li>
+				<li>
+					<img src="../images/images02.jpg" alt="img">
+				</li>
+				<li>
+					<img src="../images/images03.jpg" alt="img">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="artWrap clearfix">
+		<div class="aside">aside</div>
+		<div class="content">content</div>
+	</div>
+	<div class="footer">footer</div>
+</body>
+</html>
