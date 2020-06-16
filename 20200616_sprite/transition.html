@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.box{
+			width: 100px; height: 100px;
+			background-color: #f00; 
+			transition-duration:1s; transition-delay:1s;
+			/*transition-property: height;*/ 
+			transition-timing-function: linear; 
+
+		}
+		.box:hover{
+			width: 300px; height:200px; background-color: powderblue;
+		}
+		.box1{
+			width: 100px; height: 100px;
+			background-color: #f00; 
+			transition-duration:1s;
+			transition-timing-function: linear; 
+
+		}
+		.box1:hover{
+			width: 300px; background-color: powderblue;
+		}
+		.box2{
+			width: 100px; height: 100px;
+			background-color: #f00; 
+			transition-duration:1s;
+			transition-timing-function: ease; 
+
+		}
+		.box2:hover{
+			width: 300px; background-color: powderblue;
+		}
+		.box3{
+			width: 100px; height: 100px;
+			background-color: #f00; 
+			transition-duration:1s;
+			transition-timing-function: ease-in; 
+
+		}
+		.box3:hover{
+			width: 300px; background-color: powderblue;
+		}
+		.box4{
+			width: 100px; height: 100px;
+			background-color: #f00; 
+			transition-duration:1s;
+			transition-timing-function: ease-out; 
+
+		}
+		.box4:hover{
+			width: 300px; background-color: powderblue;
+		}
+
+	</style>
+</head>
+<body>
+<!-- 
+ transition의 옵션,duration 시간 ,delay 시간후 작동,
+ property (width/height) timing-function 초당 움직임 균일하게
+ timing function의 속성들 : linear 일직선, ease 그네(제일많이사용), ease-in 도착성, ease-out, ease-in-out
+ -->
+	<div class="box">1</div>
+	<div class="box1">2</div>
+	<div class="box2">3</div>
+	<div class="box3">4</div>
+	<div class="box4">5</div>
+</body>
+</html>
