@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.box{
+			width: 100px; height: 100px; background-color: #f00;
+			animation-name: ani; animation-duration: 1s; /*animation-fill-mode: forwards;*/
+			animation-iteration-count: infinite; animation-direction: alternate-reverse;
+			animation-delay: 1s; animation-timing-function: linear;
+		}
+		@keyframes ani{
+/*			from{width: 100px;}
+			to{width: 200px;}*/
+			0%{
+				width: 100px; background-color: #f00; height: 100px;
+				left: 0;
+			}
+			50%{
+				width: 300px;background-color: #0f0; height: 50px;
+				left: 200px;
+			}
+			100%{
+				width: 500px; background-color: #00f; height: 10px;
+			}
+			}
+			.boxWrap{
+				width: 300px; height: 300px; background-color: mistyrose;
+				position: relative;
+			}
+			.line{
+				width: 0; height: 10px; background-color: blue;
+				_animation-name:lineAni; animation-duration: 1s; animation-fill-mode: forwards;
+				position: absolute; top: 0; right: 0;
+			}
+			@keyframes lineAni{
+				from{width: 0;}
+				to{width: 100%;}
+			}
+			.line1{
+				width: 10px; height: 0; background-color: midnightblue;
+				position: absolute; bottom: 0; left: 0; _animation-name:lineAniOne; animation-duration: 1s;
+				animation-fill-mode: forwards;
+			}
+			@keyframes lineAniOne{
+				from{height: 0;}
+				to{height: 100%;}
+			}
+			.line2{
+				width: 10px; height: 0; background-color: powderblue;
+				position: absolute; top: 0; right: 0; _animation-name:lineAniOne; animation-duration: 1s;
+				animation-fill-mode: forwards;
+			}
+			@keyframes lineAniTwo{
+				from{height: 0;}
+				to{height: 100%;}
+			}
+			.line3{
+				width: 0; height: 10px; background-color: royalblue;
+				position: absolute; bottom: 0; left: 0; _animation-name:lineAniOne; animation-duration: 1s;
+				animation-fill-mode: forwards;
+			}
+			@keyframes lineAniThree{
+				from{width: 0;}
+				to{width: 100%;}
+			}
+
+
+
+			.boxWrap:hover .line{animation-name:lineAni;}
+			.boxWrap:hover .line1{animation-name:lineAniOne;}
+			.boxWrap:hover .line2{animation-name:lineAniTwo;}
+			.boxWrap:hover .line3{animation-name:lineAniThree;}
+		/*@keyframes ani{
+			from{width: 100px;} 시작
+			to{width: 200px;} 끝
+		}*/
+	</style>
+</head>
+<body>
+<!-- 
+애니메이션은 키프레이 필요
+name은 이름정하기 (키프레임에 들어갈 이름과 동일)
+duration 애니메이션 작동시간
+fill-mode 애니메이션 종료시점 forwards fill-mode 속성값
+direction 번갈아서 나오기
+(속성값 alternate, alternate_reverse, reverse)
+count 애니메이션 반복 횧수
+(속성값 숫자 혹은 infinite (대부분 infinite 사용)
+
+ -->
+ 	<div class="box">
+ 		
+ 	</div>
+ 	<div class="boxWrap">
+ 		<div class="line"></div>
+ 		<div class="line1"></div>
+ 		<div class="line2"></div>
+ 		<div class="line3"></div>
+ 	</div>
+</body>
+</html>
