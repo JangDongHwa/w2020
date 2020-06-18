@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>chavy_slider</title>
+	<link rel="stylesheet" href="../20200615/bxslider/css/reset.css">
+	<link rel="stylesheet" href="../20200615/bxslider/css/jquery.bxslider.css">
+	<script src="../20200615/bxslider/js/jquery-3.1.1.min.js"></script>
+	<script src="../20200615/bxslider/js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({
+				auto:true
+			});
+		});
+	</script>
+	<style>
+		header#header{width: 1100px; height: 50px; margin: 0 auto; background: skyblue;}
+		.box{
+			width: 100px; height: 10px; background: red;
+		}
+		.box1{
+			width: 100px; height: 10px; background: orange;
+			margin-top: 10px;
+		}
+		.view{width: 1100px; position: relative; height: 300px; margin: 0 auto;}
+		.visual .slider li{overflow: hidden;}
+		.visual .slider .img{position: absolute; left: 50%;}
+		.visual .visualTxt{position: absolute; top: 70px; width: 500px;}
+		.visual .visualTxt h3{font-size: 1.8em;}
+		.visual .visualTxt p{margin-bottom: 10px;}
+		.visual .visualTxt a{
+			display: block; width: 130px; height: 40px; background: #f00; color:white;
+			border-radius: 20px; text-align: center; line-height: 40px;
+		}
+	</style>
+</head>
+<body>
+<!-- 
+position 사용시 
+ -->
+	<header id="header">
+		<div class="box"></div>
+		<div class="box1"></div>
+	</header>
+	<div class="visual">
+		<ul class="slider">
+			<li> <!-- w 100% -->
+				<div class="view">
+					<img src="../images/img1.jpg" alt="" class="img">
+					<div class="visualTxt">
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, modi.</p>
+						<a href="#" class="btnA">Request Demo</a>
+					</div>
+				</div>
+			</li>
+			<li> <!-- w 100% -->
+				<div class="view">
+					<img src="../images/img2.jpg" alt="" class="img">
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
