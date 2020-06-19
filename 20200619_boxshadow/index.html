@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>box shadow</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.box{
+			width: 300px; height: 300px; background: skyblue;
+			padding: 20px 25px; border: 2px solid #f00;
+			transition:0.3s; cursor:pointer; border-radius: 10px;
+			/*position: absolute; left: 20px; top: 20px;*/
+			box-shadow: 10px 10px 10px #eee, -5px -5px 10px #eee, -10px 20px 10px #eee, 20px -10px 10px #eee; 
+		}
+		/*.box:hover{
+			box-shadow: 10px 10px 10px #aaa, -5px -5px 10px #aaa, -10px 20px 10px #aaa, 20px -10px 10px #aaa; 
+		}*/
+		.box1{
+			height: 500px; background: #000 url(../images/pc01.jpg) no-repeat center;
+			-webkit-background-size: cover;
+			background-size: cover; position: relative;
+		}
+		.box1 h2{
+			width: 400px; height: 108px; position: absolute; left: 50%; margin-left: -200px;
+			top: 50%; margin-top: -54px;
+			/*background: #fff;*/ text-align: center; font-size: 2.5em; color:white;
+			text-shadow: 10px 10px 10px #000;
+		}
+		.box2{
+			width: 300px; height: 300px; background: orange; padding: 10px;
+			position: relative; top: 30px;left: 30px; margin-bottom: 100px;
+			transition: 0.3s;
+		}
+		.box2:hover{
+			box-shadow: 0 0 20px #000;
+		}
+	</style>
+</head>
+<body>
+<!-- 
+디자인 할때 너무 검정 쓰지마세요
+box-shadow text-shadow
+hover 많이 사용해 보세요
+글자 셰도우는 이미지와 텍스트가 겹쳐있어서 텍스트가 잘 안보일때 구분을 주기위해 사용
+ -->
+	<div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ea, voluptatem explicabo accusantium nobis incidunt consequuntur saepe est inventore minima.</div>
+	<div class="box1">
+		<h2>Lorem ipsum dolor sit amet.</h2>
+	</div>
+	<div class="box2">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, soluta?
+	</div>
+</body>
+</html>
