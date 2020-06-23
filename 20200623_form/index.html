@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>form</title>
+</head>
+<body>
+<!-- 
+action은 서버에서 진행하는 프로그램 
+method는 자료를 어떻게 보낼 것이냐 get 방식과 post방식이 있음
+get방식은 모든 자료가 오픈됨 post방식은 자료가 숨겨짐
+name(전송할때의 이름) 과 vlaue값이 중요함
+input type 속성값 
+	text 한 줄 글상자
+	checkbox 취미 관심사 (다중선택)
+	radio 성별 문제풀이 (단일선택)
+	submit 확인<자료전송>
+label의 for 과 input의 id 값이 같아야함
+? (변수) & (and)
+ -->
+	<form action="welcome.php" method="get">
+		<fieldset>
+			<legend>기본정보</legend>
+			<!-- <input type="checkbox" name="fav1" value="sc"> 축구
+			<input type="checkbox" name="fav2" value="ba"> 야구
+			<input type="checkbox" name="fav3" value="bk"> 농구
+
+			<input type="radio" name="sex" value="male"> 남성
+			<input type="radio" name="sex" value="female"> 여성 -->
+
+
+			<label for="na">이름</label>
+			<input type="text" name="name" value="" id="na"><br>
+			<label for="email">이메일</label>
+			<input type="text" name="mail" id="email">
+		</fieldset>
+		<input type="submit" value="보내기">
+	</form>
+</body>
+</html>
