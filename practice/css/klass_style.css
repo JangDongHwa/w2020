@@ -52,6 +52,10 @@
 .contentOne>ul>li>a>p.conTitle{
 	font-size: 1.5em; font-weight: bold; color:#202543;
 }
+.contentOne .conOneDeco:hover{
+	box-shadow: 10px 10px 10px #ccc, -10px -10px 10px #ccc, -10px 10px 10px #ccc, 10px -10px 10px #ccc;
+	transition: 0.5s;
+}
 
 /*contentTwo*/
 .contentTwo{
