@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>pc layout</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+address 시맨틱태그 주소입력할때 풋터에 사용 폰트변경해야함
+포지션에서는 relative에 높이값 적용해야함
+ -->
+ 	<!-- header#main_header>h1#logo>{logo}^nav#util_menu>ul.clearfix>li*4>a[#]>{menu$}^^^^nav#main_menu>ul.clearfix>li*4>a[#]>{menu$} -->
+ 	<!-- header#main_header>(h1#logo>{logo})+(nav#util_menu>ul.clearfix>li*4>a[#]>{menu$})+(nav#main_menu>ul.clearfix>li*4>a[#]>{menu$}) -->
+ 	<header id="main_header">
+ 		<!-- <div id="logo">
+ 			<h1>logo</h1>
+ 		</div> -->
+ 		<h1 id="logo">logo</h1>
+ 		<nav id="util_menu">
+ 			<!-- ul.clearfix>li*4>a[#]>{menu$} -->
+ 			<ul class="clearfix">
+ 				<li><a href="#">menu1</a></li>
+ 				<li><a href="#">menu2</a></li>
+ 				<li><a href="#">menu3</a></li>
+ 				<li><a href="#">menu4</a></li>
+ 			</ul>
+ 		</nav>
+ 		<nav id="main_menu">
+ 			<ul class="clearfix">
+ 				<li><a href="#">menu1</a></li>
+ 				<li><a href="#">menu2</a></li>
+ 				<li><a href="#">menu3</a></li>
+ 				<li><a href="#">menu4</a></li>
+ 				<li><a href="#">menu5</a></li>
+ 			</ul>
+ 		</nav>
+ 	</header>
+ 	<div id="content" class="clearfix">
+ 		<section id="main_section">
+			<!-- article.main_article*3>h2>lorem2^p>lorem25 -->
+			<article class="main_article">
+				<h2>Lorem ipsum.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aperiam quae, sunt, quas dignissimos nulla eveniet sapiente laudantium placeat eum hic, doloremque modi tempore deserunt?</p>
+			</article>
+			<article class="main_article">
+				<h2>Voluptatibus, velit.</h2>
+				<p>Voluptates perferendis consectetur, quos nostrum reiciendis officia! Voluptatem possimus fuga architecto, labore ipsa, neque perspiciatis totam rem vero quam maiores. Quam asperiores, laboriosam quibusdam veritatis.</p>
+			</article>
+			<article class="main_article">
+				<h2>Perferendis, nihil!</h2>
+				<p>Similique soluta nulla autem ratione aperiam, fugiat eum! Laudantium, sint, quo! Distinctio quas soluta atque natus minus, culpa, nemo ipsa quo iusto, tempore veritatis omnis?</p>
+			</article>
+ 		</section>
+ 		<aside id="main_aside"></aside>
+ 	</div>
+ 	<footer id="main_footer">
+ 		<h3>Lorem ipsum.</h3>
+ 		<address>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, cupiditate.</address>
+ 	</footer>
+</body>
+</html>

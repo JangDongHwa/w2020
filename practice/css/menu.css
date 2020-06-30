@@ -1,0 +1,7 @@
+@charset "utf-8";
+.gnb{width: 1600px; margin: auto; background: middle;}
+.gnb>ul{}
+.gnb>ul>li{float: left;width: 400px;}
+.gnb>ul>li>a{display: block; text-align: center;}
+
+.sMenu{display: none;}
