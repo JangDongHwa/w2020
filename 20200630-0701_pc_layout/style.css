@@ -13,7 +13,6 @@
 	#util_menu>ul>li>a{
 		display: block; padding: 2px 10px; border: 1px solid #000;
 		border-right:0 none;
-		
 	}
 	#util_menu>ul>li:last-child a{
 		border-right: 1px solid #000; border-radius:0 10px 10px 0;
@@ -36,15 +35,44 @@
 	#main_menu>ul>li>a{
 		display: block; text-align: center; line-height: 40px;
 	}
+
 /*content*/
 #content{width: 960px; margin: 0 auto; margin-bottom: 20px;}
+	/*main section*/
 	#main_section{width: 750px;float: left;}
-	#main_aside{
-		width: 200px; height: 200px; float: right; background: gray;
-	}
 	#main_section>.main_article{
 		padding: 20px;border: 1px solid #000; margin-bottom: 20px;
 	}
+	/*main aside*/
+	#main_aside{
+		width: 200px; height: 200px; float: right; _background: gray;
+	}
+	#main_aside .buttons>label{
+		display: block; float: left; width: 100px;
+		height: 30px; line-height: 30px;
+		text-align: center; cursor:pointer;
+		background-color: skyblue; border-radius: 10px 10px 0 0;
+	}
+	/*input[type="radio"].inp:nth-child(1)*/
+	.inp:nth-child(1):checked ~ div.buttons > label:first-child{background-color: #f00 !important;}
+	.inp:nth-child(2):checked ~ div.buttons > label:last-child{background-color: #f00 !important;}
+	.inp:nth-child(1),.inp:nth-child(2){display: none;}
+	.inp:nth-child(1):checked ~ div.tab_item1{display: block;}
+	.inp:nth-child(1) ~ div.tab_item1{display: none;}
+	.inp:nth-child(2):checked ~ div.tab_item2{display: block;}
+	.inp:nth-child(2) ~ div.tab_item2{display: none;}
+
+	.item{
+		padding: 10px;border: 1px solid #000; border-top: 0 none;
+	}
+	.thumbnail{float: left;}
+	.des{float: left; margin-left: 10px;}
+	.des > strong{
+		display: block; width: 120px;
+		white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+	}
+
+
 /*footer*/
 #main_footer{
 	width: 960px; margin: 0 auto; text-align: center;

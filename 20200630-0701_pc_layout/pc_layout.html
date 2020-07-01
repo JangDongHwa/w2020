@@ -11,6 +11,8 @@
 <!--
 address 시맨틱태그 주소입력할때 풋터에 사용 폰트변경해야함
 포지션에서는 relative에 높이값 적용해야함
+white space : wrap, nowrap
+text overflow : clip(잘림 효과) , ellipsis (...효과)
  -->
  	<!-- header#main_header>h1#logo>{logo}^nav#util_menu>ul.clearfix>li*4>a[#]>{menu$}^^^^nav#main_menu>ul.clearfix>li*4>a[#]>{menu$} -->
  	<!-- header#main_header>(h1#logo>{logo})+(nav#util_menu>ul.clearfix>li*4>a[#]>{menu$})+(nav#main_menu>ul.clearfix>li*4>a[#]>{menu$}) -->
@@ -54,7 +56,94 @@ address 시맨틱태그 주소입력할때 풋터에 사용 폰트변경해야�
 				<p>Similique soluta nulla autem ratione aperiam, fugiat eum! Laudantium, sint, quo! Distinctio quas soluta atque natus minus, culpa, nemo ipsa quo iusto, tempore veritatis omnis?</p>
 			</article>
  		</section>
- 		<aside id="main_aside"></aside>
+ 		<aside id="main_aside">
+ 			<input type="radio" name="tab"id="first" class="inp" checked>
+ 			<input type="radio" name="tab"id="second" class="inp">
+ 			<div class="buttons clearfix">
+ 				<label for="first">first</label>
+ 				<label for="second">second</label>
+ 			</div>
+ 			<div class="tab_item1">
+				<ul>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>1 Lorem ipsum dolor.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>1 Lorem ipsum dolor.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>1 Lorem ipsum dolor.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>1 Lorem ipsum dolor.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+				</ul>
+ 			</div>
+ 			<div class="tab_item2">
+				<ul>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>2 Lorem ipsum.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>2 Lorem ipsum.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>2 Lorem ipsum.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>2 Lorem ipsum.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+				</ul>
+ 			</div>
+ 		</aside>
  	</div>
  	<footer id="main_footer">
  		<h3>Lorem ipsum.</h3>

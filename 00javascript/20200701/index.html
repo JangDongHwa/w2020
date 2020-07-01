@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>연산자&함수</title>
+
+</head>
+<body>
+<!-- 
+console 창에서 진행 
+if문은 값이 true / false 로 나눠져서 표현
+ ture에 해당하는 값은 {}안에 표현
+ false에 해당하는 값은 {}밖에 표현
+ if(조건문){true값}false값
+===는 타입까지 따지는 연산자로 ==보다 정밀한 표현
+ -->
+	<script>
+		var a = 100;
+		if(a==="100"){ 
+			document.write("100입니다.")
+		} document.write("100이 아닙니다.")
+
+		//$(document).ready(function(){});
+		
+		//function(){}; //익명함수
+		//function han(문법){실행문}; //함수
+		function han(){
+			alert("꽝! 네이버로 이동합니다...");
+			// document.write("꽝! 다음기회에...");
+			location.href="http://www.naver.com";
+		}
+		function han1(){
+			alert("꽝! 다음으로 이동합니다....");
+			// document.write("꽝! 다음기회에...");
+			location.href="http://www.daum.net";
+		}
+		// han();
+	</script>
+	<br>
+	<a href="#" onclick="han();">클릭하시오(결과)</a> <br>
+	<a href="#" onclick="han1();">클릭하시오(결과)</a>
+	<!-- <a href="#" onclick="location.href='http://www.naver.com'">이동하기</a> -->
+</body>
+</html>
