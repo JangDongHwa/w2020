@@ -1,0 +1,155 @@
+@charset "utf-8";
+.bgcolorOne{background: #ddd;}
+.bgcolorTwo{background: #f00;}
+
+	.contents{
+		width: 1200px; margin: 0 auto;
+		padding: 30px 0;
+	}
+	.contents>ul{}
+	.contents>ul>li{
+		float: left; width: 228px; margin-right: 15px;
+		position: relative; overflow:hidden;
+	}
+	.contents>ul>li:last-child{margin-right: 0;}
+	.contents>ul>li>img{width: 100%; transition:0.5s;}
+	.contents>ul>li>div.bg{
+		width: 100%; height: 100%; 
+		background: rgba(0,0,0,0.3);
+		position: absolute; top: 100%; transition:0.5s;
+	}
+	.contents>ul>li>div.bg>h3{
+		width: 40px; color:white; text-align: center; 
+		position: absolute;
+		left: 50%; top: 50%;
+		transform:translate(-50%,-50%);
+	}
+	.contents>ul>li:hover .bg{top: 0;}
+	.contents>ul>li:hover img{transform: scale(1.2);}
+
+	.contents2{
+		width: 1200px; margin: 0 auto;
+		padding: 30px 0;
+	}
+	.contents2>ul{}
+	.contents2>ul>li{
+		float: left; width: 228px; margin-right: 15px;
+		position: relative; overflow:hidden;
+	}
+	.contents2>ul>li:last-child{margin-right: 0;}
+	.contents2>ul>li>img{width: 100%; transition:0.5s;}
+	.contents2>ul>li>div.bg{
+		width: 100%; height: 100%; 
+		background: rgba(0,0,0,0.3);
+		position: absolute; top: -100%; transition:0.5s;
+	}
+	.contents2>ul>li>div.bg>h3{
+		width: 40px; color:white; text-align: center; 
+		position: absolute;
+		left: 50%; top: 50%;
+		transform:translate(-50%,-50%);
+	}
+	.contents2>ul>li:hover .bg{top: 0;}
+	.contents2>ul>li:hover img{transform: scale(1.2);}
+
+	.contents3{
+		width: 1200px; margin: 0 auto;
+		padding: 30px 0;
+	}
+	.contents3>ul{}
+	.contents3>ul>li{
+		float: left; width: 228px; margin-right: 15px;
+		position: relative; overflow:hidden;
+	}
+	.contents3>ul>li:last-child{margin-right: 0;}
+	.contents3>ul>li>img{width: 100%; transition:0.5s;}
+	.contents3>ul>li>div.bg{
+		width: 100%; height: 100%; 
+		background: rgba(0,0,0,0.3);
+		position: absolute; top: 0; left: -100%; transition:0.5s;
+	}
+	.contents3>ul>li>div.bg>h3{
+		width: 40px; color:white; text-align: center; 
+		position: absolute;
+		left: 50%; top: 50%;
+		transform:translate(-50%,-50%);
+	}
+	.contents3>ul>li:hover .bg{left: 0;}
+	.contents3>ul>li:hover img{transform: scale(1.2);}
+
+	.contents4{
+		width: 1200px; margin: 0 auto;
+		padding: 30px 0;
+	}
+	.contents4>ul{}
+	.contents4>ul>li{
+		float: left; width: 228px; margin-right: 15px;
+		position: relative; overflow:hidden;
+	}
+	.contents4>ul>li:last-child{margin-right: 0;}
+	.contents4>ul>li>img{width: 100%; transition:0.5s;}
+	.contents4>ul>li>div.bg{
+		width: 100%; height: 100%; 
+		background: rgba(0,0,0,0.3);
+		position: absolute; top: 0; left: 100%; transition:0.5s;
+	}
+	.contents4>ul>li>div.bg>h3{
+		width: 40px; color:white; text-align: center; 
+		position: absolute;
+		left: 50%; top: 50%;
+		transform:translate(-50%,-50%);
+	}
+	.contents4>ul>li:hover .bg{left: 0;}
+	.contents4>ul>li:hover img{transform: scale(1.2);}
+
+	.contents5{
+		width: 1200px; margin: 0 auto;
+		padding: 30px 0;
+	}
+	.contents5>ul{}
+	.contents5>ul>li{
+		float: left; width: 228px; margin-right: 15px;
+		position: relative; overflow:hidden;
+	}
+	.contents5>ul>li:last-child{margin-right: 0;}
+	.contents5>ul>li>img{width: 100%; transition:0.5s;}
+	.contents5>ul>li>div.bg{
+		width: 100%; height: 100%; 
+		background: rgba(0,0,0,0.3);
+		position: absolute; top: -100%; left: 100%; transition:0.5s;
+	}
+	.contents5>ul>li>div.bg>h3{
+		width: 40px; color:white; text-align: center; 
+		position: absolute;
+		left: 50%; top: 50%;
+		transform:translate(-50%,-50%);
+	}
+	.contents5>ul>li:hover .bg{top: 0;left: 0;}
+	.contents5>ul>li:hover img{transform: scale(1.2);}
+
+	.contents6{
+		width: 1200px; margin: 0 auto;
+		padding: 30px 0;
+	}
+	.contents6>ul{}
+	.contents6>ul>li{
+		float: left; width: 228px; margin-right: 15px;
+		position: relative; overflow:hidden;
+	}
+	.contents6>ul>li:last-child{margin-right: 0;}
+	.contents6>ul>li>img{width: 100%; transition:0.5s;}
+	.contents6>ul>li>div.bg{
+		width: 100%; height: 100%; 
+		background: rgba(0,0,0,0.3);
+		position: absolute; /*top: 100%; left: -100%;*/ transition:0.5s;
+		transform:scale(0);
+	}
+	.contents6>ul>li>div.bg>h3{
+		width: 40px; color:white; text-align: center; 
+		position: absolute;
+		left: 50%; top: 50%;
+		transform:translate(-50%,-50%);
+	}
+	.contents6>ul>li:hover .bg{
+		top: 0;left: 0;transform: scale(1);}
+		.contents6>ul>li:hover img{transform: scale(1.2);}
