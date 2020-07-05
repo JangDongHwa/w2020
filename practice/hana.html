@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>hana header</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		*{font-size:12px;}
+		#header{width: 733px; margin: auto;}
+		.logoWrap{float: left;padding: 27px 0; margin-right: 39px;}
+		.init legend{
+			padding: 20px; text-align: center;
+		}
+		.init fieldset{
+			width: 410px; 
+			border-radius: 25px; border: 2px solid #000;
+		}
+		.init input{width: 330px; height: 45px; border: 0 none;}
+		.init button{border: 0 none; width: 18px;height: 45px;}
+		.init img{vertical-align:middle;}
+		
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<div id="header">
+		<div class="logoWrap">
+			<h1 class="logo"><img src="images/hana_logo.png" alt="하나투어"></h1>
+		</div>
+		<form action="#" class="init">
+			<legend class="alone_le">
+				<fieldset class="alone_field">
+					<input class="alone_input"type="text" name="search" placeholder="검색어를 입력해 주세요">
+					<button><img src="images/hana_btn.png" alt="검색"></button>
+				</fieldset>
+			</legend>
+		</form>
+		<style>
+			.reset{box-sizing:border-box;}
+			.reset fieldset{width: 410px; height: 45px; border:2px solid #000; border-radius:35px; text-align: center;padding-right:13px; overflow:hidden;}
+			.reset legend{text-indent:-9999px;  font-size:0;}
+			.reset input,
+			.reset button{height: 100%; vertical-align:middle; border:0 none;}
+			.reset input{width: calc(100% - 45px); padding:0 21px; border:0 none;}
+			.reset button{width: 40px;background:url(images/hana_btn.png) no-repeat 50%;}
+		</style>
+		<form action="#" class="reset">
+			<fieldset>
+				<legend>여행검색창</legend>
+				<input type="text" placeholder="검색어를 입력해 주세요">
+				<button></button>
+			</fieldset>
+		</form>
+		<!-- <div class="recom">
+			울릉도
+		</div> -->
+	</div>
+</div>
+</body>
+</html>
