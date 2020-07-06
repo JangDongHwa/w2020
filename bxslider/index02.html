@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider</title>
+	<style>
+		*{padding: 0; margin: 0; box-sizing:border-box;}
+		a:link,a:visited{ color:black; text-decoration:none;}
+		li{list-style:none;}
+	</style>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+		<style>
+		.gnbWrap{
+			width: 1200px; background-color: #eee; margin: 20px auto;
+			border-top: 3px dotted magenta; border-bottom: 3px dotted magenta;
+		}
+		.gnbWrap>ul:after{
+			content:""; display: block; clear: both;
+		}
+		.gnbWrap>ul>li{
+			float:left; width: 20%; line-height:50px;
+		}
+		.gnbWrap>ul>li>a{display: block; text-align:center;}
+		.gnbWrap>ul>li>a:hover{background-color: #ccc; color:magenta;}
+		.visual1{
+			width: 1200px; height: 500px; margin: 0 auto;
+			margin-bottom: 50px;
+		}
+		.visual2{
+			width: 800px; height: 300px; margin: 0 auto;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".bxslider1").bxSlider({auto:true});
+		});
+		$(document).ready(function(){
+			$(".bxslider2").bxSlider({auto:true});
+		})
+	</script>
+
+</head>
+<body>
+	<nav class="gnbWrap">
+		<ul>
+			<li><a href="#">MENU</a></li>
+			<li><a href="#">MENU</a></li>
+			<li><a href="#">MENU</a></li>
+			<li><a href="#">MENU</a></li>
+			<li><a href="#">MENU</a></li>
+		</ul>
+	</nav>
+	<div class="visual1">
+		<div class="bxslider1">
+			<div><img src="images/pc04.jpg" alt="이미지1"></div>
+			<div><img src="images/pc05.jpg" alt="이미지2"></div>
+			<div><img src="images/pc06.jpg" alt="이미지3"></div>
+			<div><img src="images/pc07.jpg" alt="이미지4"></div>
+			<div><img src="images/pc08.jpg" alt="이미지5"></div>
+			<div><img src="images/pc09.jpg" alt="이미지6"></div>
+		</div>
+	</div>
+
+		<div class="visual2">
+		<div class="bxslider2">
+			<div><img src="images/pc07.jpg" alt="이미지1"></div>
+			<div><img src="images/pc08.jpg" alt="이미지2"></div>
+			<div><img src="images/pc09.jpg" alt="이미지3"></div>
+			<div><img src="images/pc04.jpg" alt="이미지4"></div>
+			<div><img src="images/pc05.jpg" alt="이미지5"></div>
+			<div><img src="images/pc06.jpg" alt="이미지6"></div>
+		</div>
+	</div>
+</body>
+</html>
