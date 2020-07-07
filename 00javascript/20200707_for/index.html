@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>for</title>
+	<script>
+		var num;
+		var st = "ABCDEFG";
+		document.write("<div>st 개수는" +st.length +"</div>");
+
+		for(num = 1;num <= st.length; num++){
+			document.write("<div class=\"box\">" + num + "</div>")
+		}
+		document.write("<div>")
+		var x;
+		for(x=1;x<=9;x++){
+			document.write("2 x" + x + "=" + (2*x) + "<br>");
+		}
+		document.write("</div>")
+	</script>
+	<style>
+		div{margin-bottom: 50px;}
+		.box{width:100px; height:100px; text-align:center;line-height:100px; display:inline-block;}
+		.box:nth-child(2n){background:skyblue;}
+	</style>
+</head>
+<body>
+<!-- 
+bom, dom 문서를 제어하는 것들
+제이쿼리가 쉽기는 한데 자바스크립트를 알아둬야 나중에 좋음
+이스케이프문자 \ ('원'자)
+length 문장 혹은 태그의 갯수를 셀 때 사용
+변수간의 수식같은 경우 ()를 사용해서 구별을 해두는 것이 나중에 수정 혹은 확인 시에 좀더
+편하게 구분할 수 있다.
+for, while 문은 반복문
+while문에서 1은 true / 0은 false를 의미
+if문에서 ==는 긍정 !=는 부정
+ -->
+ 	<div>
+ 		<script>
+ 			var x,y;
+			for(x=1, y=3;x<=9;x++){
+			document.write(y +"x" + x + "=" + (y*x) + "<br>");
+		}
+ 		</script>
+ 	</div>
+	<div>
+ 		<script>
+ 			var x,y;
+			for(x=2;x<=9;x++){
+				document.write("<div style=\"width:150px; text-align: center; display:inline-block;\">")
+				document.write(x + "단 입니다. <br>");
+				for(y=1;y<=9;y++){
+					document.write(x + "x" + y + "=" + (x*y) + "<br>");
+				}
+				document.write("</div>")
+			}
+ 		</script>
+ 	</div>
+ 	<script>
+ 		var sum = 0 ;
+ 		for(var i =1; i<=20; i++){
+ 			document.write(i);
+ 			if (i!=20) {
+ 				document.write("+");
+ 			} else{
+ 				document.write("=");
+ 			}
+ 			//sum = sum + i;
+ 			sum += i;
+ 		} document.write(sum + "<br>");
+
+ 		var sum = 0;
+ 		var x =1;
+ 		while(x<=20){
+ 			sum += x;
+ 			document.write(x)
+ 			if (x<20) {
+ 				document.write("+");
+ 			} else{
+ 				document.write("=");
+ 			}
+ 			x++
+ 		} document.write(sum +"<br>");
+
+ 		var sum = 0;
+ 		var x =1;
+ 		while(true){
+ 			sum += x;
+ 			x++
+ 			if(x==101){
+ 				break;
+ 			}
+ 		} document.write(sum);
+ 	</script>
+</body>
+</html>

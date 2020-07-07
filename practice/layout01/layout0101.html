@@ -10,6 +10,7 @@
 		.green{background:green;}
 		.orange{background: orange;}
 		.yellow{background: yellow;}
+		.red{background: red;}
 		/*w1280*/
 		#header{height: 169px; background: #333;}
 		.hTop{height: 107px; width: 1280px; margin: auto; background:powderblue; line-height:107px; overflow:hidden;}
@@ -23,15 +24,18 @@
 		.navTog{width: 67px; height: 62px; float:right;}
 
 		#contents{height: 3039px; background: #aaa;}
+		/*slider*/
 		.mainSliderWrap{width: 1280px; height: 657px; margin: auto;}
 		.mainSlider{height: 535px; background: powderblue;}
 		.sliderNav{height: 122px; background: blue;}
 		.sliderMenu{width: 406.66px; height: 122px; float:left; margin-right:30px;}
 		.sliderMenu:last-child{margin-right:0;}
+		/*news*/
 		.conWrap{width: 1280px; margin:auto;}
 		.conNews{height: 82px;}
 		.conNewsLine{height: 2px;}
-		.conOne{height: 893px; background: #673ab7; padding:80px 0 0 0; overflow:hidden;}
+		/*contentone*/
+		.conOne{height: 893px !important; background: #673ab7; padding:80px 0 0 0; overflow:hidden; box-sizing:border-box;}
 		.conOneTitle{width: 547px; height: 38px; margin:auto; margin-bottom:58px;}
 		.conOneLeft{width: 918px; height:612px; float:left;}
 		.conOneLeftMenuWrap{overflow:hidden;}
@@ -45,10 +49,29 @@
 		.conOneLeftBody:nth-child(7){margin-bottom:0;}
 		.conOneLeftBody:nth-child(8){margin-bottom:0;}
 		.conOneLeftBody:nth-child(9){margin-right:0; margin-bottom:0;}
-		.conOneRight{}
-		
-		.conOne
-		#footer{height: 256px; background: #111;}
+		.conOneRight{width: 340px; height: 612px; float:right;}
+		.conOneRightSlider{height: 306px; margin-bottom:19px;}
+		.conOneRightNews{height: 287px;}
+		/*contenttwo*/
+		.conTwo{height: 752px; background: #8171e1; padding:80px 0 0 0; overflow:hidden; box-sizing:border-box;}
+		.conTwoTitle{width: 547px; height: 38px; margin:auto; margin-bottom:58px;}
+		.conTwoLeft{width: 772px; height: 452px; float:left;}
+		.conTwoRight{width: 499px; height: 452px; float:right;}
+		/*contentthree*/
+		.conThree{height: 572px; background: #f579f6; padding:79px 0 0 0; overflow:hidden; box-sizing:border-box;}
+		.conThreeTitle{width:595px; height:39px; margin: auto; margin-bottom:58px;}
+		.conThBox1{width: 221px; height: 303px; float:left; margin-right:20px;}
+		.conThBox2{width: 557px; height: 303px; float:right;}
+		/*footer*/
+		#footer{height: 256px; background: #111; padding:39px 0 0 0; box-sizing:border-box;}
+		.fWrap{width: 1280px; height: 217px; margin: auto;}
+		.fMenu{height: 217px; float:left; margin-right:30px;}
+		.fLogo{width: 190px; height: 35px;}
+		.fContact{width: 178px; height: 170px;}
+		.fSns{width: 181px; height: 85px;}
+		.fContent{width: 123px; height: 170px;}
+		.fSite{width: 258px; height: 85px;}
+		.fMark{width: 135px; height: 93px;}
 	</style>
 </head>
 <body>
@@ -73,6 +96,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- contents -->
 		<div id="contents">
 			<div class="mainSliderWrap">
 				<div class="mainSlider"></div>
@@ -86,6 +110,7 @@
 				<div class="conNews green"></div>
 				<div class="conNewsLine gray"></div>
 				<div class="conNews pink"></div>
+				<!-- content one -->
 				<div class="conOne">
 					<div class="conOneTitle orange"></div>
 					<div class="conOneLeft">
@@ -108,13 +133,36 @@
 							<div class="conOneLeftBody pink"></div>
 						</div>
 					</div>
-					<div class="conOneRight"></div>
+					<div class="conOneRight yellow">
+						<div class="conOneRightSlider gray"></div>
+						<div class="conOneRightNews green"></div>
+					</div>
 				</div>
-				<div class="conTwo"></div>
-			</div>
+				<!-- content two -->
+				<div class="conTwo">
+					<div class="conTwoTitle gray"></div>
+					<div class="conTwoLeft orange"></div>
+					<div class="conTwoRight green"></div>
+				</div>
+				<div class="conThree">
+					<div class="conThreeTitle green"></div>
+					<div class="conThBox1 pink"></div>
+					<div class="conThBox1 pink"></div>
+					<div class="conThBox1 pink"></div>
+					<div class="conThBox2 gray"></div>
+				</div>
+			</div> <!-- contentwrap 1280 -->
 		</div>
+		<!-- footer -->
 		<div id="footer">
-			
+			<div class="fWrap orange">
+				<div class="fMenu fLogo pink"></div>
+				<div class="fMenu fContact pink"></div>
+				<div class="fMenu fSns pink"></div>
+				<div class="fMenu fContent pink"></div>
+				<div class="fMenu fSite pink"></div>
+				<div class="fMenu fMark pink"></div>
+			</div>
 		</div>
 	</div>
 </body>
