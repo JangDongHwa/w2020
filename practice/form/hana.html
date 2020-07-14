@@ -5,13 +5,22 @@
 	<meta charset="UTF-8">
 	<title>하나투어 로고 검색창</title>
 	<style>
-		
+		#header{width:1200px; margin: auto; overflow:hidden;}
+		.logo{float:left;}
 	</style>
 </head>
 <body>
 	<div class="wrap">
 		<div id="header">
-			<div class="logo"></div>
+			<div class="logo">
+				<img src="../images/hana_logo.png" alt="hanatour">
+			</div>
+			<form action="#"method="get">
+				<fieldset>
+					<legend>여행 검색창</legend>
+					<input type="text" placeholder="검색어를 입력하세요">
+				</fieldset>
+			</form>
 		</div>
 	</div>
 </body>
