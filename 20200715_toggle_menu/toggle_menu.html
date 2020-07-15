@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>toggle_menu</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".toggleMenu").click(function(){
+				var toggle = $(this).attr("class") 
+				if(toggle == "toggleMenu"){
+					$(this).addClass("change");
+					$(".menu").stop().animate({left:0},300);
+				}else{
+					$(this).removeClass("change");
+					$(".menu").stop().animate({left:"-100%"},300);
+				}
+				//$(선택자).stop().animate({style에서 속성값},듀레이션속도(1000이 1초))
+
+				// console.log($(".menu").attr("class"));
+				// if($(".menu").attr("class") == "menu"){
+				// 	$(".menu").addClass("top");
+				// }else{
+				// 	$(".menu").removeClass("top");
+				// }
+			});
+		});
+	</script>
+	<style>
+		.toggleMenu{width: 50px; height: 50px; border: 1px solid #ccc; position:absolute; right: 0; cursor:pointer; z-index:1;}
+		.toggleMenu div{width: 34px; height: 5px; background:#000; border-radius:3px; position:absolute; left:7px; transition:0.5s;}
+		.bar1{top:11px;}
+		.bar2{top:21px;}
+		.bar3{top:31px;}
+		.toggleMenu.change{background:#ccc;}
+		.toggleMenu.change .bar1{top: 50%; left:50%; transform:translate(-50%) rotate(45deg);}
+		.toggleMenu.change .bar2{opacity:0;}
+		.toggleMenu.change .bar3{top: 50%; left:50%; transform:translate(-50%) rotate(-45deg);}
+		.menu{width: 100%; height: 100%; position:fixed;
+			background:gray; left:-100%; _transition:0.5s;}
+		.menu h3{width: 100px; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);}
+		.menu.top{left:0;}
+	</style>
+</head>
+<body>
+	<div class="toggleMenu">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</div>
+	<div class="menu"><h3>menu</h3></div>
+</body>
+</html>

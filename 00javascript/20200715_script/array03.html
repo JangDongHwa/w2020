@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>array03</title>
+</head>
+<body>
+<!-- 
+NaN = Not a Number 숫자가 아니다라고 말해주는것
+
+ -->
+ 	<script>
+ 		var com = [95,88,,72,68,,69,82,78,87];
+ 		function printAvg(){
+ 			var sum = 0;
+ 			var n = com.length;
+ 			var count = 0;//입력점수 카운터 변수
+
+ 			for(var i=0;i<n;i++){
+ 				if(com[i] == undefined){
+ 					continue;
+ 				}else{
+ 				sum += com[i];
+ 				count++;//
+ 				}
+ 			}
+ 			return (sum/count);
+ 		}
+ 		var getAvg = printAvg();
+ 		document.write(getAvg);
+ 	</script>
+
+ 	<!-- <script>
+ 		var com = [95,88,,72,68,,69,82,78,87]
+ 		function printArr(){
+ 			var sum = 0;
+ 			var n = com.length;
+ 			for(var = i;i<n;i++){
+ 				if(com[i] == undefined){
+ 					com[i] = 0
+ 				}
+ 				sum += com[i];
+ 			}
+ 			return sum/n;
+ 		}
+ 		var getAvg = printArr();
+ 		documnet.write(getAvg);
+ 	</script> -->
+</body>
+</html>
