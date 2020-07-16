@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>쿠팡</title>
+	<style>
+		#header{width: 871px;height: 86px; margin:auto; padding overflow:hidden;}
+		.logo{width: 185px; padding:20px 0; float:left; margin-right:20px;}
+		.search{padding:20px 0; float:left;}
+		.search fieldset{width: 522px; height: 41px; border:2px solid #4285f4; padding:0; margin:0; overflow:hidden;}
+		.search legend{padding:0; text-indent:-9999px; font-size:0;}
+		.search select, .search button,
+		.search input{height: 100%; vertical-align:middle; border:0 none;}
+		.search select{width: 136px;}
+		.search select:after{content:""; width: 1px; height: 100%; background:#333;}
+		.search input{width: 300px;}
+		.search .sound{width: 20px; background:url(../images/coupang_btn01.png) no-repeat 50%; margin-right:15px;}
+		.search .enter{width: 20px; background:url(../images/coupang_btn02.png) no-repeat 50%;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div id="header">
+			<div class="logo">
+				<img src="../images/coupang_logo.png" alt="">
+			</div>
+			<form action="#" class="search">
+				<fieldset>
+					<legend>상품검색창</legend>
+					<select name="kk" id="kk">
+						<option value="전체">전체</option>
+						<option value="가전">가전</option>
+						<option value="식품">식품</option>
+						<option value="의류">의류</option>
+					</select>
+					<input type="text" placeholder="찾고 싶은 상품을 검색해보세요!">
+					<button class="sound"></button>
+					<button class="enter"></button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

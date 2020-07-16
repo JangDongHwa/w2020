@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>toggle menu</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/all.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".toggleMenu").click(function(){
+				var toggle = $(this).attr("class");
+				if(toggle == "toggleMenu"){
+					$(this).addClass("change");
+					$(".myTopMenu").stop().animate({top:0},300);
+				}else{
+					$(this).removeClass("change");
+					$(".myTopMenu").stop().animate({top:"-100%"},300);
+				}
+			});
+		});
+		$(window).resize(function(){
+			var wSize = $(window).width();
+			console.log(wSize);
+			if(wSize > 576){
+				$(".myTopMenu").css("top",0);
+				$(".toggleMenu").removeClass("change");
+			}else{
+				$(".myTopMenu").css("top","-100%");
+			}
+		});
+	</script>
+	<style>
+		@media screen and (min-width: 923px){
+		.menuWrap{width: 1200px; position:relative; background:#333; margin: auto; height:45px;}
+		.menuWrap h1{width: 150px; text-align:center;}
+		.menuWrap h1 a{color:#fff;}
+		.menuWrap .myTopMenu{position:absolute; top:0;right:50px;}
+		.myTopMenu ul{overflow:hidden;}
+		.myTopMenu ul li{float:left; padding-right:20px;}
+		.myTopMenu ul li a{color:#fff; display:block; line-height:45px;}
+		.toggleMenu{display:none;}
+		}
+		
+		@media screen and (min-width:577px) and (max-width:922px){
+			.menuWrap{width: 100%; position:relative; background:#333; margin: auto; height:45px;}
+			.menuWrap h1{width: 150px; text-align:center;}
+			.menuWrap h1 a{color:#fff;}
+			.menuWrap .myTopMenu{position:absolute; top:0;left:200px;}
+			.myTopMenu ul{overflow:hidden;}
+			.myTopMenu ul li{float:left; padding-right:20px;}
+			.myTopMenu ul li a{color:#fff; display:block; line-height:45px;}
+			.toggleMenu{display:none;}
+		}
+
+		@media screen and (max-width:576px){
+			.menuWrap{width: 100%; position:relative; background:#333; margin: auto; height:45px;}
+			.menuWrap h1{width: 150px; text-align:center;}
+			.menuWrap h1 a{color:#fff;}
+			.menuWrap .myTopMenu{position:fixed; width: 100%; height: 100%;
+				background: orange; top:-100%;}
+			.topNav{position:absolute; left:50%; top:50%; transform:translate(-50%);}
+			.myTopMenu ul{overflow:hidden;}
+			.myTopMenu ul li{float:none;}
+			.myTopMenu ul li a{color:#fff; display:block; line-height:45px;}
+			.toggleMenu{display:block;}
+		}
+
+
+
+
+
+
+
+		/*toggle menu*/
+		.toggleMenu{width: 40px; height: 40px; border:1px solid #fff; position:absolute; right:20px; top:2.5px; border-radius:5px;}
+		.toggleMenu div{width:28px; height:4px; background:#fff; position:absolute; left:5px; border-radius:3px;}
+		.toggleMenu .bar1{top:7px;}
+		.toggleMenu .bar2{top:17px;}
+		.toggleMenu .bar3{top:27px;}
+		.change .bar1{left:50%; top:50%; transform:translate(-50%) rotate(-45deg);}
+		.change .bar2{opacity:0;}
+		.change .bar3{left:50%; top:50%; transform:translate(-50%) rotate(45deg);}
+		.visual img{width: 100%;}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="menuWrap">
+		<h1><a href="#">logo</a></h1>
+		<div class="myTopMenu">
+			<nav class="topNav">
+				<ul>
+					<li><a href="#"><i class="fab fa-apple"></i>COMPANY</a></li>
+					<li><a href="#"><i class="fab fa-cc-apple-pay"></i>PRODUCT</a></li>
+					<li><a href="#"><i class="fas fa-mobile-alt"></i>CONTACT</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="toggleMenu">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+	</div>
+	<div class="visual">
+		<img src="../images/pc03.jpg" alt="img">
+	</div>
+
+	<!-- a태그 눌러서 상단으로 올라가는 것 방지 -->
+	<h1>
+		<a href="#" onclick="return false">Test</a>
+		<a href="javascript:void(0)">Test1</a>
+	</h1>
+</body>
+</html>

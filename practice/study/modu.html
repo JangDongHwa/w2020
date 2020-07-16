@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>모두투어</title>
+	<style>
+		#header{width: 1105px; height: 118px; margin:auto; overflow:hidden;}
+		.logo{width: 166px; line-height: 118px; float:left; margin-right:159px;}
+		.search{box-sizing:border-box; padding: 22px 0;}
+		.search fieldset{width: 579px; height: 49px; border:2px solid #159e92; padding:0; overflow:hidden;}
+		.search legend{padding:0; text-indent:-9999px; font-size:0;}
+		.search select,
+		.search input,
+		.search button{height: 100%; vertical-align:middle; border:0 none;}
+		.search select{width: 147px;}
+		.search input{width:379px;}
+		.search button{width: 30px;background:url(../images/modu_btn.png) no-repeat 50%;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div id="header">
+			<div class="logo">
+				<img src="../images/modu_logo.png" alt="모두투어">
+			</div>
+			<form action="#" class="search">
+				<fieldset>
+					<legend>여행 검색창</legend>
+					<select name="local" id="choice">
+						<option value="서울">서울 출발</option>
+						<option value="부산">부산 출발</option>
+						<option value="인천">인천 출발</option>
+					</select>
+					<input type="text" placeholder="국가/도시/ 또는 단체번호/ 상품코드 입력 ">
+					<button></button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
