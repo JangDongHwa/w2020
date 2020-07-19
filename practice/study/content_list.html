@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		/*reset*/
+		*{padding:0; margin:0;}
+		a{text-decoration:none;}
+		li{list-style:none;}
+		
+		#wrap{height: 500px; padding:50px 0;}
+		#content{width:721px; height:369px; margin:0 auto;}
+		#content:before{content:""; display:block; width: 100%; height:1px; background:#ededed;}
+		#content:after{content:""; display:block; width: 100%; height:1px; background:#ededed;}
+		.conTitle{width: 227px; height:96px; margin:0 auto; text-align:center; padding-top:40px;}
+		.imgBox{background:red; width:56px; height:56px; margin:0 auto;margin-bottom:23px;}
+		.conTitle h3{font-size:0.9em;}
+		.conTitle h3 span{color:#1ad8f3;}
+		.conBody{height: 207px; overflow:hidden; padding-top:24px;}
+		.conBody li{width: calc(20% - 8px); float:left; margin-right:8px;}
+		.conBody li:last-child{margin-right:0;}
+		.LiImgBox{width:138px; height:104px; background:orange;}
+		.LiTxtBox{width: 138px; height: 49px; text-align:center; font-size:0.8em; padding-top:12px;}
+		.LiTxtBox p{width: 138px;}
+		.txt_count{color:#9e9e9e;}
+		.txt_title{color:#212121;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="content">
+			<div class="conTitle">
+				<div class="imgBox"></div>
+				<h3>가장 <span>인기</span> 많았던 포스트 TOP5</h3>
+			</div>
+			<ul class="conBody">
+				<li>
+					<a href="#">
+					<div class="LiImgBox"></div>
+					<div class="LiTxtBox">
+						<p class="txt_count">3462회</p>
+						<p class="txt_title">아주 만족스러웠던 강릉 에어비엔비</p>
+					</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+					<div class="LiImgBox"></div>
+					<div class="LiTxtBox">
+						<p class="txt_count">120회</p>
+						<p class="txt_title">봄, 벚꽃, 인생샷, 개인화보 촬영</p>
+					</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+					<div class="LiImgBox"></div>
+					<div class="LiTxtBox">
+						<p class="txt_count">120회</p>
+						<p class="txt_title">가로수길 라붐 가죽공방</p>
+					</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+					<div class="LiImgBox"></div>
+					<div class="LiTxtBox">
+						<p class="txt_count">3462회</p>
+						<p class="txt_title">아주 만족스러웠던 강릉 에어비엔비</p>
+					</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+					<div class="LiImgBox"></div>
+					<div class="LiTxtBox">
+						<p class="txt_count">120회</p>
+						<p class="txt_title">아주 만족스러웠던 강릉 에어비엔비</p>
+					</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
