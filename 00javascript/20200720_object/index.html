@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>array_method</title>
+</head>
+<body>
+<!-- 
+배열의 확장성은 DB(데이터베이스)와 연결이 된다.
+indexOf값이 -1로 나오면 값을 찾을 수 없다는 의미이다.
+ -->
+	<script>
+		var kdata = ["서울","부산","대구","청주"];
+
+		kdata.forEach(printArr);
+		function printArr(item,index){
+			var num = index+1;
+			document.write(num+"."+item+"<br>");
+		}
+
+		function printArrOne(){
+			for(var i=0;i<kdata.length;i++){
+				document.write(i+4+"."+kdata[i]+"<br>");
+			}
+		}
+		printArrOne();
+
+		var data = [10,20,30,40,30,60,70,30,90,100];
+
+		document.write(data+"<br>");
+		document.write(data.indexOf(30)+"<br>");
+		document.write(data.lastIndexOf(30)+"<br>");
+		document.write(data.indexOf(30,3)+"<br>");
+		document.write(data.indexOf(300));
+	</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>list</title>
+	<style>
+
+		/* 기본 reset */
+		/* *(전체선택자) 사용 비추 */
+		*{margin:0; padding:0; font-size:12px;}
+		a{text-decoration:none;}
+
+		#content{width:702px; margin:0 auto; padding:15px 0;}
+		.listarea li{overflow:hidden; margin-bottom:18px;}
+
+		/* 이미지 영역만 width값 고정, 텍스트 영역은 사이즈 고정 필요 x */
+		.imgBox{width: 170px; height: 114px; float:left; margin-right:21px; background:#999;}
+		
+		/* .imgBox영역의 float:left 해제 (overflow:hidden) */
+		.txtBox{overflow:hidden;}
+		.subTitle, .mainTxt{font-size:13px;}
+		.mainTitle{color:#c08d31;}
+		.subTitle{margin-top:5px; color:#202020; font-weight:bold;}
+		/* .mainTxt영역 height, line-height, overflow:hidden 속성 사용하여 영역 숨기기 (2줄이상일 경우) */
+		.mainTxt{margin-top:5px; height:34px; line-height:17px; overflow:hidden; color:#404040;}
+		.subTxt{margin-top:5px; color:#505050;}
+		.subTxt .time{color:#808080;}
+
+		/* ㆍ처리하기 (+ 플러스 선택자 사용_인접형제 선택자) */
+		.subTxt span + span{position:relative; padding-left:7px;}
+		.subTxt span + span:before{position:absolute; left:0; top:7px; width:2px; height:2px; background:#333; content:'';}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div id="content">
+			<ul class="listarea">
+				<li>
+					<div class="imgBox">
+						<a href="#"><img src="#" alt="img"></a>
+					</div>
+					<div class="txtBox">
+						<a href="#">
+							<span class="mainTitle">홈 & 스타일</span>
+							<p class="subTitle">이케아부터 에르메스까지, 뷰티 스타 이사배의 휴양지 같은집</p>
+							<p class="mainTxt">255만 명의 꼼화 아가씨와 꼼화 도련님을 거느리며 메이크업 아티스트계의 넘버원이라는 수식어가 뒤따르는 뷰티 크리에이터 이사배. 그녀가 새로 이사한 집에 <메종>을 초대했...</p>
+							<p class="subTxt">
+								<span>메종</span>
+								<span class="time">4일 전</span>
+							</p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="imgBox">
+						<a href="#"><img src="#" alt="img"></a>
+					</div>
+					<div class="txtBox">
+						<a href="#">
+							<span class="mainTitle">리빙</span>
+							<p class="subTitle">군더더기 없이 깔끔하게 완성한 집</p>
+							<p class="mainTxt">안녕하세요. 오늘 보여드릴 곳은 강남 대치동에 위치한 아이파크 아파트입니다. 모던한분위기로 블랙, 화이트, 그레이의 모노톤 색상에 차분한 톤의 우드 소재를 많이 사용하여 ... </p>
+							<p class="subTxt">
+								<span class="time">4년 전</span>
+							</p>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

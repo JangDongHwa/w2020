@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>object</title>
+	<style>
+		#var1,#var2{color:purple; text-align:center;}
+	</style>
+</head>
+<body>
+<!-- 
+객체는 {}를 사용
+java 객체지향프로그램
+ -->
+ 	<div id="var1"></div>
+ 	<div id="var2"></div>
+	<script>
+		var car = ["sonata",100,"white",4];
+		document.write("자동차의 이름 : "+car[0]+"<br>");
+
+		var carOne = { //object define(선언)
+			name:"avante",
+			speed:200,
+			color:"red", //속성
+			start:function(){
+				return this.speed+150
+			} //method
+		}
+		document.write("자동차의 이름 : " +carOne.name + "<br>");
+		document.write("자동차의 속도 : " +carOne.start()+"<br>");
+		document.write("자동차의 색상 : " +carOne["color"]);
+		//= document.write("자동차의 색상 : "carOne.color );
+		document.getElementById("var1").innerHTML="<h3>"+carOne.name+"</h3>"; //object display(출력)
+		document.getElementById("var2").innerHTML="<h4>"+carOne.start()+"</h4>";
+	</script>
+	
+</body>
+</html>
