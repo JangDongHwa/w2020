@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>dom2</title>
+</head>
+<body>
+	Lorem ipsum dolor sit <span class="text">amet</span>, consectetur <span>adipisicing</span> elit. Laboriosam vitae nobis, eveniet vero, eaque aperiam qui, autem <span>similique</span> atque esse recusandae animi <span>dolores</span> enim delectus voluptate <span class="text">eius</span> dolor. Aliquam ipsum voluptatum cum voluptate itaque <span>placeat</span> debitis laudantium pariatur odio nemo.
+	<div onclick="change()">태그변경</div>
+	
+	<script>
+		function change(){
+			var span = document.getElementsByTagName("span");
+			console.log(span.length);
+			// span[0].style.color = "red";
+			for(var i=0;i<span.length;i++){
+				span[i].style.color="red";
+				span[i].style.fontWeight="bold";
+			}
+		}
+		change();
+	</script>
+</body>
+</html>
