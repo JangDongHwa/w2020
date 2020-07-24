@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>event</title>
+	<script>
+		var pTag;
+		function init(){
+			pTag = document.getElementById("newP");
+			pTag.onmouseover = function(){
+				pTag.style.background = "orchid";
+			};
+
+			// pTag.onmouseout = out;
+			// pTag.addEventListener("이벤트명",함수이름)
+			pTag.addEventListener("mouseout",out);
+		}
+
+		function out(){
+			pTag.style.background = "white";
+		};
+	</script>
+</head>
+<body onload="init()"> <!-- 문서를 읽고나서 init를 실행 -->
+<!--
+이벤트에 리스너를 함수로 호출 할때는 소괄호가 있으면 에러 발생
+이벤트에서 함수를 호출할시 소괄호 생략
+addEventListener에서는 이벤트 앞에 붙이던 on 생략 이벤트명만 입력
+ -->
+	
+	
+	<p id="newP">마우스를 올리면 색상변경</p>
+
+</body>
+</html>
