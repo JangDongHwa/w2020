@@ -1,1 +1,26 @@
 @charset "utf-8";
+/*header*/
+#header_wrap{position:fixed; left:50%; transform:translateX(-50%);}
+#header{width: 1280px;margin:0 auto;}
+/*headertop*/
+.header_top{overflow:hidden; height: 107px;}
+.header_top h1{width: 187px; height: 107px;background:url(../images/logo.jpg) no-repeat 50%; float:left; margin-right:198px;}
+.header_top form{float:left; padding:32px 0;}
+.header_top form legend{text-indent:-9999px; font-size:0;}
+.header_top form fieldset{float:left; width: 513px; height: 44px;border: 2px solid #0361ab; box-sizing:border-box;overflow:hidden; padding-left:36px;}
+.header_top form legend{float:left;}
+.header_top form input,
+.header_top form button{height:100%; border:0 none;}
+.header_top form input{width:calc(100% - 78px); float:left;}
+.header_top form button{width:42px; float:right; text-indent:-9999px; background:url(../images/icon_search_main_2.png) no-repeat 50%;}
+.hd_top_icon_wrap{float:right; padding:25px 0; box-sizing:border-box;}
+.hd_top_icon{overflow:hidden;}
+.hd_top_icon li{float:left; padding-left:27px;}
+.hd_top_icon li a{display:block; text-align:center;}
+/*headermenu*/
+.header_menu_wrap{height: 59px; background:#0162b1;}
+.header_menu{width: 1280px; margin:0 auto;}
+.header_menu ul{overflow:hidden; float:left;}
+.header_menu ul li{float: left; line-height:59px;width:203px; border-right:1px solid #4284a7;}
+.header_menu ul li a{display:block;text-align:center; font-weight:bold; color:#f9faf2;}
+.header_menu .toggle_menu{width: 62px;height: 59px; float:left; background:#0a3e78; position:absolute; right:0;}

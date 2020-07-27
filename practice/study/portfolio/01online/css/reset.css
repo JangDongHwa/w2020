@@ -47,3 +47,5 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a:link,a:visited{color:#000; text-decoration: none;}
+li{list-style: none;}
