@@ -9,6 +9,11 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+		});
+	</script>
 </head>
 <body>
 	<div class="wrap">
@@ -45,30 +50,88 @@
 					</div>
 				</div>
 			</div>
-			<div class="header_menu_wrap">
-					<div class="header_menu">
+			<div class="menu_wrap">
+					<div class="main_menu">
 						<ul>
-							<li><a href="#">청년정책</a></li>
-							<li><a href="#">청년공간</a></li>
-							<li><a href="#">청년상담실</a></li>
-							<li><a href="#">청년소식</a></li>
-							<li><a href="#">청년구직활동지원금</a></li>
-							<li><a href="#">소개</a></li>
+							<li>
+								<a href="#">청년정책</a>
+							</li>
+							<li>
+								<a href="#">청년공간</a>
+							</li>
+							<li>
+								<a href="#">청년상담실</a>
+							</li>
+							<li>
+								<a href="#">청년소식</a>
+							</li>
+							<li>
+								<a href="#">청년구직활동지원금</a>
+							</li>
+							<li>
+								<a href="#">소개</a>
+							</li>
 						</ul>
 						<div class="toggle_menu">
 							<div class="bar1"></div>
 							<div class="bar2"></div>
 							<div class="bar3"></div>							
 						</div>
-						<div class="hd_sub_menu">
-							
-						</div>
+					
 					</div>
+					<div class="sub_menu">
+							<ul>
+								<li class="smenu">
+									<ul>
+										<li><a href="#">청년정책통합검색</a></li>
+										<li><a href="#">주요정책비교</a></li>
+										<li><a href="#">쉬운정책풀이</a></li>
+										<li><a href="#">(구)청년정책통합검색</a></li>
+									</ul>
+								</li>
+								<li class="smenu">
+									<ul>
+										<li><a href="#">청년공간검색</a></li>
+										<li><a href="#">공간별프로그램</a></li>
+									</ul>
+								</li>
+								<li class="smenu">
+									<ul>
+										<li><a href="#">청년상담실은?</a></li>
+										<li><a href="#">카카오톡상담</a></li>
+										<li><a href="#">게시판상담</a></li>
+										<li><a href="#">자주묻는질문(FAQ)</a></li>
+									</ul>
+								</li>
+								<li class="smenu">
+									<ul>
+										<li><a href="#">공지사항</a></li>
+										<li><a href="#">청년정보PICK</a></li>
+										<li><a href="#">청년꿀팁</a></li>
+										<li><a href="#">청년핫뉴스</a></li>
+									</ul>
+								</li>
+								<li class="smenu">
+									<ul>
+										<li><a href="#">청년구직활동지원금이란?</a></li>
+										<li><a href="#">지원금신청</a></li>
+										<li><a href="#">예비교육</a></li>
+										<li><a href="#">취업성공금</a></li>
+									</ul>
+								</li>
+								<li class="smenu">
+									<ul>
+										<li><a href="#">온라인청년센터는?</a></li>
+										<li><a href="#">업무별담당자안내</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
 				</div>
 		</div>
 		<div id="contents_wrap">
 			<div id="contents">
-				
+			
 			</div>
 		</div>
 		<div id="footer_wrap">
@@ -77,5 +140,22 @@
 			</div>
 		</div>
 	</div>
+						<!-- 토글오픈 -->
+						<script>
+							var tMenu = document.querySelectorAll(".toggle_menu");
+							var sMenu = document.getElementsByClassName("sub_menu");
+							tMenu[0].addEventListener("click",change);
+							function change(){
+								var toggle = tMenu[0].getAttribute("class");
+								if(toggle == "toggle_menu"){
+									tMenu[0].setAttribute("class","toggle_menu open")
+									sMenu[0].style.display = "block";
+								}else{
+									tMenu[0].setAttribute("class","toggle_menu");
+									sMenu[0].style.display = "none";
+								}
+							}
+						</script>
+						<!-- 토글오픈 -->
 </body>
 </html>
