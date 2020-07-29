@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		ul{overflow:hidden;}
+		ul li{float:left; width:100px; background:powderblue; line-height:40px;text-align:center; margin-right:10px; border-radius:5px;}
+		.box_wrap{width: 320px; border:2px solid #222; padding:25px;}
+		.box_wrap .box2,.box_wrap .box3{display:none;}
+		.active{background:red;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			// $("ul>li").eq(0).click(function(){
+			// 	$(".box_wrap>div").hide().eq(0).show();
+			// });
+			// $("ul>li").eq(1).click(function(){
+			// 	$(".box_wrap>div").hide().eq(1).show();
+			// });
+			// $("ul>li").eq(2).click(function(){
+			// 	$(".box_wrap>div").hide().eq(2).show();
+			// });
+
+			// $("ul>li").click(function(){
+			// 	var li_num = $(this).index();
+			// 	$("ul>li").removeClass().eq(li_num).addClass("active");
+			// 	$(".box_wrap>div").hide().eq(li_num).show();
+			// });
+
+			$("ul>li").click(function(){
+				var li_num= $(this).index();
+				$("ul>li").removeClass();
+				$(this).addClass("active")
+				$(".box_wrap>div").hide();
+				$(".box_wrap>div").eq(li_num).fadeIn();
+			});			
+		});
+	</script>
+</head>
+<body>
+	<ul>
+		<li class="active">menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+	</ul>
+	<div class="box_wrap">
+		<div class="box1">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex sed amet porro velit cumque rerum? Corporis a beatae neque libero.</div>
+		<div class="box2">2. Adipisci ullam in fuga aliquid, accusamus molestias ipsam mollitia delectus provident beatae quisquam laudantium eius perspiciatis vitae, modi eum assumenda!</div>
+		<div class="box3">3. Delectus quisquam vero fuga ex perferendis eaque adipisci sequi facilis ipsam odit eligendi quasi sed dolorum, quibusdam quia ipsum. Provident.</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>탭메뉴연습</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		.body_wrap{width: 800px; margin:0 auto; border:3px solid #111;}
+		.body_wrap ul{overflow:hidden; line-height:45px; border-bottom:2px solid #555;}
+		.body_wrap ul li{float:left; width:20%;}
+		.body_wrap ul li:hover{background:powderblue;}
+		.body_wrap ul li a{display:block; text-align:center; font-size:24px; font-weight:bold;}
+		.body_wrap .active{background:orange;}
+		.box_wrap{padding:15px;}
+		.box_wrap .box2,.box_wrap .box3,.box_wrap .box4,
+		.box_wrap .box5{display:none;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$("ul>li").click(function(){
+				var li_num = $(this).index();
+				$("ul>li").removeClass().eq(li_num).addClass("active");
+				$(".box_wrap>div").hide().eq(li_num).show();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="body_wrap">
+		<ul>
+			<li class="active"><a href="#">MENU1</a></li>
+			<li><a href="#">MENU2</a></li>
+			<li><a href="#">MENU3</a></li>
+			<li><a href="#">MENU4</a></li>
+			<li><a href="#">MENU5</a></li>
+		</ul>
+		<div class="box_wrap">
+			<div class="box1">Txt1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab hic repellendus voluptatum esse deserunt, aut dolor, libero ipsum voluptas impedit reprehenderit dolorum ipsa blanditiis perferendis amet debitis magni ad sed recusandae nulla voluptatibus. Veritatis enim, perspiciatis ea facere cumque numquam quibusdam, quis tempora quasi similique sint quod. Nemo, quisquam, velit.</div>
+			<div class="box2">Txt2. Ratione, consequuntur provident qui vitae veritatis aperiam minima tempore sit nihil expedita doloribus, commodi optio facilis voluptates facere cumque a, doloremque id beatae officia eaque. Autem quos dolor repellat animi eaque itaque obcaecati, necessitatibus doloremque maiores quaerat. Asperiores odio, iste praesentium ducimus eum nobis voluptates sapiente eius cupiditate! Natus, sunt!</div>
+			<div class="box3">Txt3. Labore ut quia dolor officia tempore neque quos est? Neque explicabo perferendis atque fuga ab facere magnam nulla doloremque cum, nostrum, quibusdam, quisquam mollitia odit deserunt, iusto aliquid. Ullam ipsum illum, commodi aut qui id laboriosam, consequuntur, impedit culpa dolorum libero tempore facilis consequatur. Eaque voluptas suscipit molestias iusto ut.</div>
+			<div class="box4">Txt4. Quibusdam rem, iure ipsum expedita aliquid deserunt totam laborum culpa ullam cum quae corporis! Expedita non temporibus, iusto! Expedita veniam quia vero nostrum, eos exercitationem voluptatem quis cum maxime! Ipsam iste aut reiciendis pariatur asperiores maxime nam rem mollitia dolores cumque. Incidunt accusantium minus ullam nam nihil, tenetur qui numquam.</div>
+			<div class="box5">Txt5. Provident esse modi fugiat reiciendis commodi veritatis at, rerum eveniet cum natus accusamus numquam, maxime pariatur blanditiis fuga veniam ea rem inventore cupiditate molestiae. Asperiores culpa, soluta maxime exercitationem accusamus fuga. Repellendus perferendis molestias aspernatur assumenda a, repellat, neque ipsa, placeat delectus nesciunt ex mollitia voluptatibus, qui tempore. Quibusdam, in!</div>
+		</div>
+	</div>
+</body>
+</html>
