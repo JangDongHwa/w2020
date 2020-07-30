@@ -11,7 +11,9 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function(){
-			
+			// $(".main_menu>ul>li").click(function(){
+			// 	$(".smenu>ul>li").show();
+			// });
 		});
 	</script>
 </head>
@@ -140,22 +142,20 @@
 			</div>
 		</div>
 	</div>
-						<!-- 토글오픈 -->
-						<script>
-							var tMenu = document.querySelectorAll(".toggle_menu");
-							var sMenu = document.getElementsByClassName("sub_menu");
-							tMenu[0].addEventListener("click",change);
-							function change(){
-								var toggle = tMenu[0].getAttribute("class");
-								if(toggle == "toggle_menu"){
-									tMenu[0].setAttribute("class","toggle_menu open")
-									sMenu[0].style.display = "block";
-								}else{
-									tMenu[0].setAttribute("class","toggle_menu");
-									sMenu[0].style.display = "none";
-								}
-							}
-						</script>
-						<!-- 토글오픈 -->
+				<script>
+					var tMenu = document.querySelectorAll(".toggle_menu");
+					var sMenu = document.getElementsByClassName("sub_menu");
+					tMenu[0].addEventListener("click",change);
+					function change(){
+						var toggle = tMenu[0].getAttribute("class");
+						if(toggle == "toggle_menu"){
+							tMenu[0].setAttribute("class","toggle_menu open")
+							sMenu[0].style.display = "block";
+						}else{
+							tMenu[0].setAttribute("class","toggle_menu");
+							sMenu[0].style.display = "none";
+						}
+					}
+				</script>
 </body>
 </html>

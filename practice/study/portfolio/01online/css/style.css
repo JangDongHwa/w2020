@@ -24,6 +24,8 @@
 .main_menu{width: 1280px; margin:0 auto; position:absolute;left:50%; transform:translateX(-50%);}
 .main_menu ul{float:left; overflow:hidden;}
 .main_menu ul li{float: left; line-height:59px;width:203px; border-right:1px solid #4284a7;}
+.main_menu ul li:hover{background:#fff; color:#0162b1;}
+.main_menu ul li:hover a{color:#0162b1;}
 .main_menu ul li a{display:block;text-align:center; font-weight:bold; font-size: 19px;color:#f9faf2;}
 .main_menu .toggle_menu{width: 60px;height: 59px; float:left; background:#0a3e78; position:absolute; right:0; cursor:pointer;}
 .toggle_menu div{width:35px;height:4px; border-radius:2px;background:#fffefc;position:absolute;left:14px; transition:0.3s;}
@@ -36,4 +38,6 @@
 /*submenu*/
 .sub_menu{width: 1280px; height: 206px; position:absolute; top:59px;left:50%; transform:translateX(-50%); border:1px solid #0062b1; border-radius:0 0 20px 20px; display:none;}
 .smenu{float:left; width: 203px;}
-.smenu ul li{padding: 27px 0 0 14px;}
+.smenu li{padding: 27px 0 0 14px;}
+.smenu li a{font-size:12px; font-weight:bold;}
+.smenu li:hover a{color:#0162b1;}
