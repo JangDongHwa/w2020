@@ -25,6 +25,7 @@
 .main_menu ul{float:left; overflow:hidden;}
 .main_menu ul li{float: left; line-height:59px;width:203px; border-right:1px solid #4284a7;}
 .main_menu ul li:hover{background:#fff; color:#0162b1;}
+.main_menu ul li:hover{background:#fff; color:#0162b1;}
 .main_menu ul li:hover a{color:#0162b1;}
 .main_menu ul li a{display:block;text-align:center; font-weight:bold; font-size: 19px;color:#f9faf2;}
 .main_menu .toggle_menu{width: 60px;height: 59px; float:left; background:#0a3e78; position:absolute; right:0; cursor:pointer;}
@@ -36,8 +37,11 @@
 .toggle_menu.open .bar2{opacity:0;}
 .toggle_menu.open .bar3{top:50%;left:50%;transform:translate(-50%,-50%) rotate(-45deg);}
 /*submenu*/
-.sub_menu{width: 1280px; height: 206px; position:absolute; top:59px;left:50%; transform:translateX(-50%); border:1px solid #0062b1; border-radius:0 0 20px 20px; display:none;}
+.sub_menu{width: 1280px; height: 206px; position:absolute; top:59px;left:50%; transform:translateX(-50%); border:1px solid #0062b1; border-radius:0 0 20px 20px; display:none; background:white;}
 .smenu{float:left; width: 203px;}
 .smenu li{padding: 27px 0 0 14px;}
-.smenu li a{font-size:12px; font-weight:bold;}
+.smenu li a{font-size:12px; font-weight:bold; text-align:center;}
 .smenu li:hover a{color:#0162b1;}
+/*content*/
+#contents_wrap{padding:166px 0;}
+#contents{}
