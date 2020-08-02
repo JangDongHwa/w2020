@@ -11,9 +11,21 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function(){
-			// $(".main_menu>ul>li").click(function(){
-			// 	$(".smenu>ul>li").show();
-			// });
+			$(".menus").mouseover(function(){
+				$(".sub_menu").show();
+			});
+			$(".menus").mouseout(function(){
+				$(".sub_menu").hide();
+			});
+			var main_slider = $(".main_slider").bxSlider({
+				auto:true,pager:false,controls:false
+			});
+			$(".prev_btn").click(function(){
+				main_slider.goToPrevSlide();
+			});
+			$(".next_btn").click(function(){
+				main_slider.goToNextSlide();
+			});
 		});
 	</script>
 </head>
@@ -32,120 +44,145 @@
 					</form>
 					<div class="hd_top_icon_wrap">
 						<ul class="hd_top_icon">
-							<li>
+							<li class="icon_login">
 								<a href="#">
-									<div class="hd_img_box">
-										<img src="images/icon_header01_2.png" alt="icon_header01_2">
-									</div>
+									로그인
 								</a>
-								<a href="#">로그인</a>
 							</li>
-							<li>
+							<li class="icon_sgin">
 								<a href="#">
-									<div class="hd_img_box">
-										<img src="images/icon_header02_2.png" alt="icon_header02_2">
-									</div>
+									회원가입
 								</a>
-								<a href="#">회원가입</a>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="menu_wrap">
-					<div class="main_menu">
-						<ul>
-							<li>
-								<a href="#">청년정책</a>
-							</li>
-							<li>
-								<a href="#">청년공간</a>
-							</li>
-							<li>
-								<a href="#">청년상담실</a>
-							</li>
-							<li>
-								<a href="#">청년소식</a>
-							</li>
-							<li>
-								<a href="#">청년구직활동지원금</a>
-							</li>
-							<li>
-								<a href="#">소개</a>
-							</li>
-						</ul>
-						<div class="toggle_menu">
-							<div class="bar1"></div>
-							<div class="bar2"></div>
-							<div class="bar3"></div>							
-						</div>
-					
-					</div>
-					<div class="sub_menu">
+					<div class="menus">
+						<div class="main_menu">
 							<ul>
-								<li class="smenu">
-									<ul>
-										<li><a href="#">청년정책통합검색</a></li>
-										<li><a href="#">주요정책비교</a></li>
-										<li><a href="#">쉬운정책풀이</a></li>
-										<li><a href="#">(구)청년정책통합검색</a></li>
-									</ul>
+								<li>
+									<a href="#">청년정책</a>
 								</li>
-								<li class="smenu">
-									<ul>
-										<li><a href="#">청년공간검색</a></li>
-										<li><a href="#">공간별프로그램</a></li>
-									</ul>
+								<li>
+									<a href="#">청년공간</a>
 								</li>
-								<li class="smenu">
-									<ul>
-										<li><a href="#">청년상담실은?</a></li>
-										<li><a href="#">카카오톡상담</a></li>
-										<li><a href="#">게시판상담</a></li>
-										<li><a href="#">자주묻는질문(FAQ)</a></li>
-									</ul>
+								<li>
+									<a href="#">청년상담실</a>
 								</li>
-								<li class="smenu">
-									<ul>
-										<li><a href="#">공지사항</a></li>
-										<li><a href="#">청년정보PICK</a></li>
-										<li><a href="#">청년꿀팁</a></li>
-										<li><a href="#">청년핫뉴스</a></li>
-									</ul>
+								<li>
+									<a href="#">청년소식</a>
 								</li>
-								<li class="smenu">
-									<ul>
-										<li><a href="#">청년구직활동지원금이란?</a></li>
-										<li><a href="#">지원금신청</a></li>
-										<li><a href="#">예비교육</a></li>
-										<li><a href="#">취업성공금</a></li>
-									</ul>
+								<li>
+									<a href="#">청년구직활동지원금</a>
 								</li>
-								<li class="smenu">
-									<ul>
-										<li><a href="#">온라인청년센터는?</a></li>
-										<li><a href="#">업무별담당자안내</a></li>
-									</ul>
+								<li>
+									<a href="#">소개</a>
 								</li>
 							</ul>
+							<div class="toggle_menu">
+								<div class="bar1"></div>
+								<div class="bar2"></div>
+								<div class="bar3"></div>							
+							</div>
 						</div>
+						<div class="sub_menu">
+								<ul class="s_menu">
+									<li>
+										<ul class="s_menu_detail">
+											<li><a href="#">청년정책통합검색</a></li>
+											<li><a href="#">주요정책비교</a></li>
+											<li><a href="#">쉬운정책풀이</a></li>
+											<li><a href="#">(구)청년정책통합검색</a></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="s_menu_detail">
+											<li><a href="#">청년공간검색</a></li>
+											<li><a href="#">공간별프로그램</a></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="s_menu_detail">
+											<li><a href="#">청년상담실은?</a></li>
+											<li><a href="#">카카오톡상담</a></li>
+											<li><a href="#">게시판상담</a></li>
+											<li><a href="#">자주묻는질문(FAQ)</a></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="s_menu_detail">
+											<li><a href="#">공지사항</a></li>
+											<li><a href="#">청년정보PICK</a></li>
+											<li><a href="#">청년꿀팁</a></li>
+											<li><a href="#">청년핫뉴스</a></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="s_menu_detail">
+											<li><a href="#">청년구직활동지원금이란?</a></li>
+											<li><a href="#">지원금신청</a></li>
+											<li><a href="#">예비교육</a></li>
+											<li><a href="#">취업성공금</a></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="s_menu_detail">
+											<li><a href="#">온라인청년센터는?</a></li>
+											<li><a href="#">업무별담당자안내</a></li>
+										</ul>
+									</li>
+									</ul>
+							</div>
+					</div>
 				</div>
 		</div>
 		<div id="contents_wrap">
 			<div id="contents">
-			 	<div class="visual_wrap">
-			 		<div class="visual">
-			 			<ul>
-			 				<li>
-			 					<a href="#"><img src="images/main_visual01_pc_2.jpg" alt=""></a>
-			 					<div class="slider_text">
-			 						
-			 					</div>
-			 				</li>
-			 			</ul>
-			 		</div>
-			 	</div>
-			</div>
+		 		<div class="visual">
+		 			<ul class="main_slider">
+		 				<li>
+		 					<a href="#"><img src="images/main_visual01_pc_2.jpg" alt=""></a>
+		 				</li>
+		 				<li>
+		 					<a href="#"><img src="images/main_visual02_pc_2.jpg" alt=""></a>
+		 				</li>
+		 			</ul>
+		 			<div class="prev_btn"><img src="images/arrow_prev01.png" alt="slider_btn"></div>
+		 			<div class="next_btn"><img src="images/arrow_next01.png" alt="slider_btn"></div>
+		 		</div>
+		 		<div class="slider_move">
+		 			<div class="slider_menu">
+		 				<ul>
+		 					<li>
+		 						<a href="#">
+		 							<div class="sl_m_txt">
+		 								<p class="sl_txt_title">청년정책</p>
+		 								<p>청년이면 누구나 누릴 수 있는 혜택</p>
+		 							</div>
+		 						</a>
+		 					</li>
+		 					<li>
+		 						<a href="#">
+		 							<div class="sl_m_txt">
+		 								<p class="sl_txt_title">청년공간</p>
+		 								<p>팀플 회의공간, 스터디룸, 휴식공간 등 장소정보</p>
+		 							</div>
+		 						</a>
+		 					</li>
+		 					<li>
+		 						<a href="#">
+		 							<div class="sl_m_txt">
+		 								<p class="sl_txt_title">맞춤형 상담</p>
+		 								<p>정책안내부터 진로고민까지 개인 맞춤형 상담</p>
+		 							</div>
+		 						</a>
+		 					</li>
+		 				</ul>
+		 			</div>
+		 		</div>
+			</div> <!-- content -->
 		</div>
 		<div id="footer_wrap">
 			<div id="footer">
