@@ -62,7 +62,7 @@
     margin-bottom:0;
 }
 .prev_btn,.next_btn{position:absolute; top:50%; transform:translateY(-50%); cursor:pointer;}
-.prev_btn{left:40px;}
-.next_btn{right:40px;}
+.prev_btn{left:300px;}
+.next_btn{right:300px;}
 .slider_move{background:rgba(130,182,221,0.3);}
 .slider_menu{width: 1280px; margin:0 auto;}

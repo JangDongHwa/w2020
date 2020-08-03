@@ -11,10 +11,10 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function(){
-			$(".menus").mouseover(function(){
-				$(".sub_menu").show();
+			$(".menus").mouseenter(function(){
+				$(".sub_menu").stop().slideDown();
 			});
-			$(".menus").mouseout(function(){
+			$(".menus").mouseleave(function(){
 				$(".sub_menu").hide();
 			});
 			var main_slider = $(".main_slider").bxSlider({
