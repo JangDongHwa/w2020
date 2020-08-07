@@ -9,7 +9,8 @@
 	<style>
 		html,body{height: 100%;}
 		.menu{position:fixed;width: 100%; height: 40px; background:powderblue; z-index:1; padding-left:40px;}
-		.menu a{display:inline-block; width: 100px; line-height:40px;}
+		.menu a{display:inline-block; line-height:40px; padding:0 20px;}
+		.menu a.active{background:#f00;}
 		.scene{width:100%; height:100%; background-attachment:fixed;background-position:center; background-size:cover; position:relative;}
 		.scene div{width: 700px; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);color:#fff;text-align:center; text-shadow:0 0 10px #eee;}
 		.scene div h2{font-size: 48px;}
@@ -21,6 +22,8 @@
 	</style>
 	<script>
 		$(function(){
+
+			//1st menu move
 			// var one_top = $("#l_01").offset().top;
 			// var two_top = $("#l_02").offset().top;
 			// var three_top = $("#l_03").offset().top;
@@ -33,17 +36,62 @@
 			// $(".menu>a").eq(2).click(function(){
 			// 	$("html,body").animate({scrollTop:three_top},300);
 			// });
+
+			//2st menu move
+			// $(".menu>a").click(function(){
+			// 	var i = $(this).index();
+			// 	var st = $(".scene").eq(i).offset().top;
+			// 	$(".menu>a").removeClass("active");
+			// 	$(this).addClass("active");
+			// 	$("html,body").animate({scrollTop:st},300);
+			// });
+
+			//2st menu move-revision
+			// menu_click();
+			// function menu_click(){
+			// 	$(".menu>a").click(function(){
+			// 		var i = $(this).index();
+			// 		var st = $(".scene").eq(i).offset().top;
+			// 		$("html,body").animate({scrollTop:st},300);
+			// 	});
+			// }
+			// $(window).resize(function(){
+			// 	$("html,body").stop().animate({scollTop:0},300);
+			// 	menu_click();
+			// });
+
+			//3st menu move
 			$(".menu>a").click(function(){
-				var i = $(this).index();
-				var st = $(".scene").eq(i).offset().top;
-				$("html,body").animate({scrollTop:st},300);
+				var target = $(this.hash);
+				// console.log(target);
+				var st = target.offset().top;
+				$("html,body").stop().animate({scrollTop:st},300);
+				return false;
+			});
+			$(window).scroll(function(){
+				var scrollY = $(window).scrollTop();
+				// console.log("스크롤값 - "+scrollY);
+				// if($(".scene").eq(0).offset().top <= scrollY){
+				// 	$(".menu>a").removeClass("active").eq(0).addClass("active");
+				// }
+				// if($(".scene").eq(1).offset().top <= scrollY){
+				// 	$(".menu>a").removeClass("active").eq(1).addClass("active");
+				// }
+				// if($(".scene").eq(2).offset().top <= scrollY){
+				// 	$(".menu>a").removeClass("active").eq(2).addClass("active");
+				// }			
+				for(var i=0;i<$(".scene").length;i++){
+					if($(".scene").eq(i).offset().top <= scrollY){
+					$(".menu>a").removeClass("active").eq(i).addClass("active");
+					}
+				}
 			});
 		});
 	</script>
 </head>
 <body>
 	<nav class="menu">
-		<a href="#l_01">MENU1</a>
+		<a href="#l_01" class="active">MENU1</a>
 		<a href="#l_02">MENU2</a>
 		<a href="#l_03">MENU3</a>
 	</nav>
