@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>menu</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		body{background:#545454;}
+		.wrap{width: 950px;margin:0 auto;}
+		#head{width:950px; height: 114px;position:fixed; overflow:hidden;}
+		#head h1{width:125px;float:left;padding-top:40px;}
+		#head ul{overflow:hidden; float:right;}
+		#head ul li{float:left; line-height:114px;margin-left:25px;}
+		#head ul li a{display:block;font-size:18px;font-weight:bold;}
+		#head ul li.on a{display:block;font-size:18px;font-weight:bold;color:white;}
+		.content{padding-top:114px;}
+		.content div{ margin-bottom:200px;}
+	</style>
+	<script>
+		$(function(){
+			var menu = $("#head>ul>li");
+			var content = $(".content>div");
+			menu.click(function(evnet){
+				event.preventDefault();
+				var i = $(this).index();
+				var section = content.eq(i);
+				var tt = section.offset().top-114;
+				$("html,body").stop(),animate({scrollTop:tt});
+			});
+			$(window).scroll(function(){
+				var sct = window.pageYOffset;
+				// content.each(function(index){
+				// 	if(sct >= $(this).offset().top-114){
+				// 		menu.removeClass("on");
+				// 		menu.eq(index).addClass("on");
+				// 	}
+				// });
+
+				var paper = content.eq(0).offset().top -114;
+				if(sct >= paper){
+					menu.removeClass("on");
+					menu.eq(0).addClass("on");
+				}				
+				var works = content.eq(1).offset().top -114;
+				if(sct >= works){
+					menu.removeClass("on");
+					menu.eq(1).addClass("on");
+				}				
+				var email = content.eq(2).offset().top -114;
+				if(sct >= email){
+					menu.removeClass("on");
+					menu.eq(2).addClass("on");
+				}				
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="head">
+			<h1><a href="#">LOGO</a></h1>
+			<ul>
+				<li class="on"><a href="#">paper</a></li>
+				<li><a href="#">works</a></li>
+				<li><a href="#">email</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div id="paper"><img src="../images/paper.jpg" alt="img1"></div>
+			<div id="works"><img src="../images/work.jpg" alt="img2"></div>
+			<div id="email"><img src="../images/email.jpg" alt="img3"></div>
+		</div>
+	</div>
+</body>
+</html>
