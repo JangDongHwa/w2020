@@ -20,39 +20,54 @@
 	</style>
 	<script>
 		$(function(){
-			var menu = $("#head>ul>li");
-			var content = $(".content>div");
-			menu.click(function(evnet){
-				event.preventDefault();
-				var i = $(this).index();
-				var section = content.eq(i);
-				var tt = section.offset().top-114;
-				$("html,body").stop(),animate({scrollTop:tt});
-			});
-			$(window).scroll(function(){
-				var sct = window.pageYOffset;
-				// content.each(function(index){
-				// 	if(sct >= $(this).offset().top-114){
-				// 		menu.removeClass("on");
-				// 		menu.eq(index).addClass("on");
-				// 	}
-				// });
+			var menu = $("#head>ul>li"); //menu dom
+			var content = $(".content>div"); //div dom
 
-				var paper = content.eq(0).offset().top -114;
-				if(sct >= paper){
-					menu.removeClass("on");
-					menu.eq(0).addClass("on");
-				}				
-				var works = content.eq(1).offset().top -114;
-				if(sct >= works){
-					menu.removeClass("on");
-					menu.eq(1).addClass("on");
-				}				
-				var email = content.eq(2).offset().top -114;
-				if(sct >= email){
-					menu.removeClass("on");
-					menu.eq(2).addClass("on");
-				}				
+			//a태그 href막는 법
+			//1 return false;
+			//2 a태그 href에 javascript:void(0) 입력
+			//3 event.preventDefault();
+
+
+			menu.click(function(evnet){ //$("#head>ul>li").click()
+				event.preventDefault(); //a tag 이동방지
+				var i = $(this).index(); //i는 li클릭시 배열값
+				var section = content.eq(i); // 중복성을 단순화 시키기 위한 
+				var tt = section.offset().top-114;
+				$("html,body").stop().animate({scrollTop:tt});
+			});
+
+			$(window).scroll(function(){
+				var sct = window.pageYOffset; // == $(window).scrollTop();
+				
+				content.each(function(index){ 
+					if(sct >= $(this).offset().top-114){
+						menu.removeClass("on");
+						menu.eq(index).addClass("on");
+					}
+				});
+
+				// var paper = content.eq(0).offset().top -114; //고정값
+				// if(sct >= paper){
+				// 	menu.removeClass("on");
+				// 	menu.eq(0).addClass("on");
+				// }				
+				// var works = content.eq(1).offset().top -114; //고정값
+				// if(sct >= works){
+				// 	menu.removeClass("on");
+				// 	menu.eq(1).addClass("on");
+				// }				
+				// var email = content.eq(2).offset().top -114; //고정값
+				// if(sct >= email){
+				// 	menu.removeClass("on");
+				// 	menu.eq(2).addClass("on");
+				// }
+
+				// for(var i =0;i<menu.length;i++){
+				// 	if(sct >=  content.eq(i).offset().top -114){
+				// 	menu.removeClass("on").eq(i).addClass("on");
+				// 	}
+				// }
 			});
 		});
 	</script>

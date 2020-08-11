@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>each</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		
+	</style>
+	<script>
+		$(function(){
+			$("button").click(function(){
+				$(".wrap>ul>li").each(function(index){
+					alert(index + "." +$(this).text());
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<button type="button">button</button>
+		<ul>
+			<li>MENU1</li>
+			<li>MENU2</li>
+			<li>MENU3</li>
+		</ul>
+	</div>
+</body>
+</html>
