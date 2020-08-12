@@ -79,12 +79,23 @@
 .sl_me_txt .sl_txt_title{font-size:16px; color:#0062bb;}
 
 /*notice*/
-.con_noti_wrap{width: 1280px; margin:0 auto;}
+.con_notice{width: 1280px; margin:0 auto;}
 .notice_top{overflow:hidden;border-bottom:2px solid #eee;}
-.notice_top div{float:left;}
-.notice_title{padding:27px 30px;}
+.notice_bottom{overflow:hidden;}
+.notice_top div, .notice_bottom div{float:left;}
+.notice_title{padding:27px 30px; width: 190px;}
 .notice_title p{font-size:24px; font-weight:bold; color:#303539; border-right:1px solid #313131;padding-right:30px;}
-.notice_body{padding:27px 30px;}
-.notice_body span{font-size:14px;}
+.notice_body{padding:30px; width: 890px; box-sizing:border-box;}
+.notice_body span{font-size:14px;position:relative;padding-left:7px;}
+.notice_body.nt_top_body span{width: 400px; margin-right:45px;}
+.notice_body span:before{position:absolute; left:0; top:9px; width:2px; height:2px; background:#333; content:'';}
+.notice_util{padding:30px 0; width: 130px; box-sizing:border-box;}
+.notice_util p{font-weight:bold;}
+.notice_util p span{padding-left:40px;}
+.notice_util p a{width: 80px; height: 40px;border:2px solid #232323;border-radius:25px;padding:10px;}
 
-.notice_util{padding:27px 30px;}
+/*policy*/
+.con_poli_wrap{background:#f3f4f8;}
+.con_policy{width: 1260px; margin:0 auto;}
+.con_poli_title h3{text-align:center; font-size:28px; font-weight:bold;padding-top:85px;}
+.con_poli_title h3 span{font-size:32px;color:#045aad;}

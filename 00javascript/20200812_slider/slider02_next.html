@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>slider_next</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		img{display:block;width: 500px;}
+		#wrapper{width: 500px; height:238px; margin:20px auto; background:skyblue;}
+		#wrapper ul{width: 500px; height:208px;position:relative; overflow:hidden;}
+		#wrapper ul li{position:absolute; left:100%;}
+		#wrapper ul li:first-child{left:0;}
+		#wrapper .btn{cursor:pointer;}
+	</style>
+	<script>
+		$(function(){
+			var current = 0;
+			var banner = $("#wrapper li");
+			var i;
+
+			function slide_next(){
+				i = current + 1; //다음 banner 값 구하기
+				if(i == 3){i=0};
+				var current_el = banner.eq(current); //현재 banner
+				var next_el = banner.eq(i); //다음 banner
+
+				current_el.css({left:0}).stop().animate({left:"-100%"},1000);
+				next_el.css({left:"100%"}).stop().animate({left:0},1000);
+
+				current = i; //최종 현재값
+				// current++;
+				// console.log(current);
+			}
+
+			function slide_prev(){
+				i = current - 1;
+				if(i == -1){i=2;}
+				var current_el = banner.eq(current);
+				var prev_el = banner.eq(i);
+
+				current_el.css({left:0}).stop().animate({left:"100%"},1000);
+				prev_el.css({left:"-100%"}).stop().animate({left:0},1000);
+				// current--;
+				// console.log(current);
+				current = i;
+			}
+
+			$(".bt_next").click(function(){
+				slide_next();
+			});
+
+			$(".bt_prev").click(function(){
+				slide_prev();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<ul>
+			<li><img src="../../images/pc01.jpg" alt=""></li>
+			<li><img src="../../images/pc02.jpg" alt=""></li>
+			<li><img src="../../images/pc03.jpg" alt=""></li>
+		</ul>
+		<div class="btn">
+				<span class="bt_prev">이전</span>
+				<span class="bt_next">다음</span>
+		</div>
+	</div>
+</body>
+</html>

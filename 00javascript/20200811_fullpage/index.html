@@ -12,7 +12,21 @@
 		$(function(){
 			$("#fullpage").fullpage({
 				anchors:["a1st","a2st","a3st","a4st"],
-				menu:"#top_menu"
+				menu:"#top_menu",
+				navigation:true,
+				afterLoad:function(anchorslink,index){
+					console.log(anchorslink+", "+index);
+					if(index == 1){
+						$("#on_view_one").addClass("move");
+					}else{
+						$("#on_view_one").removeClass("move");
+					}
+					if(index == 2){
+						$("#on_view_two").addClass("move");
+					}else{
+						$("#on_view_two").removeClass("move");
+					}
+				}
 			});
 		});
 	</script>
@@ -26,6 +40,29 @@
 		nav#nav_top ul#top_menu li{float:left;}
 		nav#nav_top ul#top_menu li a{display:block;line-height:50px;text-align:center;padding:0 10px;}
 		nav#nav_top ul#top_menu li.active{background:skyblue;}
+		.scroll{position:absolute; left:50%;transform:translateX(-50%);bottom:20px; animation:x_scroll 0.8s infinite alternate;}
+		@keyframes x_scroll{
+			form{bottom:20px;}
+			to{bottom:0;}
+		}
+		.main{width: 400px;position: absolute;left: 50%;transform:translateX(-50%);color:#fff;top:30%;text-align: center;}
+		.main a{display:block; margin:0 auto; width:150px; border:1px solid #fff;border-radius:18px;line-height:35px;color:#fff;}
+		.main a:hover{background:#fff; color:#111;}
+
+		#on_view_one{top: 10%;transition:0.3s;opacity:0;}
+		#on_view_one.move{top: 30%;opacity:1;}
+		#on_view_two{left: 10%;transition:0.3s;opacity:0;}
+		#on_view_two.move{left: 50%;opacity:1;}
+		
+		.slide{position:relative;}
+		.slide .view{position:absolute;width: 70%;height: 500px;background:skyblue;left:50%;top:50%;transform:translate(-50%,-50%);}
+
+		.f3em{font-size:3em !important;}		
+		.f25em{font-size:2.5em !important;}
+		.f2em{font-size:2em !important;}
+		.f15em{font-size:1.5em !important;}
+		.mb20{margin-bottom:20px;}
+		.mb25{margin-bottom:25px;}
 	</style>
 </head>
 <body>
@@ -38,10 +75,56 @@
 		</ul>
 	</nav>
 	<div id="fullpage">
-		<div class="section" id="page1" data-anchor="a1st"></div>
-		<div class="section" id="page2" data-anchor="a2st"></div>
-		<div class="section" id="page3" data-anchor="a3st"></div>
-		<div class="section" id="page4" data-anchor="a4st"></div>
+		<div class="section" id="page1" data-anchor="a1st">
+			<div class="scroll">
+				<a href="#a2st">
+					<img src="images/btn_scroll.png" alt="btn">
+				</a>
+			</div>
+			<div class="main" id="on_view_one">
+				<h3 class="f3em">Lorem ipsum.</h3>
+				<p class="f15em mb25">Lorem ipsum dolor sit.</p>
+				<a href="#">MORE</a>
+			</div>
+		</div>
+		<div class="section" id="page2" data-anchor="a2st">
+			<div class="scroll">
+				<a href="#a3st">
+					<img src="images/btn_scroll.png" alt="btn">
+				</a>
+			</div>
+			<div class="main" id="on_view_two">
+				<h3 class="f3em">Lorem ipsum.</h3>
+				<p class="f15em mb25">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusantium.</p>
+				<a href="#">MORE</a>
+			</div>
+		</div>
+		<div class="section" id="page3" data-anchor="a3st">
+			<div class="scroll">
+				<a href="#a4st">
+					<img src="images/btn_scroll.png" alt="btn">
+				</a>
+			</div>
+		</div>
+		<div class="section" id="page4" data-anchor="a4st">
+			<div class="scroll">
+				<a href="#a1st">
+					<img src="images/btn_scroll.png" alt="btn">
+				</a>
+			</div>
+			<div class="slide">
+				<div class="view">qLorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore dolorem, nostrum! Ipsum perspiciatis laudantium illo praesentium in aliquid assumenda rerum et cum! Mollitia consequuntur porro illum quibusdam, esse accusantium quasi.</div>
+			</div>
+			<div class="slide">
+				<div class="view">Molestiae fugiat atque pariatur minima, harum sapiente velit voluptas? Perferendis sint minima nostrum consequuntur aliquam debitis ipsam numquam distinctio et alias nobis, inventore amet deleniti veniam harum laborum quibusdam minus?</div>
+			</div>
+			<div class="slide">
+				<div class="view">Cum, doloremque! Voluptatibus inventore amet eos magni consectetur dignissimos ipsa ipsum quis aliquid quibusdam totam nobis sunt fugit aliquam, cupiditate aspernatur necessitatibus ipsam similique eum asperiores, eveniet tempora voluptas magnam!</div>
+			</div>
+		</div>
+		<div class="section fp-auto-height" data-anchor="a5st">
+			<div class="footer" style="height:300px;background:skyblue"></div>
+		</div>
 	</div>
 </body>
 </html>
