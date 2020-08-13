@@ -19,32 +19,45 @@
 			var current = 0;
 			var banner = $("#wrapper li");
 			var i;
+			var over_btn = false;
 
 			function slide_next(){
-				i = current + 1; //다음 banner 값 구하기
-				if(i == 3){i=0};
-				var current_el = banner.eq(current); //현재 banner
-				var next_el = banner.eq(i); //다음 banner
 
-				current_el.css({left:0}).stop().animate({left:"-100%"},1000);
-				next_el.css({left:"100%"}).stop().animate({left:0},1000);
-
-				current = i; //최종 현재값
+				if(over_btn == false){
+					over_btn = true;
+					i = current + 1; //다음 banner 값 구하기
+					if(i == 3){i=0}					
+					slide_view("next");
+				}
+				current = i;
 				// current++;
 				// console.log(current);
 			}
 
 			function slide_prev(){
-				i = current - 1;
-				if(i == -1){i=2;}
-				var current_el = banner.eq(current);
-				var prev_el = banner.eq(i);
 
-				current_el.css({left:0}).stop().animate({left:"100%"},1000);
-				prev_el.css({left:"-100%"}).stop().animate({left:0},1000);
+				if(over_btn == false){
+					over_btn = true;
+					i = current - 1;
+					if(i == -1){i=2;}
+					slide_view("prev");
+				}
 				// current--;
 				// console.log(current);
-				current = i;
+
+			}
+
+			function slide_view(view){
+				var current_el = banner.eq(current); //현재 banner
+				var next_el = banner.eq(i); //다음 banner
+				if(view == "prev"){
+					current_el.css({left:0}).stop().animate({left:"100%"},1000,function(){over_btn=false;});
+					next_el.css({left:"-100%"}).stop().animate({left:0},1000);
+				}else{
+					current_el.css({left:0}).stop().animate({left:"-100%"},1000,function(){over_btn=false;});
+					next_el.css({left:"100%"}).stop().animate({left:0},1000);
+				}
+				current = i; //최종 현재값				
 			}
 
 			$(".bt_next").click(function(){
@@ -54,6 +67,11 @@
 			$(".bt_prev").click(function(){
 				slide_prev();
 			});
+
+			function trigger(){
+				$(".bt_next").trigger("click");
+			}
+			setInterval(trigger,3000); //setInterval 1000 = 1초
 		});
 	</script>
 </head>

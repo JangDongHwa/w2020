@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>call back</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		
+	</style>
+	<script>
+		$(function(){
+			$("button.hide").click(function(){
+				$("p").hide("slow",function(){});
+			});
+			$("button.show").click(function(){
+				$("p").show("slow",function(){});
+			});
+		});
+	</script>
+</head>
+<body>
+	<button class="show">show</button>
+	<button class="hide">hide</button>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, aliquid.</p>
+</body>
+</html>
