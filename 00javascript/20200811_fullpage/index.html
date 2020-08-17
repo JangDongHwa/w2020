@@ -57,6 +57,8 @@
 		.slide{position:relative;}
 		.slide .view{position:absolute;width: 70%;height: 500px;background:skyblue;left:50%;top:50%;transform:translate(-50%,-50%);}
 
+		#video{position:absolute;width: 100%;height: 100%;object-fit:cover;top: 0;}
+
 		.f3em{font-size:3em !important;}		
 		.f25em{font-size:2.5em !important;}
 		.f2em{font-size:2em !important;}
@@ -88,6 +90,9 @@
 			</div>
 		</div>
 		<div class="section" id="page2" data-anchor="a2st">
+			<video id="video"autoplay muted data-autoplay loop>
+				<source src="video/video02.mp4" type="video/mp4">
+			</video>
 			<div class="scroll">
 				<a href="#a3st">
 					<img src="images/btn_scroll.png" alt="btn">
