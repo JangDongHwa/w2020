@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.flex{display:flex;background:yellow;height:50vh;}
+		.flex div{flex-grow:1;display:flex;justify-content:center;align-items:center;transition:0.3s;}
+		div.cell1{background:gray;}
+		div.cell2{background:aqua;}
+		div.cell3{background:orange;}
+		div.cell4{background:pink;}
+		div.cell5{background:yellow;}
+		.flex div:hover{flex-grow:3;}
+		/*flex:grow;*/
+		/*display:flex사용할때 justify-content,align-items는  레이아웃잡을 경우 사용*/
+		.wrap{background:#ddd;padding-top:20px;}
+		.wrap>h2{text-align:center; width:20px; margin: 0 auto;font-size:32px;}
+		.container{width:1000px; margin:0 auto; display:flex; justify-content:space-between; padding:20px 0;}
+		.content{width:240px; border:1px solid #111; padding:20px;}
+		.content h2{margin-bottom:10px;}
+		.content p{font-size:14px;}
+		.nav{width:100vw; background:skyblue;}
+		.nav ul{width:1000px; margin:0 auto; display:flex; height:40px;}
+		.nav ul li{flex:1; text-align:center;background:pink;}
+		.nav a{display:block;line-height:40px;}
+	</style>
+</head>
+<body>
+	<div class="flex">
+		<div class="cell1">1</div>
+		<div class="cell2">2</div>
+		<div class="cell3">3</div>
+		<div class="cell4">4</div>
+		<div class="cell5">5</div>
+	</div>
+	<div class="wrap">
+		<h2>TITLE</h2>
+		<div class="container">
+			<div class="content">
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Repellat aliquid ipsam, dicta nihil sint veritatis et blanditiis quibusdam eos, ab.</p>
+			</div>
+			<div class="content">
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium itaque reprehenderit recusandae accusantium perferendis aliquid ad repellat nihil omnis.</p>
+			</div>
+			<div class="content">
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae, repudiandae officiis aut. Ex vero eveniet amet officia quod enim.</p>
+			</div>
+			<div class="content">
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Nam corporis dolor sed, perspiciatis reprehenderit earum odit doloribus, magni animi dignissimos!</p>
+			</div>
+		</div>
+	</div>
+	<div class="nav">
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+			<li><a href="#">menu6</a></li>
+		</ul>
+	</div>
+</body>
+</html>

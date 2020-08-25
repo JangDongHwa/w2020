@@ -108,15 +108,15 @@
 .poli_body_left .left_list_title ul li{float:left; width:calc(20% - 6px); height: 55px; border:1px solid #e4e3e8;margin-right:6px; box-sizing:border-box; background:#fff;position:relative;}
 
 .poli_body_left .left_list_title ul li:hover:before{content:'';border-width:20px;border-style:solid; border-color: #0162b1 transparent transparent transparent; position:absolute; bottom:-30px; left:50%; transform:translateX(-50%);}
-
-.poli_body_left .left_list_title ul li:hover:before{content:'';border-width:20px;border-style:solid; border-color: #0162b1 transparent transparent transparent; position:absolute; bottom:-30px; left:50%; transform:translateX(-50%); z-index:1;}
 .poli_body_left .left_list_title ul li:hover a{background:#0162b1; color:#fff;}
 .poli_body_left .left_list_title ul li a{display:block; text-align:center;line-height:55px; color:#737373; font-weight:bold;}
 .poli_body_left .left_list_body{position:relative;}
 .poli_body_left .left_list_body ul{overflow:hidden;}
 .poli_body_left .left_list_body ul li{float:left; box-sizing:border-box; width:calc(33.33% - 12px); height: 175px;background:#444 url(../images/icon_policy01_bg.png) no-repeat center;margin-right:12px;margin-bottom:10px; padding: 25px 25px;}
-.poli_body_left .left_list_body ul li:hover a{}
-.poli_body_left .left_list_body ul li:hover a:before{content:'';display:block;background:url(../images/icon_policy01.png) no-repeat center;}
+.poli_body_left .left_list_body ul li:hover{background:#fff; border:2px dotted #0060a4;}
+.poli_body_left .left_list_body ul li:hover a h3{color:#5e5e5e;text-overflow:ellipsis; padding-bottom:10px; font-size:15px;}
+.poli_body_left .left_list_body ul li:hover a p{color:#c0c0c0;font-size:12px;line-height:20px}
+.poli_body_left .left_list_body ul li:hover a:before{content:'';width: 120px;height: 150px;float:left;display:block;background:url(../images/icon_policy01.png) no-repeat center; }
 .poli_body_left .left_list_body ul li a{display:block; color:#fff; font-weight:bold; text-align:center;}
 .left_list_body ul li a h3{font-size:20px; padding-bottom:24px;}
 .left_list_body ul li a p{font-size:15px; line-height:20px;}
