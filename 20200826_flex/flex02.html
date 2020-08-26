@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>flex</title>
+	<style>
+		.wrapper{_margin-bottom:50px;padding:30px 0;}
+		.wrapper h3{text-align:center; font-size:1.6em;}
+		.wrapper .intro{padding:20px 50px;}
+		.img{display:none;}
+		.program-list{padding:20px 50px;}
+		.program-list h4{font-size:1.3em; margin-bottom:20px;}
+		.program-list .program{padding:30px;background:#fff;border:1px solid #aaa; margin-bottom:20px;}
+		.gray{background:#ccc;}
+
+		/*footer*/
+		.footer{padding-top:30px;padding-bottom:50px;background:#34495e;}
+		.footer-info{padding:0 50px;}
+		.contact{color:#fff; margin-bottom:20px;}
+		.sns{display:inline-block;}
+
+		@media screen and (min-width:764px){
+			.wrapper{width:1200px; margin:0 auto;}
+			.intro{display:flex; align-items:center;}
+			.intro .txt{flex:2; padding:0 50px;}
+			.intro .img{flex:1;display:block; display:flex; justify-content: center;align-items:center;}
+			.program-list{display:flex; justify-content: space-between;}
+			.program{/*flex-grow:;flex-shrink:;*/flex-basis:19%;}
+			
+			/*footer*/
+			.footer-info{display:flex;}
+			.contact{flex:2;}
+			.sns{flex:1;display:flex;justify-content:flex-end;}
+			.sns a{margin:10px;}
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div class="wrapper">
+			<h3>Lorem ipsum dolor sit.</h3>
+			<div class="intro">
+				<div class="txt">
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Veniam harum accusantium nostrum minus possimus eum non doloribus nam facilis. Dolores!
+					Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Veniam harum accusantium nostrum minus possimus eum non doloribus nam facilis. Dolores!
+					</p>
+				</div>
+				<div class="img">
+					<img src="images/coding.png" alt="img" width="250">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="gray">
+		<div class="wrapper">
+			<h3>교육프로그램</h3>
+			<div class="program-list">
+				<div class="program">
+					<h4>Lorem, ipsum.</h4>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Quas assumenda, voluptatibus harum accusamus, dolorum tempora illum adipisci culpa rerum inventore.</p>
+				</div>
+				<div class="program">
+					<h4>Lorem, ipsum.</h4>
+					<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Quas animi, reprehenderit quo unde officia corrupti impedit similique quod autem soluta.</p>
+				</div>
+				<div class="program">
+					<h4>Lorem, ipsum.</h4>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil suscipit sequi nobis, odio sed exercitationem harum molestias obcaecati! Odit, magni?</p>
+				</div>
+				<div class="program">
+					<h4>Lorem, ipsum.</h4>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maiores, voluptas nostrum maxime rerum perferendis beatae tempore consequatur velit earum.</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="wrapper">
+			<div class="footer-info">
+				<div class="contact">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+					<p>Dolores nulla autem, laborum veritatis sed possimus!</p>
+					<p>Illo ab vero molestias, aperiam aliquam modi.</p>
+					<p>Architecto cupiditate nesciunt, velit sed ex, pariatur.</p>
+				</div>
+				<div class="sns">
+					<a href="#"><img src="images/fb.png" alt="img"></a>
+					<a href="#"><img src="images/tw.png" alt="img"></a>
+					<a href="#"><img src="images/ytube.png" alt="img"></a>
+					<a href="#"><img src="images/gp.png" alt="img"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

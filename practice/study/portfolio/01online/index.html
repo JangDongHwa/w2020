@@ -17,6 +17,19 @@
 			$(".menus").mouseleave(function(){
 				$(".sub_menu").hide();
 			});
+			var tMenu = document.querySelectorAll(".toggle_menu");
+			var sMenu = document.getElementsByClassName("sub_menu");
+			tMenu[0].addEventListener("click",change);
+			function change(){
+			var toggle = tMenu[0].getAttribute("class");
+			if(toggle == "toggle_menu"){
+				tMenu[0].setAttribute("class","toggle_menu open")
+				sMenu[0].style.display = "block";
+			}else{
+				tMenu[0].setAttribute("class","toggle_menu");
+				sMenu[0].style.display = "none";
+			}
+		}
 			var main_slider = $(".main_slider").bxSlider({
 				auto:true,pager:false,controls:false
 			});
@@ -26,7 +39,9 @@
 			$(".next_btn").click(function(){
 				main_slider.goToNextSlide();
 			});
-
+			$(".policy_slider").bxSlider({
+				auto:true
+			});
 		});
 	</script>
 </head>
@@ -296,32 +311,37 @@
 		 							</ul>
 		 						</div>
 		 					</div>
-		 					<div class="poli_body_right"></div>
+		 					<div class="poli_body_right">
+		 						<div class="right_slider">
+		 							<ul class="policy_slider">
+		 								<li>
+		 									<a href="#"><img src="images/policy_slider01.png" alt=""></a>
+		 								</li>
+		 								<li>
+		 									<a href="#"><img src="images/policy_slider02.png" alt=""></a>
+		 								</li>
+		 								<li>
+		 									<a href="#"><img src="images/policy_slider03.png" alt=""></a>
+		 								</li>
+		 								<li>
+		 									<a href="#"><img src="images/policy_slider04.png" alt=""></a>
+		 								</li>
+		 								<li>
+		 									<a href="#"><img src="images/policy_slider05.png" alt=""></a>
+		 								</li>
+		 							</ul>
+		 						</div>
+		 					</div>
 		 				</div>
 		 			</div>
 		 		</div>
 			</div> <!-- content -->	
-		</div>
+		</div> <!-- contentswrap -->
 		<div id="footer_wrap">
 			<div id="footer">
 				
 			</div>
 		</div>
 	</div>
-	<script>
-		var tMenu = document.querySelectorAll(".toggle_menu");
-		var sMenu = document.getElementsByClassName("sub_menu");
-		tMenu[0].addEventListener("click",change);
-		function change(){
-			var toggle = tMenu[0].getAttribute("class");
-			if(toggle == "toggle_menu"){
-				tMenu[0].setAttribute("class","toggle_menu open")
-				sMenu[0].style.display = "block";
-			}else{
-				tMenu[0].setAttribute("class","toggle_menu");
-				sMenu[0].style.display = "none";
-			}
-		}
-	</script>
 </body>
 </html>
