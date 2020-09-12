@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<style>
+		.font{width:500px; height: 500px; margin:0 auto;}
+		.font path{
+			stroke:#ccc; stroke-width:1; fill:#f00;
+			animation: t_view 2s forwards;
+			opacity:0;
+		}
+		@keyframes t_view {
+			form{opacity:0;}
+			to{opacity:1;}
+		}
+	</style>
+	<script>
+		$(function(){
+			//jquuery + javascript mehtod 
+			var pathes = $(".font").find("path");
+			var path_length = pathes.length; //path의 개수 구하기
+			for(var i=0;i<path_length;i++){
+				var path = $(".font path").get(i);
+				var total_length = path.getTotalLength();
+
+				//초기값
+				path.style.strokeDasharray = total_length;
+				path.style.strokeDashoffset = total_length;
+				
+				//애니메이션
+				$(path).animate({"strokeDashoffset":0},2000);
+			}
+		});
+	</script>
+</head>
+<body>
+	<div class="font">
+		<svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 100 100" >
+			<g>
+				<path d="M29.9,57.9c0,0.4-0.1,0.8-0.3,1c-0.2,0.3-0.5,0.4-0.9,0.4h-3.9c-0.3,0-0.6-0.1-0.9-0.4c-0.2-0.3-0.3-0.6-0.3-1v-5h1.5v4.9
+					h3.3V39.5h1.5V57.9z"/>
+				<path d="M34,44.3h-1.4v-2.1H34V44.3z M33.9,59.4h-1.4V47h1.4V59.4z"/>
+				<path d="M42.2,59.4h-1.4V59c-0.6,0.1-1.1,0.2-1.7,0.3c-0.7,0.1-1.3,0.2-1.7,0.2c-0.8,0-1.2-0.5-1.2-1.4v-4.5c0-0.9,0.4-1.4,1.2-1.4
+					h3.3v-3.7h-3.1v2.1h-1.4v-2.1c0-1,0.4-1.4,1.2-1.4H41c0.8,0,1.2,0.5,1.2,1.4V59.4z M40.9,57.8v-4.4h-3.2v4.4L40.9,57.8z"/>
+				<path d="M50.6,59.4h-1.4V48.5L46,48.6v10.7h-1.4V47H46v0.3c0.6-0.1,1.1-0.2,1.7-0.3c0.7-0.1,1.2-0.2,1.7-0.2c0.8,0,1.2,0.5,1.2,1.4
+					V59.4z"/>
+				<path d="M58.8,62.6c0,1-0.4,1.4-1.2,1.4h-3.4c-0.8,0-1.2-0.6-1.2-1.8c0-0.1,0-0.4,0-0.6s0-0.5,0-0.6h1.4v1.6h3v-3.2H55
+					c-0.6,0-1.2-0.3-1.6-0.8s-0.6-1.1-0.6-1.9v-7.2c0-0.7,0.2-1.3,0.6-1.8s0.9-0.7,1.5-0.7c0.2,0,1,0.1,2.5,0.4V47h1.4V62.6z
+					 M57.4,57.9v-9.3c-1.1-0.1-1.8-0.1-2-0.1c-0.8,0-1.2,0.5-1.2,1.4v6.6c0,0.9,0.4,1.4,1.2,1.4H57.4z"/>
+				<path d="M62.9,39.5l-1,6.2h-1l0.4-6.2H62.9z"/>
+				<path d="M70.4,57.9c0,1-0.4,1.4-1.2,1.4h-3.3c-0.8,0-1.2-0.5-1.2-1.4v-2.8h1.4v2.8H69v-2.5l-3.7-3.6c-0.4-0.3-0.5-0.8-0.5-1.3v-2.1
+					c0-1,0.4-1.4,1.2-1.4h3.2c0.8,0,1.2,0.5,1.2,1.4v2.5H69v-2.4h-2.9v2.2l3.8,3.6c0.3,0.3,0.5,0.8,0.5,1.3V57.9z"/>
+			</g>
+		</svg>
+	</div>
+</body>
+</html>

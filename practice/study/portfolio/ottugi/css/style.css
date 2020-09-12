@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* header */
+#header{background:#fef100;}
+.header_inner{width: 1200px; margin:0 auto; padding-top:16px;}
+.logo{margin-bottom:45px;text-align:center;}
+/* gnb */
+.gnb{}
+.gnb ul{overflow:hidden;}
+.gnb ul li{float:left; width:16.666%;}
+.gnb ul li a{display:block; height:45px; text-align:center; position:relative;}
+.gnb ul li a:hover{border-bottom:3px solid #f00; color:#f00;box-sizing:border-box;}
+.gnb ul li a:before{content:''; display:inline-block; width:2px; height:14px; background:#8f8f8f; position:absolute; left:0; top:1px;}
+.gnb ul li:first-child a:before{display:none;}
+/* // gnb */
+/* // header */
