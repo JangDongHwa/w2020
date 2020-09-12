@@ -9,6 +9,13 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(function(){
+			$(".main_slider").bxSlider({
+				controls:false
+			});
+		});
+	</script>
 </head>
 <body>
 	<div id="wrap">
@@ -17,9 +24,10 @@
 	  	<div class="header_inner">
 	  		<h1 class="logo">
 	  			<a href="#">
-	  				<img src="images/logo.png" alt="logo">
+	  				<img src="images/logo_samyang.png" alt="삼양 로고">
 	  			</a>
 	  		</h1>
+	  		<!-- gnb -->
 		  	<div class="gnb">
 		  		<ul>
 		  			<li>
@@ -38,17 +46,65 @@
 		  				<a href="#">고객서비스</a>
 		  			</li>
 		  			<li>
-		  				<a href="#">오뚜기몰</a>
+		  				<a href="#">삼양맛샵</a>
 		  			</li>
 		  		</ul>
 		  	</div>
+		  	<!--  // gnb -->
 		  </div>
 	  </header>
 	  <!-- // Header -->
 
 	  <!-- Container -->
 	  <div id="container">
-
+	  	<!-- main_banner -->
+	  	<div class="main_banner">
+	  		<ul class="main_slider">
+	  			<li><img src="images/main_banner_01.jpg" alt="김치 불닭볶음면 배너"></li>
+	  			<li><img src="images/main_banner_02.jpg" alt="크림까르보 불닭볶음면 배너"></li>
+	  			<li><img src="images/main_banner_03.jpg" alt="불타는 시리즈 배너"></li>
+	  		</ul>
+	  	</div>
+	  	<!-- // main_banner -->
+	  	<!-- section_one -->
+	  	<div class="section_one">
+	  		<div class="company">
+	  			<ul>
+	  				<li class="mall">
+	  					<a href="#">
+	  						<strong>삼양맛샵</strong>
+	  						<p></p>
+	  						<span></span>
+	  					</a>
+	  				</li>
+	  				<li class="share">
+	  					<a href="#">
+	  						<strong>나눔미학</strong>
+	  						<p></p>
+	  						<span></span>
+	  					</a>
+	  				</li>
+	  				<li class="future">
+	  					<a href="#">
+	  						<strong>미래가치</strong>
+	  						<p></p>
+	  						<span></span>
+	  					</a>
+	  				</li>
+	  				<li class="nature">
+	  					<a href="#">
+	  						<strong>자연과함께</strong>
+	  						<p></p>
+	  						<span></span>
+	  					</a>
+	  				</li>
+	  			</ul>
+	  		</div>
+	  		<div class="news">
+	  			
+	  		</div>
+	  	</div>
+	  	<!-- // section_one -->
 	  </div>
 	  <!-- // Container -->
 

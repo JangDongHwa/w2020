@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* header */
-#header{background:#fef100;}
+#header{background:#fff;}
 .header_inner{width: 1200px; margin:0 auto; padding-top:16px;}
 .logo{margin-bottom:45px;text-align:center;}
 /* gnb */
@@ -8,8 +8,37 @@
 .gnb ul{overflow:hidden;}
 .gnb ul li{float:left; width:16.666%;}
 .gnb ul li a{display:block; height:45px; text-align:center; position:relative;}
-.gnb ul li a:hover{border-bottom:3px solid #f00; color:#f00;box-sizing:border-box;}
+.gnb ul li a:hover{border-bottom:3px solid #ff661b; color:#ff661b;box-sizing:border-box;}
 .gnb ul li a:before{content:''; display:inline-block; width:2px; height:14px; background:#8f8f8f; position:absolute; left:0; top:1px;}
 .gnb ul li:first-child a:before{display:none;}
 /* // gnb */
+
 /* // header */
+
+/* container */
+
+/* main_slider */
+.bx-wrapper {-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; border: 0 none;margin-bottom: 20px;
+}
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {position: absolute;left:25px; bottom: 44px; width: 100px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {background: #fff;text-indent: -9999px;display: block; width: 10px; height: 10px; margin: 0 5px; outline: 0; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus { background: #ff661b; width:20px;
+}
+/* // main_slider */
+/* section_one */
+/* company*/
+.company{width:1200px; margin:0 auto;}
+.company ul{overflow:hidden;}
+.company ul li{float:left;width:calc(25% - 15px); margin-right:15px;}
+.company ul li.mall{background:url(../images/img_company_01.jpg) no-repeat center;}
+.company ul li.share{background:url(../images/img_company_02.jpg) no-repeat center;}
+.company ul li.future{background:url(../images/img_company_03.jpg) no-repeat center;}
+.company ul li.nature{background:url(../images/img_company_04.jpg) no-repeat center;}
+/* //company*/
+/* news */
+
+/* // news */
+/* // setction_one*/
+/* // container */
