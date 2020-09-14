@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>오뚜기</title>
+	<title>삼양맛샵</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -13,6 +13,21 @@
 		$(function(){
 			$(".main_slider").bxSlider({
 				controls:false
+			});
+			$(".event_slider").bxSlider({
+				controls:false
+			});
+			$(".new_slider").bxSlider({
+				controls:false
+			});
+			var hot_slider = $(".hot_slider").bxSlider({
+				controls:false, pager:false
+			});
+			$(".hot_btn_next").click(function(){
+				hot_slider.goToNextSlide();
+			});
+			$(".hot_btn_prev").click(function(){
+				hot_slider.goToPrevSlide();
 			});
 		});
 	</script>
@@ -68,43 +83,246 @@
 	  	<!-- // main_banner -->
 	  	<!-- section_one -->
 	  	<div class="section_one">
+	  		<!-- company -->
 	  		<div class="company">
 	  			<ul>
 	  				<li class="mall">
 	  					<a href="#">
 	  						<h4>삼양맛샵</h4>
 	  						<p>바로가기</p>
-	  						<span>more ></span>
+	  						<span>more></span>
 	  					</a>
 	  				</li>
 	  				<li class="share">
 	  					<a href="#">
 	  						<h4>나눔미학</h4>
 	  						<p>사회공헌</p>
-	  						<span>more ></span>
+	  						<span>more></span>
 	  					</a>
 	  				</li>
 	  				<li class="future">
 	  					<a href="#">
 	  						<h4>미래가치</h4>
 	  						<p>투자정보</p>
-	  						<span>more ></span>
+	  						<span>more></span>
 	  					</a>
 	  				</li>
 	  				<li class="nature">
 	  					<a href="#">
 	  						<h4>자연과함께</h4>
 	  						<p>환경경영</p>
-	  						<span>more ></span>
+	  						<span>more></span>
 	  					</a>
 	  				</li>
 	  			</ul>
 	  		</div>
+	  		<!-- // company -->
+	  		<!-- news -->
 	  		<div class="news">
-	  			
+	  			<ul>
+	  				<li class="news_title">
+	  					<a href="#">
+	  						<h3>삼양 뉴스</h3>
+	  						<p>more></p>
+	  					</a>
+	  				</li>
+	  				<li>
+	  					<a href="#">
+	  						<h4>2019 삼양 지속가능경영보고서</h4>
+	  						<p>2019 삼양 지속가능경영보고서2019년에 발간된 삼양 지속가능경영보고서 창간호입니다. 건강한 식문화로 세계와 함께하며, 인류 식생활 향상에 이바지하는 삼양으로 거듭나겠습니다.</p>
+	  						<span>2020.08.14</span>
+	  					</a>
+	  				</li>
+	  				<li>
+	  					<a href="#">
+	  						<h4>스위트홈 제25회 삼양 가족요리 페스티발 취소 안내</h4>
+	  						<p>스위트홈 제25회 삼양 가족요리 페스티발 행사는 코로나19 확산 방지와 참가자 여러분들의 안전을 위해 올해는 개최하지 않기로 결정되었음을 알려드립니다. 행사에 많은 관심과 성원을 보내주신 여러분께 감사드립니다.</p>
+	  						<span>2020.07.24</span>
+	  					</a>
+	  				</li>
+	  				<li>
+	  					<a href="#">
+	  						<h4>삼양 베트남 창립10주년 기념식</h4>
+	  						<p>삼양 베트남 창립 10주년 기념식이 지난 1월 13일 월요일 오전 9시 30분, 베트남 롯데 레전드 호텔에서 개최되었습니다. 삼양 임직원 및 삼양 베트남의 고객사 등이 참석하여 진행한 이날 행사는 건강한 식문화로 세계와 함께하는 삼양을 보여드렸습니다.</p>
+	  						<span>2020.01.20</span>
+	  					</a>
+	  				</li>
+	  			</ul>
 	  		</div>
+	  		<!-- // news -->
 	  	</div>
 	  	<!-- // section_one -->
+	  	<!-- section_two -->
+	  	<div class="section_two">
+	  		<!-- event -->
+	  		<div class="event">
+	  			<h3>이벤트</h3>
+	  			<div class="event_banner">
+		  			<ul class="event_slider">
+		  				<li><img src="images/banner_event_01.png" alt="불닭소스 이벤트"></li>
+		  				<li><img src="images/banner_event_02.jpg" alt="신규가입 이벤트"></li>
+		  			</ul>
+		  		</div>
+	  		</div>
+	  		<!-- // event -->
+	  		<!-- new_pro -->
+	  		<div class="new_pro">
+	  			<h3>신제품 소개</h3>
+	  			<div class="goods">
+	  				<ul class="new_slider">
+	  					<li>
+	  						<img src="images/img_goods_01.jpg" alt="삼양목장 넹인형">
+	  						<p>삼양목장 넹인형</p>
+	  						<div class="icon">NEW</div>
+	  					</li>
+	  					<li>
+	  						<img src="images/img_goods_02.jpg" alt="삼양라면 유선노트">
+	  						<p>삼양라면 유선노트</p>
+	  						<div class="icon">NEW</div>
+	  					</li>
+	  					<li>
+	  						<img src="images/img_goods_03.jpg" alt="불닭라면기(큰컵)">
+	  						<p>불닭라면기(큰컵)</p>
+	  						<div class="icon">NEW</div>
+	  					</li>
+	  					<li>
+	  						<img src="images/img_goods_04.jpg" alt="2080호치치약 100g">
+	  						<p>2080 호치치약</p>
+	  						<div class="icon">NEW</div>
+	  					</li>
+	  				</ul>
+	  			</div>
+	  			<div class="new_source">
+	  				<div class="icon">NEW</div>
+	  				<p>유이셋뚜_불닭 소스 4종</p>
+	  				<span>(불닭소스+까르보불닭소스+핵불닭소스+불닭마요)</span>
+	  			</div>
+	  		</div>
+	  		<!-- // new_pro -->
+	  	</div>
+	  	<!-- // section_two -->
+	  	<!-- section_three -->
+	  	<div class="section_three">
+	  		<div class="hot_pro">
+	  			<div class="hot_title">
+			  		<h3>삼양 인기상품</h3>
+			  		<p>삼양의 인기상품들을 소개합니다.</p>
+			  	</div>
+			  	<div class="hot_body">	
+	  				<div class="hot_product">
+	  					<ul class="hot_slider">
+	  						<li>
+	  							<ul class="hot_slider_inner">
+	  								<li>
+	  									<div>
+		  									<a href="#">
+			  									<img src="images/img_product_01.jpg" alt="">
+			  									<div class="hot_txt">
+			  										<p>불타는 고추짬뽕</p>
+			  										<span>봉지면</span>
+			  									</div>
+		  									</a>
+		  									<div class="overlay"><a href="#"></a></div>
+	  									</div>
+	  								</li>
+	  								<li>
+	  									<div>
+		  									<a href="#">
+			  									<img src="images/img_product_02.jpg" alt="">
+			  									<div class="hot_txt">
+			  										<p>목장세트(밀크전병 + 밀크만주)</p>
+			  										<span>디저트/간편식</span>
+			  									</div>
+		  									</a>
+		  									<div class="overlay"><a href="#"></a></div>
+		  								</div>	
+	  								</li>
+	  								<li>
+	  									<div>
+		  									<a href="#">
+			  									<img src="images/img_product_03.jpg" alt="">
+			  									<div class="hot_txt">
+			  										<p>불타는 고추짜장</p>
+			  										<span>봉지면</span>
+			  									</div>
+		  									</a>
+		  									<div class="overlay"><a href="#"></a></div>
+	  									</div>
+		  							</li>
+		  							<li>
+		  								<div>
+			  								<a href="#">
+			  									<img src="images/img_product_04.jpg" alt="">
+			  									<div class="hot_txt">
+			  										<p>불닭맛 야채곱창 170g</p>
+			  										<span>냉동식품</span>
+			  									</div>
+			  								</a>
+			  								<div class="overlay"><a href="#"></a></div>
+			  							</div>	
+	  								</li>
+	  							</ul>
+	  						</li>
+	  						<li>
+	  							<ul class="hot_slider_inner">
+	  								<li>
+	  									<div>
+		  									<a href="#">
+			  									<img src="images/img_product_05.jpg" alt="">
+			  									<div class="hot_txt">
+			  										<p>불타는 고추짬뽕</p>
+			  										<span>봉지면</span>
+			  									</div>
+		  									</a>
+		  									<div class="overlay"><a href="#"></a></div>
+	  									</div>
+	  								</li>
+	  								<li>
+	  									<div>
+		  									<a href="#">
+			  									<img src="images/img_product_06.jpg" alt="">
+			  									<div class="hot_txt">
+			  										<p>목장세트(밀크전병 + 밀크만주)</p>
+			  										<span>디저트/간편식</span>
+			  									</div>
+		  									</a>
+		  									<div class="overlay"><a href="#"></a></div>
+		  								</div>	
+	  								</li>
+	  								<li>
+	  									<div>
+		  									<a href="#">
+			  									<img src="images/img_product_07.jpg" alt="">
+			  									<div class="hot_txt">
+			  										<p>불타는 고추짜장</p>
+			  										<span>봉지면</span>
+			  									</div>
+		  									</a>
+		  									<div class="overlay"><a href="#"></a></div>
+	  									</div>
+		  							</li>
+		  							<li>
+		  								<div>
+			  								<a href="#">
+			  									<img src="images/img_product_08.jpg" alt="">
+			  									<div class="hot_txt">
+			  										<p>불닭맛 야채곱창 170g</p>
+			  										<span>냉동식품</span>
+			  									</div>
+			  								</a>
+			  								<div class="overlay"><a href="#"></a></div>
+			  							</div>	
+	  								</li>
+	  							</ul>
+	  						</li>
+	  					</ul>
+	  				</div>
+		  			<div class="hot_btn_prev"></div>
+		  			<div class="hot_btn_next"></div>
+			  	</div>
+	  		</div>
+	  	</div>
+	  	<!-- // section_three -->
 	  </div>
 	  <!-- // Container -->
 
