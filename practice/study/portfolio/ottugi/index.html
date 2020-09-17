@@ -13,9 +13,7 @@
 	<script>
 		$(function(){
 			$(".main_slider").bxSlider({
-				controls:false,
-				auto: true,
-			  autoControls: true
+				controls:false
 			});
 			$(".event_slider").bxSlider({
 				controls:false,
@@ -23,7 +21,9 @@
 			  autoControls: true
 			});
 			$(".new_slider").bxSlider({
-				controls:false
+				controls:false,
+				auto: true,
+			  autoControls: true
 			});
 			var hot_slider = $(".hot_slider").bxSlider({
 				controls:false, pager:false
@@ -42,6 +42,9 @@
 			});
 			$(".cook_btn_prev").click(function(){
 				cook_slider.goToPrevSlide();
+			});
+			$(".top_scroll").click(function(){
+				$("html,body").animate({scrollTop:0},300);
 			});
 		});
 	</script>
@@ -137,7 +140,7 @@
 	  	<div class="section">
 	  		<div class="section_inner">
 	  			<div class="section_news">
-	  				<div class="news_title">
+	  				<div class="title_type_a">
 	  					<a href="#">
 	  						<h3>삼양 뉴스</h3>
 	  						<p>more></p>
@@ -148,21 +151,21 @@
 		  					<a href="#">
 		  						<h4>2019 삼양 지속가능경영보고서</h4>
 		  						<p>2019 삼양 지속가능경영보고서2019년에 발간된 삼양 지속가능경영보고서 창간호입니다. 건강한 식문화로 세계와 함께하며, 인류 식생활 향상에 이바지하는 삼양으로 거듭나겠습니다.</p>
-		  						<span>2020.08.14</span>
+		  						<span class="date">2020.08.14</span>
 		  					</a>
 		  				</li>
 		  				<li>
 		  					<a href="#">
 		  						<h4>스위트홈 제25회 삼양 가족요리 페스티발 취소 안내</h4>
 		  						<p>스위트홈 제25회 삼양 가족요리 페스티발 행사는 코로나19 확산 방지와 참가자 여러분들의 안전을 위해 올해는 개최하지 않기로 결정되었음을 알려드립니다. 행사에 많은 관심과 성원을 보내주신 여러분께 감사드립니다.</p>
-		  						<span>2020.07.24</span>
+		  						<span class="date">2020.07.24</span>
 		  					</a>
 		  				</li>
 		  				<li>
 		  					<a href="#">
 		  						<h4>삼양 베트남 창립10주년 기념식</h4>
 		  						<p>삼양 베트남 창립 10주년 기념식이 지난 1월 13일 월요일 오전 9시 30분, 베트남 롯데 레전드 호텔에서 개최되었습니다. 삼양 임직원 및 삼양 베트남의 고객사 등이 참석하여 진행한 이날 행사는 건강한 식문화로 세계와 함께하는 삼양을 보여드렸습니다.</p>
-		  						<span>2020.01.20</span>
+		  						<span class="date">2020.01.20</span>
 		  					</a>
 		  				</li>
 		  			</ul>
@@ -171,10 +174,12 @@
 	  	</div>
 	  	<!-- // news -->
 	  	<div class="section">
-	  		<div class="section_inner">
+	  		<div class="section_inner after">
 		  		<!-- event -->
 		  		<div class="section_event">
-		  			<h3>이벤트</h3>
+		  			<div class="title_type_a">
+			  			<a href="#"><h3>이벤트</h3></a>
+		  			</div>
 		  			<div class="event_banner">
 			  			<ul class="event_slider">
 			  				<li><a href="#"><img src="images/banner_event_01.png" alt="불닭소스 이벤트"></a></li>
@@ -185,7 +190,9 @@
 		  		<!-- // event -->
 		  		<!-- new -->
 		  		<div class="section_new">
-		  			<h3>신제품 소개</h3>
+		  			<div class="title_type_a">
+			  			<a href="#"><h3>신제품 소개</h3></a>
+		  			</div>
 		  			<div class="new_goods">
 		  				<ul class="new_slider">
 		  					<li>
@@ -226,7 +233,7 @@
 			  				<div class="icon">NEW</div>
 			  				<div class="txt">
 				  				<p>유이셋뚜_불닭 소스 4종</p>
-				  				<span>(불닭소스+까르보불닭소스+핵불닭소스+불닭마요)</span>
+				  				<span class="detail">(불닭소스+까르보불닭소스+핵불닭소스+불닭마요)</span>
 			  				</div>
 			  			</a>	
 		  			</div>
@@ -235,10 +242,10 @@
 		  	</div>	
 	  	</div>
 	  	<!-- hot -->
-	  	<div class="section bg">
+	  	<div class="section bg_img">
 	  		<div class="section_inner">
 		  		<div class="section_hot">
-		  			<div class="hot_title">
+		  			<div class="title_type_b">
 				  		<h3>삼양 인기상품</h3>
 				  		<p>삼양의 인기상품들을 소개합니다.</p>
 				  	</div>
@@ -246,104 +253,128 @@
 		  				<div class="hot_product">
 		  					<ul class="hot_slider">
 		  						<li>
-		  							<ul class="hot_slider_inner">
+		  							<ul class="slider_inner">
 		  								<li>
-		  									<div>
-			  									<a href="#">
-				  									<img src="images/img_product_01.jpg" alt="불타는 고추짬뽕">
-				  									<div class="hot_txt">
-				  										<p>불타는 고추짬뽕</p>
-				  										<span>봉지면</span>
-				  									</div>
-			  									</a>
+		  									<div class="product_box">
+		  										<div class="img">
+				  									<img src="images/img_product_01.png" alt="크림까르보 불닭볶음면">
+			  									</div>
+			  									<div class="hot_txt">
+			  										<p>크림까르보 불닭볶음면</p>
+			  										<span>봉지면</span>
+			  									</div>
 			  									<div class="overlay"><a href="#"></a></div>
 		  									</div>
 		  								</li>
 		  								<li>
-		  									<div>
-			  									<a href="#">
-				  									<img src="images/img_product_02.jpg" alt="밀크전병 + 밀크만주 세트">
-				  									<div class="hot_txt">
-				  										<p>목장세트(밀크전병 + 밀크만주)</p>
-				  										<span>디저트/간편식</span>
-				  									</div>
-			  									</a>
+		  									<div class="product_box">
+		  										<div class="img">
+				  									<img src="images/img_product_02.png" alt="바비큐치킨맛 볶음면">
+			  									</div>
+			  									<div class="hot_txt">
+			  										<p>바비큐치킨맛 볶음면</p>
+			  										<span>용기면 </span>
+			  									</div>
 			  									<div class="overlay"><a href="#"></a></div>
 			  								</div>	
 		  								</li>
 		  								<li>
-		  									<div>
-			  									<a href="#">
-				  									<img src="images/img_product_03.jpg" alt="불타는 고추짜장">
-				  									<div class="hot_txt">
-				  										<p>불타는 고추짜장</p>
-				  										<span>봉지면</span>
-				  									</div>
-			  									</a>
+		  									<div class="product_box">
+		  										<div class="img">
+				  									<img src="images/img_product_03.png" alt="불닭 비빔면">
+				  								</div>
+			  									<div class="hot_txt">
+			  										<p>불닭 비빔면</p>
+			  										<span>봉지면</span>
+			  									</div>
 			  									<div class="overlay"><a href="#"></a></div>
 		  									</div>
 			  							</li>
 			  							<li>
-			  								<div>
-				  								<a href="#">
-				  									<img src="images/img_product_04.jpg" alt="불닭맛 야채곱창">
-				  									<div class="hot_txt">
-				  										<p>불닭맛 야채곱창 170g</p>
-				  										<span>냉동식품</span>
-				  									</div>
-				  								</a>
+			  								<div class="product_box">
+			  									<div class="img">
+				  									<img src="images/img_product_04.png" alt="까르보불닭 소스">
+				  								</div>
+			  									<div class="hot_txt">
+			  										<p>까르보불닭 소스</p>
+			  										<span>소스류</span>
+			  									</div>
+				  								<div class="overlay"><a href="#"></a></div>
+				  							</div>	
+		  								</li>
+		  								<li>
+			  								<div class="product_box">
+			  									<div class="img">
+				  									<img src="images/img_product_05.png" alt="크림불닭 파스타소스">
+				  								</div>
+			  									<div class="hot_txt">
+			  										<p>크림불닭 파스타소스</p>
+			  										<span>소스류</span>
+			  									</div>
 				  								<div class="overlay"><a href="#"></a></div>
 				  							</div>	
 		  								</li>
 		  							</ul>
 		  						</li>
 		  						<li>
-		  							<ul class="hot_slider_inner">
+		  							<ul class="slider_inner">
 		  								<li>
-		  									<div>
-			  									<a href="#">
-				  									<img src="images/img_product_05.jpg" alt="까르보 불닭 라볶이">
-				  									<div class="hot_txt">
-				  										<p>까르보 불닭 라볶이</p>
-				  										<span>디저트/간편식</span>
-				  									</div>
-			  									</a>
+		  									<div class="product_box">
+		  										<div class="img">
+				  									<img src="images/img_product_06.png" alt="훈제란">
+				  								</div>
+			  									<div class="hot_txt">
+			  										<p>훈제란</p>
+			  										<span>디저트/간편식</span>
+			  									</div>
 			  									<div class="overlay"><a href="#"></a></div>
 		  									</div>
 		  								</li>
 		  								<li>
-		  									<div>
-			  									<a href="#">
-				  									<img src="images/img_product_06.jpg" alt="버터와플">
-				  									<div class="hot_txt">
-				  										<p>버터와플 100g</p>
-				  										<span>스낵</span>
-				  									</div>
-			  									</a>
+		  									<div class="product_box">
+		  										<div class="img">
+				  									<img src="images/img_product_07.png" alt="사또밥">
+				  								</div>
+			  									<div class="hot_txt">
+			  										<p>사또밥</p>
+			  										<span>스낵</span>
+			  									</div>
 			  									<div class="overlay"><a href="#"></a></div>
 			  								</div>	
 		  								</li>
 		  								<li>
-		  									<div>
-			  									<a href="#">
-				  									<img src="images/img_product_07.jpg" alt="크림불닭 파스타소스">
-				  									<div class="hot_txt">
-				  										<p>크림불닭 파스타소스 140g</p>
-				  										<span>소스류</span>
-				  									</div>
-			  									</a>
+		  									<div class="product_box">
+		  										<div class="img">
+				  									<img src="images/img_product_08.png" alt="초코 뽀빠이바">
+				  								</div>
+			  									<div class="hot_txt">
+			  										<p>초코 뽀빠이바</p>
+			  										<span>스낵</span>
+			  									</div>
 			  									<div class="overlay"><a href="#"></a></div>
 		  									</div>
 			  							</li>
 			  							<li>
-			  								<div>
-				  								<a href="#">
-				  									<img src="images/img_product_08.jpg" alt="벨지안 초콜릿 과자">
-				  									<div class="hot_txt">
-				  										<p>벨지안 초콜릿 씬 100g</p>
-				  										<span>스낵</span>
-				  									</div>
-				  								</a>
+			  								<div class="product_box">
+			  									<div class="img">
+				  									<img src="images/img_product_09.png" alt="뿌셔먹는 라면스낵 불닭">
+				  								</div>
+			  									<div class="hot_txt">
+			  										<p>뿌셔먹는 라면스낵 불닭</p>
+			  										<span>스낵</span>
+			  									</div>
+				  								<div class="overlay"><a href="#"></a></div>
+				  							</div>	
+		  								</li>
+		  								<li>
+			  								<div class="product_box">
+			  									<div class="img">
+				  									<img src="images/img_product_010.png" alt="삼계탕">
+				  								</div>
+			  									<div class="hot_txt">
+			  										<p>삼계탕</p>
+			  										<span>디저트/간편식</span>
+			  									</div>
 				  								<div class="overlay"><a href="#"></a></div>
 				  							</div>	
 		  								</li>
@@ -351,147 +382,147 @@
 		  						</li>
 		  					</ul>
 		  				</div>
-			  			<div class="hot_btn_prev"></div>
-			  			<div class="hot_btn_next"></div>
+			  			<button type="button" class="hot_btn_prev"></button>
+			  			<button type="button" class="hot_btn_next"></button>
 				  	</div>
 		  		</div>
 		  	</div>	
 	  	</div>
 	  	<!-- // hot -->
 	  	<!-- cook -->
-	  	<div class="section">
+	  	<div class="section bg">
 	  		<div class="section_inner">
 		  		<div class="section_cook">
-		  			<div class="cook_title">
-				  		<h3>쿠킹 & 스토리</h3>
+		  			<div class="title_type_b">
+				  		<h3>쿠킹&스토리</h3>
 				  		<p>삼양 레시피와 활용 팁을 소개합니다.</p>
 				  	</div>
 				  	<div class="cook_body">	
 		  				<div class="cook_product">
 		  					<ul class="cook_slider">
 		  						<li>
-		  							<ul class="cook_slider_inner">
+		  							<ul class="slider_inner">
 		  								<li>
-		  									<div>
-			  									<a href="#">
+		  									<div class="product_box">
+		  										<div class="img">
 				  									<img src="images/img_cook_01.jpg" alt="멸치장국국수 레시피">
-				  									<div class="cook_txt">
-				  										<p>멸치장국 국수</p>
-				  										<span>한식 > 면</span>
-				  									</div>
-			  									</a>
+			  									</div>
+			  									<div class="cook_txt">
+			  										<p>멸치장국 국수</p>
+			  										<span>한식 > 면</span>
+			  									</div>
 			  									<div class="overlay"><a href="#"></a></div>
 		  									</div>
 		  								</li>
 		  								<li>
-		  									<div>
-			  									<a href="#">
+		  									<div class="product_box">
+		  										<div class="img">
 				  									<img src="images/img_cook_02.jpg" alt="볶음밥 + 새우꼬치 레시피">
-				  									<div class="cook_txt">
-				  										<p>굴소스 볶음밥 & 새우 꼬치</p>
-				  										<span>양식 > 밥</span>
-				  									</div>
-			  									</a>
+				  								</div>	
+			  									<div class="cook_txt">
+			  										<p>굴소스 볶음밥 & 새우 꼬치</p>
+			  										<span>양식 > 밥</span>
+			  									</div>
 			  									<div class="overlay"><a href="#"></a></div>
 			  								</div>	
 		  								</li>
 		  								<li>
-		  									<div>
-			  									<a href="#">
+		  									<div class="product_box">
+		  										<div class="img">
 				  									<img src="images/img_cook_03.jpg" alt="사천짜장소스 볶음밥 레시피">
-				  									<div class="cook_txt">
-				  										<p>사천짜장소스 볶음밥</p>
-				  										<span>중식 > 밥</span>
-				  									</div>
-			  									</a>
+				  								</div>	
+			  									<div class="cook_txt">
+			  										<p>사천짜장소스 볶음밥</p>
+			  										<span>중식 > 밥</span>
+			  									</div>
 			  									<div class="overlay"><a href="#"></a></div>
 		  									</div>
 			  							</li>
 			  							<li>
-			  								<div>
-				  								<a href="#">
+			  								<div class="product_box">
+			  									<div class="img">
 				  									<img src="images/img_cook_04.jpg" alt="닭봉튀김 레시피">
-				  									<div class="cook_txt">
-				  										<p>바삭 닭봉튀김</p>
-				  										<span>양식 > 튀김</span>
-				  									</div>
-				  								</a>
+				  								</div>	
+			  									<div class="cook_txt">
+			  										<p>바삭 닭봉튀김</p>
+			  										<span>양식 > 튀김</span>
+			  									</div>
 				  								<div class="overlay"><a href="#"></a></div>
 				  							</div>	
 		  								</li>
 		  								<li>
-			  								<div>
-				  								<a href="#">
+			  								<div class="product_box">
+			  									<div class="img">
 				  									<img src="images/img_cook_05.jpg" alt="바나나 핫케이크 레시피">
-				  									<div class="cook_txt">
-				  										<p>바나나 핫케이크</p>
-				  										<span>양식 > 빵</span>
-				  									</div>
-				  								</a>
+				  								</div>	
+			  									<div class="cook_txt">
+			  										<p>바나나 핫케이크</p>
+			  										<span>양식 > 빵</span>
+			  									</div>
 				  								<div class="overlay"><a href="#"></a></div>
 				  							</div>	
 		  								</li>
 		  							</ul>
 		  						</li>
 		  						<li>
-		  							<ul class="cook_slider_inner">
+		  							<ul class="slider_inner">
 		  								<li>
-		  									<div>
-			  									<a href="#">
+		  									<div class="product_box">
+		  										<div class="img">
 				  									<img src="images/img_cook_06.jpg" alt="닭봉 오븐구이 레시피">
-				  									<div class="cook_txt">
-				  										<p>닭봉 오븐구이</p>
-				  										<span>양식 > 구이</span>
-				  									</div>
-			  									</a>
+				  								</div>	
+			  									<div class="cook_txt">
+			  										<p>닭봉 오븐구이</p>
+			  										<span>양식 > 구이</span>
+			  									</div>
 			  									<div class="overlay"><a href="#"></a></div>
 		  									</div>
 		  								</li>
 		  								<li>
-		  									<div>
-			  									<a href="#">
+		  									<div class="product_box">
+		  										<div class="img">
 				  									<img src="images/img_cook_07.jpg" alt="호밀빵 참치샌드위치 레시피">
-				  									<div class="cook_txt">
-				  										<p>호밀빵 참치 샌드위치</p>
-				  										<span>양식 > 빵</span>
-				  									</div>
-			  									</a>
+				  								</div>	
+			  									<div class="cook_txt">
+			  										<p>호밀빵 참치 샌드위치</p>
+			  										<span>양식 > 빵</span>
+			  									</div>
 			  									<div class="overlay"><a href="#"></a></div>
 			  								</div>	
 		  								</li>
 		  								<li>
-		  									<div>
-			  									<a href="#">
+		  									<div class="product_box">
+		  										<div class="img">
 				  									<img src="images/img_cook_08.jpg" alt="증편과 송화밀수 레시피">
-				  									<div class="cook_txt">
-				  										<p>증편과 송화밀수</p>
-				  										<span>한식 > 한과</span>
-				  									</div>
-			  									</a>
+				  								</div>	
+			  									<div class="cook_txt">
+			  										<p>증편과 송화밀수</p>
+			  										<span>한식 > 한과</span>
+			  									</div>
 			  									<div class="overlay"><a href="#"></a></div>
 		  									</div>
 			  							</li>
 			  							<li>
-			  								<div>
-				  								<a href="#">
+			  								<div class="product_box">
+			  									<div class="img">
 				  									<img src="images/img_cook_09.jpg" alt="당면 콩나물 잡채 레시피">
-				  									<div class="cook_txt">
-				  										<p>당면 콩나물 잡채</p>
-				  										<span>한식 > 무침</span>
-				  									</div>
-				  								</a>
+				  								</div>	
+			  									<div class="cook_txt">
+			  										<p>당면 콩나물 잡채</p>
+			  										<span>한식 > 무침</span>
+			  									</div>
 				  								<div class="overlay"><a href="#"></a></div>
 				  							</div>	
 		  								</li>
 		  								<li>
-			  								<div>
-				  								<a href="#">
+			  								<div class="product_box">
+			  									<div class="img">
 				  									<img src="images/img_cook_010.jpg" alt="크랜베리 셔벗 레시피">
-				  									<div class="cook_txt">
-				  										<p>크랜베리 셔벗</p>
-				  										<span>양식 > 음료</span>
-				  									</div>
-				  								</a>
+				  								</div>	
+			  									<div class="cook_txt">
+			  										<p>크랜베리 셔벗</p>
+			  										<span>양식 > 음료</span>
+			  									</div>
 				  								<div class="overlay"><a href="#"></a></div>
 				  							</div>	
 		  								</li>
@@ -499,8 +530,8 @@
 		  						</li>
 		  					</ul>
 		  				</div>
-			  			<div class="cook_btn_prev"></div>
-			  			<div class="cook_btn_next"></div>
+			  			<button type="button" class="cook_btn_prev"></button>
+			  			<button type="button" class="cook_btn_next"></button>
 				  	</div>
 		  		</div>
 		  	</div>	
@@ -526,10 +557,10 @@
 			  	</div>
 			  	<div class="f_sns">
 			  		<ul>
-							<li class="insta"><a href="#">인스타그램 아이콘</a></li>
-							<li class="blog"><a href="#">블로그 아이콘</a></li>
-							<li class="facebook"><a href="#">페이스북 아이콘</a></li>
-							<li class="yutube"><a href="#">유투브 아이콘</a></li>
+							<li class="insta"><a href="#">인스타그램</a></li>
+							<li class="blog"><a href="#">블로그</a></li>
+							<li class="facebook"><a href="#">페이스북</a></li>
+							<li class="yutube"><a href="#">유투브</a></li>
 						</ul>
 			  	</div>
 			  </div>		
@@ -544,15 +575,19 @@
 			  	</div>
 			  	<div class="f_mark">
 			  		<ul>
-						<li class="ssl"><a href="#">SSL인증마크</a></li>
-						<li class="esc"><a href="#">ESCROW INIPAY인증마크</a></li>
-						<li class="ini"><a href="#">INIPAY인증마크</a></li>
+						<li class="ssl"><a href="#">SSL인증</a></li>
+						<li class="esc"><a href="#">ESCROW INIPAY인증</a></li>
+						<li class="ini"><a href="#">INIPAY인증</a></li>
 					</ul>
 			  	</div>
 		  	</div>
 	  	</div>
 	  </footer>
 	  <!-- // Footer -->
+	  <!-- top_scroll -->
+	  <button type="button" class="top_scroll">
+	  	TOP
+	  </button>
 	</div>
 </body>
 </html>
