@@ -11,24 +11,24 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function(){
-			$(".menus").mouseenter(function(){
+			$(".menu_inner").mouseenter(function(){
 				$(".sub_menu").stop().slideDown();
-				$(".toggle_menu").addClass("open");
+				$(".btn_toggle").addClass("open");
 			});
 			$(".menus").mouseleave(function(){
 				$(".sub_menu").hide();
-				$(".toggle_menu").removeClass("open");
+				$(".btn_toggle").removeClass("open");
 			});
-			var tMenu = document.querySelectorAll(".toggle_menu");
+			var tMenu = document.querySelectorAll(".btn_toggle");
 			var sMenu = document.getElementsByClassName("sub_menu");
 			tMenu[0].addEventListener("click",change);
 			function change(){
 			var toggle = tMenu[0].getAttribute("class");
-				if(toggle == "toggle_menu"){
-					tMenu[0].setAttribute("class","toggle_menu open")
+				if(toggle == "btn_toggle"){
+					tMenu[0].setAttribute("class","btn_toggle open")
 					sMenu[0].style.display = "block";
 				}else{
-					tMenu[0].setAttribute("class","toggle_menu");
+					tMenu[0].setAttribute("class","btn_toggle");
 					sMenu[0].style.display = "none";
 				}
 			}
@@ -83,8 +83,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="menu_wrap">
-				<div class="menus">
+			<div class="menu">
+				<div class="menu_inner">
 					<div class="main_menu">
 						<ul>
 							<li>
@@ -106,11 +106,11 @@
 								<a href="#">소개</a>
 							</li>
 						</ul>
-						<div class="toggle_menu">
-							<div class="bar1"></div>
-							<div class="bar2"></div>
-							<div class="bar3"></div>		
-						</div>
+						<button type="button" class="btn_toggle">
+							<span class="bar1"></span>
+							<span class="bar2"></span>
+							<span class="bar3"></span>		
+						</button>
 					</div>
 					<div class="sub_menu">
 						<ul class="s_menu">
@@ -164,56 +164,41 @@
 			</div>
 		</div>
 		<div id="container">
-			<div id="contents">
-		 		<div class="visual">
-		 			<ul class="main_slider">
-		 				<li>
-		 					<a href="#"><img src="images/main_visual01_pc_2.jpg" alt=""></a>
-		 				</li>
-		 				<li>
-		 					<a href="#"><img src="images/main_visual02_pc_2.jpg" alt=""></a>
-		 				</li>
-		 			</ul>
-		 			<div class="slider_move">
-			 			<div class="slider_menu">
-			 				<ul>
-			 					<li>
-			 						<a href="#">
-			 							<div class="sl_me_txt">
-			 								<p class="sl_txt_title">청년정책</p>
-			 								<p>청년이면 누구나 누릴 수 있는 혜택</p>
-			 							</div>
-			 							<div class="sl_me_img">
-			 								<img src="images/icon_quick01_new_2.png" alt="sl_icon">
-			 							</div>
-			 						</a>
-			 					</li>
-			 					<li>
-			 						<a href="#">
-			 							<div class="sl_me_txt">
-			 								<p class="sl_txt_title">청년공간</p>
-			 								<p>팀플 회의공간, 스터디룸, 휴식공간 등 장소정보</p>
-			 							</div>
-			 							<div class="sl_me_img">
-			 								<img src="images/icon_quick02_new_2.png" alt="sl_icon">
-			 							</div>
-			 						</a>
-			 					</li>
-			 					<li>
-			 						<a href="#">
-			 							<div class="sl_me_txt">
-			 								<p class="sl_txt_title">맞춤형 상담</p>
-			 								<p>정책안내부터 진로고민까지 개인 맞춤형 상담</p>
-			 							</div>
-			 							<div class="sl_me_img">
-			 								<img src="images/icon_quick03_new_2.png" alt="sl_icon">
-			 							</div>
-			 						</a>
-			 					</li>
-			 				</ul>
-			 			</div>
-			 		</div>
+			<div class="visual">
+	 			<ul class="main_slider">
+	 				<li>
+	 					<a href="#"><img src="images/main_visual01_pc_2.jpg" alt=""></a>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="images/main_visual02_pc_2.jpg" alt=""></a>
+	 				</li>
+	 			</ul>
+	 			<div class="slider_bottom">
+		 			<div class="bottom_list">
+		 				<ul>
+		 					<li>
+		 						<a href="#">
+	 								<strong>청년정책</strong>
+	 								<p>청년이면 누구나 누릴 수 있는 혜택</p>
+		 						</a>
+		 					</li>
+		 					<li>
+		 						<a href="#">
+	 								<strong>청년공간</strong>
+	 								<p>팀플 회의공간, 스터디룸, 휴식공간 등 장소정보</p>
+		 						</a>
+		 					</li>
+		 					<li>
+		 						<a href="#">
+	 								<strong>맞춤형 상담</strong>
+	 								<p>정책안내부터 진로고민까지 개인 맞춤형 상담</p>
+		 						</a>
+		 					</li>
+		 				</ul>
+		 			</div>
 		 		</div>
+	 		</div>
+			<div id="contents">
 	 			<div class="con_notice">
 	 				<div class="notice_top">
 	 					<div class="notice_title"> <!-- mr35 -->
