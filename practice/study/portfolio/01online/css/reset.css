@@ -50,4 +50,5 @@ table {
 a:link,a:visited{color:#000; text-decoration: none;}
 button{
 	border:0 none;
+	background:none;
 }

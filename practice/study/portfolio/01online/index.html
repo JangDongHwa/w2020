@@ -15,7 +15,7 @@
 				$(".sub_menu").stop().slideDown();
 				$(".btn_toggle").addClass("open");
 			});
-			$(".menus").mouseleave(function(){
+			$(".menu_inner").mouseleave(function(){
 				$(".sub_menu").hide();
 				$(".btn_toggle").removeClass("open");
 			});
@@ -35,7 +35,9 @@
 			$(".main_slider").bxSlider({
 				auto:true,pager:false,controls:false
 			});
-			
+			$(".notice_slider").bxSlider({
+				auto:true,pager:false,controls:false,mode:'vertical'
+			});
 			$(".policy_slider").bxSlider({
 				auto:true,pager:false,controls:false
 			});
@@ -54,6 +56,7 @@
 </head>
 <body>
 	<div id="wrap">
+		<!-- 헤더 시작 -->
 		<div id="header">
 			<div id="header_inner">
 				<div class="header_top">
@@ -88,28 +91,28 @@
 					<div class="main_menu">
 						<ul>
 							<li>
-								<a href="#">청년정책</a>
+								<a href="#"><span class="txt_line">청년정책</span></a>
 							</li>
 							<li>
-								<a href="#">청년공간</a>
+								<a href="#"><span class="txt_line">청년공간</span></a>
 							</li>
 							<li>
-								<a href="#">청년상담실</a>
+								<a href="#"><span class="txt_line">청년상담실</span></a>
 							</li>
 							<li>
-								<a href="#">청년소식</a>
+								<a href="#"><span class="txt_line">청년소식</span></a>
 							</li>
 							<li>
-								<a href="#">청년구직활동지원금</a>
+								<a href="#"><span class="txt_line">청년구직활동지원금</span></a>
 							</li>
 							<li>
-								<a href="#">소개</a>
+								<a href="#"><span class="txt_line">소개</span></a>
 							</li>
 						</ul>
 						<button type="button" class="btn_toggle">
-							<span class="bar1"></span>
-							<span class="bar2"></span>
-							<span class="bar3"></span>		
+							<span class="bar top"></span>
+							<span class="bar middle"></span>
+							<span class="bar bottom"></span>		
 						</button>
 					</div>
 					<div class="sub_menu">
@@ -163,6 +166,8 @@
 				</div>
 			</div>
 		</div>
+		<!-- 헤더 끝 -->
+		<!-- 콘텐츠 시작 -->
 		<div id="container">
 			<div class="visual">
 	 			<ul class="main_slider">
@@ -176,19 +181,19 @@
 	 			<div class="slider_bottom">
 		 			<div class="bottom_list">
 		 				<ul>
-		 					<li>
+		 					<li class="policy_quick">
 		 						<a href="#">
 	 								<strong>청년정책</strong>
 	 								<p>청년이면 누구나 누릴 수 있는 혜택</p>
 		 						</a>
 		 					</li>
-		 					<li>
+		 					<li class="place_quick">
 		 						<a href="#">
 	 								<strong>청년공간</strong>
 	 								<p>팀플 회의공간, 스터디룸, 휴식공간 등 장소정보</p>
 		 						</a>
 		 					</li>
-		 					<li>
+		 					<li class="consult_quick">
 		 						<a href="#">
 	 								<strong>맞춤형 상담</strong>
 	 								<p>정책안내부터 진로고민까지 개인 맞춤형 상담</p>
@@ -198,149 +203,162 @@
 		 			</div>
 		 		</div>
 	 		</div>
-			<div id="contents">
-	 			<div class="con_notice">
-	 				<div class="notice_top">
-	 					<div class="notice_title"> <!-- mr35 -->
-	 						<p><a href="#">새로운 소식</a></p> <!-- w190 -->
+			<div id="notice">
+	 			<div class="contents">
+	 				<div class="notice top">
+	 					<div class="title">
+	 						<h3><a href="#">새로운 소식</a></h3>
 	 					</div>
-	 					<div class="notice_body nt_top_body">
-	 						<span><a href="#">청년구직활동지원금 보고서 심사 관련으로 안내드립니다</a></span>
-	 						<span><a href="#">전국 코로나19 긴급지원정책 종합자료(20.6.25.10:00 ~</a></span>
-	 						<!-- w890 -->
+	 					<div class="txt">
+	 						<p class="new"><a href="#">청년구직활동지원금 보고서 심사 관련으로 안내드립니다.(20.09.24 ~ 20.12.25)</a></p>
+	 						<p class="new"><a href="#">전국 코로나19 긴급지원정책 종합자료(20.6.25.10:00 ~</a></p>
 	 					</div>
-	 					<div class="notice_util">
-	 						<p><a href="#">더보기<span>+</span></a></p><!-- w130 -->
-	 					</div>
+	 					<button type="button" class="btn_detail">
+	 						더보기
+	 					</button>
 	 				</div>
-	 				<div class="notice_bottom">
-	 					<div class="notice_title"> 
-	 						<p><a href="#">청년 핫뉴스</a></p> <!-- w190 -->
+	 				<div class="notice bottom">
+	 					<div class="title"> 
+	 						<h3><a href="#">청년 핫뉴스</a></h3>
 	 					</div>
-	 					<div class="notice_body">
-	 						<span><a href="#">[스토리텔링이 답이다] ②지피지기면 백전백승, 기업을 알고 나를 알아야 면접에서 승리한다</a></span>
-	 						<!-- w890 -->
+	 					<div class="txt">
+	 						<ul class="notice_slider">
+	 							<li>
+			 						<p><a href="#">[스토리텔링이 답이다] ②지피지기면 백전백승, 기업을 알고 나를 알아야 면접에서 승리한다</a></p>
+		 						</li>
+		 						<li>
+			 						<p><a href="#">[알쓸신JOB] 하반기 대졸 신입 채용 ‘금융·전자·통신’은 늘고, ‘여행·항공’ 대폭 줄 것</a></p>
+		 						</li>
+		 						<li>
+			 						<p><a href="#">[합격 비밀노트] 번개장터 신입 2인 “데이터 점수싸움, 인턴 경험으로 업무역량 증명했어요”﻿</a></p>
+		 						</li>
+		 						<li>
+			 						<p><a href="#">[스토리텔링이 답이다] ⑤공백기도 걱정 NO ! 나만의 에피소드 만들기</a></p>
+		 						</li>
+	 						</ul>
 	 					</div>
-	 					<div class="notice_util">
-	 						<p><a href="#">더보기<span>+</span></a></p><!-- w130 -->
-	 					</div>
+	 					<button type="button" class="btn_detail">
+	 						더보기
+	 					</button>
 	 				</div>
 	 			</div>
-		 		<div class="con_poli_wrap">
-		 			<div class="con_policy">
-		 				<div class="con_poli_title">
-		 					<h3>복잡하지? 이거 하나면 돼! <span>'청년정책'</span></h3>
-		 				</div>
-		 				<div class="con_poli_body">
-		 					<div class="poli_body_left">
-		 						<div class="left_list_title">
-		 							<ul>
-		 								<li><a href="#">취업지원</a></li>
-		 								<li><a href="#">창업지원</a></li>
-		 								<li><a href="#">주거ㆍ금융</a></li>
-		 								<li><a href="#">생활ㆍ복지</a></li>
-		 								<li><a href="#">정책참여</a></li>
-		 							</ul>
-		 						</div>
-		 						<div class="left_list_body">
-		 							<ul>
-		 								<li>
-		 									<a href="#">
-		 										<h3>청년구직활동지원금(20년 8월개편)</h3>
-		 										<p>스스로 취업을 준비하는 청년에게 월 50만원씩 최대 6개월 간 지원</p>
-		 									</a>
-		 								</li>
-		 								<li>
-		 									<a href="#">
-		 										<h3>구직청년을 위한 드림체크카드</h3>
-		 										<p>구직청년에게 취업을 위한 직ㆍ간접비 지원(월50만원씩 6개월,최대300만원)</p>
-		 									</a>
-		 								</li>
-		 								<li>
-		 									<a href="#">
-		 										<h3>국민내일배움카드(20년 8월 개편)</h3>
-		 										<p>국민 누구나 일자리에 도움이 되는 훈련을 받을 수 있는 평생능력개발 기반 마련</p>
-		 									</a>
-		 								</li>
-		 								<li>
-		 									<a href="#">
-		 										<h3>취업성공패키지</h3>
-		 										<p>단계별로 차근차근 취업에 성공하자! 상담-능력개발-취업알선 3단계에 걸쳐 취업 지원</p>
-		 									</a>
-		 								</li>
-		 								<li>
-		 									<a href="#">
-		 										<h3>청년고용지원</h3>
-		 										<p>청년고용정책지원</p>
-		 									</a>
-		 								</li>
-		 								<li>
-		 									<a href="#">
-		 										<h3>청년내일배움공제</h3>
-		 										<p>중소ㆍ중견기업 청년 근로자의 장기근속과 자산형성지원</p>
-		 									</a>
-		 								</li>
-		 								<li>
-		 									<a href="#">
-		 										<h3>NCS기반 능력중심 채용 및 공공/민간 블라인드 채용</h3>
-		 										<p>직무능력중심으로 평가하는 블라인드 채용 확산 추진</p>
-		 									</a>
-		 								</li>
-		 								<li>
-		 									<a href="#">
-		 										<h3>경기도 청년일자리 프로젝트</h3>
-		 										<p>해커톤 사업을 통해 선정된 청년일자리 우수아이디어를 20년 정책사업으로 추진하여 청년실업률 해소에 기여</p>
-		 									</a>
-		 								</li>
-		 								<li>
-		 									<a href="#">
-		 										<h3>청년 추가고용장려금 지원사업</h3>
-		 										<p>청년을 정규직으로 추가 고용한 중소ㆍ중견기업 인건비 지급</p>
-		 									</a>
-		 								</li>
-		 							</ul>
-		 						</div>
-		 					</div>
-		 					<div class="poli_body_right">
-		 						<div class="right_slider">
-		 							<ul class="policy_slider">
-		 								<li>
-		 									<a href="#"><img src="images/policy_slider01.png" alt=""></a>
-		 								</li>
-		 								<li>
-		 									<a href="#"><img src="images/policy_slider02.png" alt=""></a>
-		 								</li>
-		 								<li>
-		 									<a href="#"><img src="images/policy_slider03.png" alt=""></a>
-		 								</li>
-		 								<li>
-		 									<a href="#"><img src="images/policy_slider04.png" alt=""></a>
-		 								</li>
-		 								<li>
-		 									<a href="#"><img src="images/policy_slider05.png" alt=""></a>
-		 								</li>
-		 							</ul>
-		 						</div>
-		 						<div class="policy_rank">
-		 							<div class="rank_title">
-		 								<h4>실시간 <span class="font_color">정책순위</span> <span class="font_date">2020.07.03</span></h4>
-		 							</div>
-		 							<div class="rank_body">
-		 								<p class="active">1 청년구직활동지원금 <span></span></p>
-		 								<p>2 구직청년을 위한 드림체크카드<span></span></p>
-		 								<p>3 청년고용지원<span  class="up"></span></p>
-		 								<p>4 취업성공패키지<span class="down"></span></p>
-		 								<p>5 국민내일배움카드<span></span></p>
-		 							</div>
-		 						</div>
-		 					</div>
-		 				</div>
-		 			</div>
+	 		</div>
+	 		<div id="policy" class="section bg">
+		 		<div class="contents">
+	 				<div class="title bottom">
+	 					<h2>복잡하지? 이거 하나면 돼! <span class="blue">'청년정책'</span></h2>
+	 				</div>
+	 				<div class="subject">
+	 					<div class="subject_left">
+	 						<div class="left_list">
+	 							<ul>
+	 								<li><a href="javascript:void(0);">취업지원</a></li>
+	 								<li><a href="javascript:void(0);">창업지원</a></li>
+	 								<li><a href="javascript:void(0);">주거ㆍ금융</a></li>
+	 								<li><a href="javascript:void(0);">생활ㆍ복지</a></li>
+	 								<li><a href="javascript:void(0);">정책참여</a></li>
+	 							</ul>
+	 						</div>
+	 						<div class="left_detail">
+	 							<ul>
+	 								<li>
+	 									<a href="#">
+	 										<strong>청년구직활동지원금(20년 8월개편)</strong>
+	 										<p>스스로 취업을 준비하는 청년에게 월 50만원씩 최대 6개월 간 지원</p>
+	 									</a>
+	 								</li>
+	 								<li>
+	 									<a href="#">
+	 										<strong>구직청년을 위한 드림체크카드</strong>
+	 										<p>구직청년에게 취업을 위한 직ㆍ간접비 지원(월50만원씩 6개월,최대300만원)</p>
+	 									</a>
+	 								</li>
+	 								<li>
+	 									<a href="#">
+	 										<strong>국민내일배움카드(20년 8월 개편)</strong>
+	 										<p>국민 누구나 일자리에 도움이 되는 훈련을 받을 수 있는 평생능력개발 기반 마련</p>
+	 									</a>
+	 								</li>
+	 								<li>
+	 									<a href="#">
+	 										<strong>취업성공패키지</strong>
+	 										<p>단계별로 차근차근 취업에 성공하자! 상담-능력개발-취업알선 3단계에 걸쳐 취업 지원</p>
+	 									</a>
+	 								</li>
+	 								<li>
+	 									<a href="#">
+	 										<strong>청년고용지원</strong>
+	 										<p>청년고용정책지원</p>
+	 									</a>
+	 								</li>
+	 								<li>
+	 									<a href="#">
+	 										<strong>청년내일배움공제</strong>
+	 										<p>중소ㆍ중견기업 청년 근로자의 장기근속과 자산형성지원</p>
+	 									</a>
+	 								</li>
+	 								<li>
+	 									<a href="#">
+	 										<strong>NCS기반 능력중심 채용 및 공공/민간 블라인드 채용</strong>
+	 										<p>직무능력중심으로 평가하는 블라인드 채용 확산 추진</p>
+	 									</a>
+	 								</li>
+	 								<li>
+	 									<a href="#">
+	 										<strong>경기도 청년일자리 프로젝트</strong>
+	 										<p>해커톤 사업을 통해 선정된 청년일자리 우수아이디어를 20년 정책사업으로 추진하여 청년실업률 해소에 기여</p>
+	 									</a>
+	 								</li>
+	 								<li>
+	 									<a href="#">
+	 										<strong>청년 추가고용장려금 지원사업</strong>
+	 										<p>청년을 정규직으로 추가 고용한 중소ㆍ중견기업 인건비 지급</p>
+	 									</a>
+	 								</li>
+	 							</ul>
+	 						</div>
+	 					</div>
+	 					<div class="subject_right">
+	 						<div class="right_slider">
+	 							<ul class="policy_slider">
+	 								<li>
+	 									<a href="#"><img src="images/policy_slider01.png" alt=""></a>
+	 								</li>
+	 								<li>
+	 									<a href="#"><img src="images/policy_slider02.png" alt=""></a>
+	 								</li>
+	 								<li>
+	 									<a href="#"><img src="images/policy_slider03.png" alt=""></a>
+	 								</li>
+	 								<li>
+	 									<a href="#"><img src="images/policy_slider04.png" alt=""></a>
+	 								</li>
+	 								<li>
+	 									<a href="#"><img src="images/policy_slider05.png" alt=""></a>
+	 								</li>
+	 							</ul>
+	 						</div>
+	 						<div class="rank">
+	 							<div class="title">
+	 								<h4>실시간 <span class="font_color">정책순위</span> <span class="font_date">2020.07.03</span></h4>
+	 							</div>
+	 							<div class="rank_body">
+	 								<p class="active">1 청년구직활동지원금 <span></span></p>
+	 								<p>2 구직청년을 위한 드림체크카드<span></span></p>
+	 								<p>3 청년고용지원<span  class="up"></span></p>
+	 								<p>4 취업성공패키지<span class="down"></span></p>
+	 								<p>5 국민내일배움카드<span></span></p>
+	 							</div>
+	 						</div>
+	 					</div>
+	 				</div>
 		 		</div>
-		 		<div class="con_place_wrap">
+		 	</div>
+		 	<div id="place" class="section">
+		 		<div class="contents">
 		 			<div class="con_place">
 		 				<div class="con_place_title">
-		 					<h3>가고싶지? 이거 하나면 돼! <span>'청년공간'</span></h3>
+		 					<h3>가고싶지? 이거 하나면 돼! <span class="green">'청년공간'</span></h3>
 		 					<div class="notice_util place_util">
 		 						<p><a href="#">더보기<span>+</span></a></p>
 		 					</div>
@@ -584,10 +602,12 @@
 		 				</div>
 		 			</div>
 		 		</div>
-		 		<div class="con_consult_wrap">
+		 	</div>
+		 	<div id="consult" class="section bg">
+		 		<div class="contents">
 		 			<div class="con_consult">
 		 				<div class="consult_title">
-		 					<h3>궁금하지? 이거 하나면 돼! <span>'맞춤형 상담'</span></h3>
+		 					<h3>궁금하지? 이거 하나면 돼! <span class="fill">'맞춤형 상담'</span></h3>
 		 				</div>
 		 				<div class="consult_body">
 		 					<ul>
@@ -669,8 +689,10 @@
 		 				</div>
 		 			</div>
 		 		</div>
-			</div> <!-- content -->	
-		</div> <!-- contentswrap -->
+			</div> <!-- section -->	
+		</div> <!-- container -->
+		<!-- 콘텐츠 끝 -->
+		<!-- 푸터 시작 -->
 		<div id="footer_wrap">
 			<div id="footer">
 				<ul>
@@ -718,6 +740,7 @@
 				</ul>
 			</div>
 		</div>
+		<!-- 푸터 끝 -->
 	</div>
 </body>
 </html>
