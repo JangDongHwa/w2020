@@ -123,7 +123,7 @@
 .left_detail ul li a:hover p{padding-left:128px;}
 .left_detail ul li a:hover strong{color:#5e5e5e;}
 .left_detail ul li a:hover p{color:#c0c0c0;}
-.left_detail button{position:absolute; width: 70px; height: 70px; background:url(../images/spr_arrow_btn.png) no-repeat center; top:50%; margin-top:-26px;}
+.left_detail button{position:absolute; width: 70px; height: 70px; background:url(../images/spr_arrow_btn.png) no-repeat center; top:50%; margin-top:-26px; cursor:pointer;}
 .left_detail button.btn_prev{left:0; background-position:0 0;}
 .left_detail button.btn_next{right:0; background-position:-80px 0;}
 .left_detail button.btn_prev:hover{background-position:0 -80px;}
@@ -148,11 +148,6 @@
 .rank_subject li a span.up{margin:-1px 0; border-color:transparent transparent #fa0004 transparent;}
 .rank_subject li a span.down{margin:7px 0; border-color: #0469bb transparent transparent transparent;}
 /*place*/
-.con_place{width: 1280px; margin:0 auto; padding-top:80px;}
-.con_place .con_place_title{padding-bottom:98px;position:relative;}
-.con_place_title h3{text-align:center; font-size:28px; font-weight:bold;}
-.con_place_title h3 span{font-size:32px;color:#32735b;}
-.con_place_title .notice_util.place_util{position:absolute; bottom:0; right:0;}
 .con_place .con_place_body{overflow:hidden; padding-bottom:130px;}
 .con_place_body .place_body_left{float:left;width: 780px;position:relative;}
 .place_body_left .place_slide li a{display:block;}
