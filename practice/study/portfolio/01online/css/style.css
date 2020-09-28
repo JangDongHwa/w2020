@@ -168,7 +168,8 @@ li.slide_content .txt_box p{font-size:12px;font-weight:bold;color:#646567;box-si
 .subject .subject_right{float:left;width: 500px; height:408px;}
 .subject_right .place_map_title{margin-bottom:11px;}
 .subject_right .place_map_title ul:after{content:''; display:block; clear:both;}
-.subject_right .place_map_title ul li{float:left; width:calc(50% - 6px);height: 55px; border:1px solid #e4e3e8; border-radius:2px; box-sizing:border-box; background:#fff; position:relative;}
+.subject_right .place_map_title ul li{float:left; width:calc(50% - 3px);height: 55px; border:1px solid #e4e3e8; border-radius:2px; box-sizing:border-box; background:#fff; position:relative;}
+.subject_right .place_map_title ul li:first-child{margin-right:6px;}
 .subject_right .place_map_title ul li:hover:before{content:'';border-width:20px;border-style:solid; border-color: #2c7c61 transparent transparent transparent; position:absolute; bottom:-30px; left:50%; transform:translateX(-50%);}
 .subject_right .place_map_title ul li a{display:block; text-align:center;line-height:55px; color:#737373; font-weight:bold;}
 .subject_right .place_map_title ul li:hover a{background:#2c7c61; color:#fff;}
