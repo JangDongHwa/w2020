@@ -42,14 +42,18 @@
 				auto:true,pager:false,controls:false
 			});
 			$(".place_slider").bxSlider({
-				auto:true
+				auto:true, autoControls: true
 			});
 			
-			$(".select_box").mouseenter(function(){
-				$(".select_box>ul").addClass("open");
-			});
-			$(".select_box").mouseleave(function(){
-				$(".select_box>ul").removeClass("open");
+			$(".select_box").click(function(){
+				var select = $(".select_box").attr("class");
+				if(select == "select_box"){
+					$(".select_box").addClass("active");
+					$(".select_box ul").addClass("open");
+				}else{
+					$(".select_box").removeClass("active");
+					$(".select_box ul").removeClass("open");
+				}
 			});
 		});
 	</script>
@@ -611,50 +615,58 @@
 		</div>
 		<!-- 콘텐츠 끝 -->
 		<!-- 푸터 시작 -->
-		<div id="footer_wrap">
-			<div id="footer">
-				<ul>
-					<li>
-						<h1><a href="#">Logo</a></h1>
-					</li>
-					<li class="contact">
+		<div id="footer">
+			<div class="contents">
+				<div class="f_logo f_section">
+					<h1><a href="#">Logo</a></h1>
+				</div>
+				<div class="f_contact f_section">
+					<div class="f_title">
 						<h3>CONTACT US</h3>
-						<p>27740 충청북도 음성군 맹동면 태정로6<br> 한국고용정보원</p>
+					</div>
+					<div class="f_txt">
+						<p>27740 충청북도 음성군 맹동면<br>태정로6<br> 한국고용정보원</p>
 						<p>온라인청년센터 시스템관련문의<br>work.kr/kakaoyouths</p>
-					</li>
-					<li class="f_sns">
+					</div>
+				</div>
+				<div class="f_sns f_section">
+					<div class="f_title">
 						<h3>SNS</h3>
+					</div>
+					<div class="f_txt">
 						<ul>
 							<li class="blog"><a href="#">blog</a></li>
 							<li class="insta"><a href="#">insta</a></li>
 							<li class="yutube"><a href="#">yutube</a></li>
 							<li class="facebook"><a href="#">facebook</a></li>
 						</ul>
-					</li>
-					<li class="f_menu">
-						<p>온라인청년센터 소개</p>
-						<p>이용약관</p>
-						<p>개인정보처리방침</p>
-						<p>찾아오시는길</p>
-						<p>오픈 API</p>
-					</li>
-					<li class="link_site">
-						<h3>관련사이트</h3>
-						<div class="select_box">
-							<p>관련사이트</p>
-							<ul>
-								<li><a href="#">고용노동부</a></li>
-								<li><a href="#">한국고용정보원</a></li>
-								<li><a href="#">워크넷</a></li>
-								<li><a href="#">고용보험</a></li>
-								<li><a href="#">HRD-Net</a></li>
+					</div>
+				</div>
+				<div class="f_menu f_section">
+					<p><a href="#">온라인청년센터 소개</a></p>
+					<p><a href="#">이용약관</a></p>
+					<p><a href="#">개인정보처리방침</a></p>
+					<p><a href="#">찾아오시는길</a></p>
+					<p><a href="#">오픈 API</a></p>
+				</div>
+				<div class="f_link f_section">
+					<div class="f_title">
+						<h4>관련사이트</h4>
+					</div>
+					<div class="select_box">
+						<p>관련사이트</p>
+						<ul>
+							<li><a href="#">고용노동부</a></li>
+							<li><a href="#">한국고용정보원</a></li>
+							<li><a href="#">워크넷</a></li>
+							<li><a href="#">고용보험</a></li>
+							<li><a href="#">HRD-Net</a></li>
 						</ul>
-						</div>						
-					</li>
-					<li class="f_mark">
-						mark
-					</li>
-				</ul>
+					</div>
+				</div>
+				<div class="f_mark f_section">
+					mark
+				</div>
 			</div>
 		</div>
 		<!-- 푸터 끝 -->

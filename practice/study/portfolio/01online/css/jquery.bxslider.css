@@ -84,7 +84,6 @@ ul.bxslider {
 }
 /* DIRECTION CONTROLS (NEXT / PREV) */
 .bx-wrapper .bx-prev {
-  left: 5px;
   background: url('../images/spr_arrow_btn.png') no-repeat 0 0;
 }
 .bx-wrapper .bx-prev:hover,
@@ -92,7 +91,7 @@ ul.bxslider {
   background-position: 0 -80px;
 }
 .bx-wrapper .bx-next {
-  right: 5px;
+  right: 10px;
   background: url('../images/spr_arrow_btn.png') no-repeat -80px 0;
 }
 .bx-wrapper .bx-next:hover,
@@ -145,12 +144,10 @@ ul.bxslider {
 }
 /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
 .bx-controls.bx-has-controls-auto.bx-has-pager{
-    position: absolute;
     left: 100px;
     bottom: 21px;
     width: 24%;
     height: 24px;
-    background: rgba(0,0,0,0.2);
     border-radius: 12px;
 }
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
@@ -158,9 +155,8 @@ ul.bxslider {
   bottom: 6px;
 }
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
-  right: 0;
-  bottom: 6px;
-  width: 100%;
+  right: 285px;
+  bottom: 5px;
 }
 /* IMAGE CAPTIONS */
 .bx-wrapper .bx-caption {
