@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* 공통 부분 */
+.range{width:1084px; margin:0 auto;}
+/* header */
+#header{height: 167px; background:gray;}
+
+/* container */
+li.bc_r{background:#e30921;}
+li.bc_p{background:#fdc7c7;}
+li.bc_b{background:#375ed5;}
+li.bc_u{background:#a5003d;}
+.main_slider a{display:block; position:relative;}
+button{width: 21px; height: 35px; position:absolute; top:50%; margin-top:-17px; background:url(../images/spr_slider_btn.png) no-repeat center; cursor:pointer;}
+.btn_prev{background-position:0 0; left:17px;}
+.btn_next{background-position:-31px 0; right:17px;}
