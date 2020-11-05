@@ -84,7 +84,7 @@ ul.bxslider {
 }
 /* DIRECTION CONTROLS (NEXT / PREV) */
 .bx-wrapper .bx-prev {
-  background: url('../images/spr_arrow_btn.png') no-repeat 0 0;
+  background: url('../images/controls.png') no-repeat 0 0;
 }
 .bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-prev:focus {
@@ -92,7 +92,7 @@ ul.bxslider {
 }
 .bx-wrapper .bx-next {
   right: 10px;
-  background: url('../images/spr_arrow_btn.png') no-repeat -80px 0;
+  background: url('../images/controls.png') no-repeat -80px 0;
 }
 .bx-wrapper .bx-next:hover,
 .bx-wrapper .bx-next:focus {

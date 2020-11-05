@@ -47,9 +47,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-a:link,a:visited{color:#000; text-decoration: none;}
+a:link,a:visited{color:#333; text-decoration: none;}
 button{
 	border:0 none;
 	background:none;
 }
-p, h1, h2, h3, h4, h5, h6, span, strong, a{letter-spacing:-2px;}
+address,em{font-style:normal}
+fieldset,input{border:0;}
+legend,.blind{position:absolute;font-size:0;left:-9999px;}
+img{vertical-align:middle}
+button{border:0; background-color:transparent; padding:0; margin:0; cursor:pointer; font-size:14px;}

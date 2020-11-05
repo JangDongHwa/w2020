@@ -1,15 +1,70 @@
 @charset "utf-8";
 /* 공통 부분 */
-html,body{margin:0 auto;}
+html,body{width:100%;height:auto;}
+body{font-family:HelveticaNeue-Regular,AppleSDGothicNeo-Regular,"Malgun Gothic","맑은 고딕",dotum,"돋움",sans-serif;color:#000;font-size:14px;}
+input{font-family:HelveticaNeue-Regular,AppleSDGothicNeo-Regular,"Malgun Gothic","맑은 고딕",dotum,"돋움",sans-serif}
+
 /* header */
-#header{}
-.app_ads{width:100%; height:75px; position:relative; background:#14c0ff;}
-.app_ads .ad_close{width:13px; height:13px; position:absolute; left:5px; top:50%; transform:translateY(-50%); background:url(../images/toggle_x.png) no-repeat 50%;background-size:contain;}
-.app_ads_detail{display:block; width: 360px; height:38px; text-indent:-9999px; background:url(../images/app_ad_img.gif) no-repeat 50%; background-size:cover; margin:0 auto; padding:15px 0;}
-.header_top{padding:13px 18px 0 18px; overflow:hidden;}
+
+#header{position:fixed; width:100%; background:#fff; z-index:100;}
+.app_ads{position:relative; background:#14c0ff;}
+.app_ads .ad_close{width:15px; height:15px; position:absolute; left:5px; top:50%; transform:translateY(-50%); background:url(../images/toggle_x.png) no-repeat 50%;background-size:contain;}
+.app_ads_detail{display:block;height:inherit; text-indent:-9999px; background:url(../images/app_ad_img.gif) no-repeat 50%; background-size:cover; margin:0 auto; padding:35px 0;}
+.header_top{padding:6px 9px 0; overflow:hidden;}
 .logo{float:left;}
 .logo h1{width: 60px; background:url(../images/logo.png) no-repeat; background-size:contain; text-indent:-9999px;}
-.logo h1 a{display:block;}
+.logo h1 a{display:inline-block; vertical-align:middle;}
 .basket{float:right; width: 26px; height: 22px; background:url(../images/basket.svg); background-size:cover;text-indent:-9999px;}
+form{padding:6px 9px 0;}
+fieldset{position:relative; border-bottom:solid #333;}
+fieldset, input{border-width:1px; }
+fieldset input{width:100%; height:36px; background-color:#fafafa; padding:0 20px 0 10px; box-sizing:border-box; border-bottom:solid #969696;}
+fieldset .btn_search{width: 20px; height: 20px; position:absolute; top:8px; right:3px; text-indent:-9999px; background:url(../images/search_icon.svg) no-repeat;background-size:cover;}
+.gnb ul{padding:18px 9px 0; overflow:hidden;}
+.gnb ul li{float:left;padding-left:8px;position:relative;}
+.gnb ul li:first-child{padding-left:0;}
+.gnb ul li:before{content:'';position:absolute; top:-7px; left:50%; margin:0 auto; color:#009fd9;}
+.gnb ul li.dot:before{width:6px;height:6px;border-radius:3px; background:#009fd9;}
+.gnb ul li a{display:inline-block; font-size:20px; font-weight:bold;}
+.gnb ul li.on a{color:#009fd9; border-width:1px; border-bottom:solid #009fd9;}
+.gnb:after{content:'';display:block;width: 100%;height:1px;background:#c5c5c5;}
 
 /* container */
+#container{width:100%; background:#f0f0f0;padding-top:210px;}
+
+/* 메인슬라이드 */
+.main_slider li img{width:100%;}
+.slider_wrap{padding-bottom:18px; background:#fff;}
+
+/* 공통사항 */
+.ad_banner{margin-bottom:6px;}
+.ad_banner img{width:100%;}
+.product_list{margin-bottom:6px;}
+.product_list .thumbnail{position:relative;}
+.product_list img{max-width:100%; height:auto;}
+.product_list .product_info{background:#fff;}
+.product_list .title{font-size:16px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.product_info, .info_detail, .btn_quick_sell{padding-top:9px;}
+.product_info .info_detail{font-size:16px;}
+.info_detail .num{font-size:20px; font-weight:bold;}
+.info_detail .del{text-decoration:line-through; color:#959595;}
+.info_detail .point{color:#ff5c5c;}
+.product_list .btn_quick_sell{background:#fff;}
+.product_list .btn_quick_sell a{display:inline-block; background:#00aee8; color:#fff; min-width:104px; text-align:center; line-height:35px; font-size:15px;} 
+
+/* 타임세일 */
+.product_list{overflow:hidden;}
+.time_sale .product_list li{width:240px; float:left;}
+.thumbnail .time_box{position:absolute; left:5px; bottom:6px;}
+.time_box .now{display:block; height:16px; background:url(../images/spr_time_sale.png) no-repeat; background-size:150px auto; }
+.time_box .now.live{width: 40px; background-position:-79px -85px;}
+.time_box .now.plus{width: 40px; background-position:-79px -67px;}
+.time_box .now.live_after{width: 134px; background-position:0 -34px;}
+.time_box .now.plus_after{width: 134px; background-position:0 -51px;}
+
+/* 퀵메뉴 */
+.quick_menu{width:100%; margin-bottom:6px;}
+.quick_menu ul{font-size:0;}
+.quick_menu li{display:inline-block; width:20%;}
+.quick_menu li a{display:block;}
+.quick_menu li a img{max-width:100%;}
