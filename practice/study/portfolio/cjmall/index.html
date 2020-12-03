@@ -5,13 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Oshopping Smart-CJmall</title>
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/swiper.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/jquery.bxslider.js"></script>
-	<script>
-		
-	</script>
+	<script src="js/swiper.min.js"></script>
 </head>
 <body>
 	<div id="wrap">
@@ -33,17 +30,18 @@
 					<button type="button" class="btn_search">검색버튼</button>
 				</fieldset>
 			</form>
-			<div class="gnb">
-				<ul>
-					<li><a href="#a">다음방송</a></li>
-					<li class="on"><a href="#a">홈</a></li>
-					<li><a href="#a">오늘의딜</a></li>
-					<li class="dot"><a href="#a">20%혜택</a></li>
-					<li><a href="#a">셀렙샵</a></li>
-					<li><a href="#a">올리브마켓</a></li>
-					<li><a href="#a">요즘뷰티</a></li>
-					<li class="dot"><a href="#a">칼라거펠트</a></li>
-					<li><a href="#a">아울렛</a></li>
+			<div class="gnb swiper-container" id="swiperGnb">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide"><a href="#a">다음방송</a></li>
+					<li class="on swiper-slide"><a href="#a">홈</a></li>
+					<li class="swiper-slide"><a href="#a">오늘의딜</a></li>
+					<li class="dot swiper-slide"><a href="#a">20%혜택</a></li>
+					<li class="swiper-slide"><a href="#a"><span class="gnb_point">패션</span> 셀렙샵</a></li>
+					<li class="swiper-slide"><a href="#a"><span  class="gnb_point">리빙&푸드</span> 올리브마켓</a></li>
+					<li class="swiper-slide"><a href="#a"><span  class="gnb_point">뷰티전문관</span> 요즘뷰티</a></li>
+					<li class="dot swiper-slide"><a href="#a">칼라거펠트</a></li>
+          <li class="swiper-slide"><a href="#a"><span  class="gnb_point">코리아세일페스타</span> 아울렛</a></li>
+          <li class="swiper-slide"><a href="#a">쿠폰&혜택</a></li>
 				</ul>
 			</div>
 		</div>
@@ -51,28 +49,30 @@
 			<div class="ad_banner">
 				<img src="images/adv_img01.jpg" alt="TV상품 3회 구매시 최대 5만원 적립">
 			</div>
-			<div class="slider_wrap">
-				<ul class="main_slider">
-					<li>
+			<div class="swiper-container" id="swiperMain">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide">
 						<a href="#a"><img src="images/main_slider_img01.jpg" alt="오늘의 TOP BRAND"></a>
 					</li>
-					<li>
+					<li class="swiper-slide">
 						<a href="#a"><img src="images/main_slider_img02.jpg" alt="가을에 신기좋은 부츠아이템"></a>
 					</li>
-					<li>
+					<li class="swiper-slide">
 						<a href="#a"><img src="images/main_slider_img03.jpg" alt="최화정 SHOW"></a>
 					</li>
-					<li>
+					<li class="swiper-slide">
 						<a href="#a"><img src="images/main_slider_img04.jpg" alt="올리브마켓 X 브리타"></a>
 					</li>
-					<li>
+					<li class="swiper-slide">
 						<a href="#a"><img src="images/main_slider_img05.jpg" alt="우리집 가을준비 언택트로 하자"></a>
 					</li>
 				</ul>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
 			</div>
-			<div class="time_sale">
-				<ul class="product_list">
-					<li>
+			<div class="time_sale swiper-container" id="swiperSale">
+				<ul class="product_list swiper-wrapper">
+					<li class="swiper-slide">
 						<a href="#a">
 							<div class="thumbnail">
 								<img src="images/time_sale_img01.jpg" alt="코칸 무선 핸디형 청소기 1+1세트">
@@ -82,35 +82,39 @@
 							</div>
 							<div class="product_info">
 								<p class="title">[1사1명품]코칸 무선 핸디형 청소기 1+1세트</p>
-								<span class="info_detail">
-									<span class="num">98,800</span>원~<span class="del">99,800원~</span> <span class="point">1%</span>
-								</span>
+                <div class="prd_price">
+                  <span class="info_detail">
+                    <span class="num">98,800</span>원~<span class="del">99,800원~</span> <span class="point">1%</span>
+                  </span>
+                </div>
 							</div>
 						</a>
-						<div class="btn_quick_sell">
+            <div class="btn_quick_sell">
 							<a href="#a">바로구매</a>
 						</div>
 					</li>
-					<li>
+					<li class="swiper-slide">
 						<a href="#a">
 							<div class="thumbnail">
-								<img src="images/time_sale_img02.jpg" alt="지스튜디오 20FW톨레뇨社원사울100%니트+숄세트">
-								<div class="time_box">
-									<span class="now plus"></span>
-								</div>
+                <img src="images/time_sale_img02.jpg" alt="지스튜디오 20FW톨레뇨社원사울100%니트+숄세트">
+                <div class="time_box">
+                  <span class="now plus"></span>
+                </div>
 							</div>
 							<div class="product_info">
-								<p class="title">[최초2만원인하]지스튜디오 20FW 톨레뇨社원사울100%니트+숄세트)</p>
-								<span class="info_detail">
-									<span class="num">129,000</span>원~
-								</span>
+                <p class="title">[최초2만원인하]지스튜디오 20FW 톨레뇨社원사울100%니트+숄세트)</p>
+                <div class="prd_price">
+                  <span class="info_detail">
+                    <span class="num">129,000</span>원~
+                  </span>
+                </div>
 							</div>
-						</a>
+            </a>    
 						<div class="btn_quick_sell">
 							<a href="#a">바로구매</a>
 						</div>
 					</li>
-					<li>
+					<li class="swiper-slide">
 						<a href="#a">
 							<div class="thumbnail">
 								<img src="images/time_sale_img03.jpg" alt="역전회관 손질통낙지 280g4미X4팩+280g5미X4팩/총8팩+소스320g">
@@ -119,17 +123,19 @@
 								</div>
 							</div>
 							<div class="product_info">
-								<p class="title">역전회관 손질통낙지 280g4미X4팩+280g5미X4팩/총8팩+소스320g</p>
-								<span class="info_detail">
-									<span class="num">59,900</span>원~<span class="del">60,900원~</span> <span class="point">2%</span>
-								</span>
+                <p class="title">역전회관 손질통낙지 280g4미X4팩+280g5미X4팩/총8팩+소스320g</p>
+                <div class="prd_price">
+                  <span class="info_detail">
+                    <span class="num">59,900</span>원~<span class="del">60,900원~</span> <span class="point">2%</span>
+                  </span>
+                </div>
 							</div>
 						</a>
 						<div class="btn_quick_sell">
 							<a href="#a">바로구매</a>
 						</div>
 					</li>
-					<li>
+					<li class="swiper-slide">
 						<a href="#a">
 							<div class="thumbnail">
 								<img src="images/time_sale_img04.jpg" alt="맛있는 유기농 곡물한잔 20gx30 2박스">
@@ -138,10 +144,12 @@
 								</div>
 							</div>
 							<div class="product_info">
-								<p class="title">맛있는 유기농 곡물한잔 20gx30 2박스</p>
-								<span class="info_detail">
-									<span class="num">30,900</span>원~<span class="del">31,900원~</span> <span class="point">3%</span>
-								</span>
+                <p class="title">맛있는 유기농 곡물한잔 20gx30 2박스</p>
+                <div class="prd_price">
+                  <span class="info_detail">
+                    <span class="num">30,900</span>원~<span class="del">31,900원~</span> <span class="point">3%</span>
+                  </span>
+                </div>
 							</div>
 						</a>
 						<div class="btn_quick_sell">
@@ -182,19 +190,407 @@
 			<div class="ad_banner">
 				<img src="images/adv_img02.jpg" alt="PRE-WINTER 최초 공개! 최신상 패션 ITEM">
 			</div>
+			<div class="prd_today swiper-container swiperToday">
+					<div class="today_bg">
+						<a href="#a"><img src="images/prd_today_bg01.jpg" alt="오늘의 TOP BRAND g스튜딩오 13% 적립 + 7% 카드할인"></a>
+					</div>
+					<ul class="product_list swiper-wrapper">
+						<li class="swiper-slide">
+							<a href="#a">
+								<div class="thumbnail">
+									<img src="images/prd_today01.jpg" alt="[지스튜디오]20FW 헝가리 구스다운 자켓+머플러">
+								</div>
+								<div class="product_info">
+									<p class="prd_title">
+										[지스튜디오]20FW 헝가리 구스다운 자켓+머플러
+									</p>
+									<div class="prd_price">
+										<span class="info_detail"><span class="num">129,000</span>원~</span>
+									</div>
+									<div class="prd_deco">
+										<span class="bedge_type_1">무이자6</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="#a">
+								<div class="thumbnail">
+									<img src="images/prd_today02.jpg" alt="[지스튜디오]20FW 헝가리 구스다운 코트+머플러">
+								</div>
+								<div class="product_info">
+									<p class="prd_title">
+										[지스튜디오]20FW 헝가리 구스다운 코트+머플러
+									</p>
+									<div class="prd_price">
+										<span class="info_detail"><span class="num">169,000</span>원~</span>
+									</div>
+									<div class="prd_deco">
+										<span class="bedge_type_1">무이자6</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="#a">
+								<div class="thumbnail">
+									<img src="images/prd_today03.jpg" alt="[지스튜디오] 20FW 유럽산 소재 무스탕코트">
+								</div>
+								<div class="product_info">
+									<p class="prd_title">
+										[지스튜디오] 20FW 유럽산 소재 무스탕코트
+									</p>
+									<div class="prd_price">
+										<span class="info_detail"><span class="num">599,000</span>원~</span>
+									</div>
+									<div class="prd_deco">
+										<span class="bedge_type_1">무이자12</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="#a">
+								<div class="thumbnail">
+									<img src="images/prd_today04.jpg" alt="[일시불2만원][지스튜디오] 20FW 트위드체크 코트">
+								</div>
+								<div class="product_info">
+									<p class="prd_title">
+										[일시불2만원][지스튜디오] 20FW 트위드체크 코트
+									</p>
+									<div class="prd_price">
+										<span class="info_detail"><span class="num">79,000</span>원~</span>
+									</div>
+									<div class="prd_deco">
+										<span class="bedge_type_1">무이자3</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="#a">
+								<div class="thumbnail">
+									<img src="images/prd_today05.jpg" alt="[최초10만원인하][지스튜디오] 20FW 이태리 컬렉션 코트">
+								</div>
+								<div class="product_info">
+									<p class="prd_title">
+										[최초10만원인하][지스튜디오] 20FW 이태리 컬렉션 코트
+									</p>
+									<div class="prd_price">
+										<span class="info_detail"><span class="num">199,000</span>원~</span>
+									</div>
+									<div class="prd_deco">
+										<span class="bedge_type_1">무이자6</span>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+			</div>
+			<div class="ad_banner ad_gap">
+				<img src="images/adv_list01.jpg" alt="역대최다! 다이내믹브레인 풀패키지">
+			</div>
+			<div class="ad_banner ad_gap">
+				<img src="images/adv_list02.jpg" alt="품격있는 TV 영어 교육맛집">
+			</div>
+			<div class="ad_banner ad_gap">
+				<img src="images/adv_list03.jpg" alt="세제/탈취제 생활용품 BEST">
+			</div>
+			<div class="ad_banner">
+				<img src="images/adv_list04.jpg" alt="A형 리뉴얼 + 기존 A형 재고 소진">
+			</div>
+			<div class="sale_info">
+				<div class="sale_info_box">
+					<img src="images/sale_info01.jpg" alt="">
+				</div>
+				<div class="sale_info_box">
+					<img src="images/sale_info02.jpg" alt="">
+				</div>
+				<div class="sale_info_box">
+					<img src="images/sale_info03.jpg" alt="">
+				</div>
+			</div>
+      <div class="prd_sell">
+        <ul class="product_list item_line">
+          <li>
+            <a href="#">
+              <div class="thumbnail">
+                <img src="images/product_list_img01.jpg" alt="[2020 김장시즌]MD방문상품 해남/괴산 절임배추 外">
+              </div>
+              <div class="product_info">
+                <p class="title">
+                  [2020 김장시즌]MD방문상품 해남/괴산 절임배추 外
+                </p>
+                <div class="prd_price">
+                  <span class="info_detail"><span class="num">34,900</span>원~</span>
+                  <span class="count">5,288개 구매</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#a">
+              <div class="thumbnail">
+                <img src="images/product_list_img02.jpg" alt="2020 NEW 블루래빗 첫 토이북 총 111종_원목블록+토끼인형+수면인형">
+                <span class="flag">TV</span>
+              </div>
+              <div class="product_info">
+                <p class="title">
+                  2020 NEW 블루래빗 첫 토이북 총 111종_원목블록+토끼인형+수면인형
+                </p>
+                <div class="prd_price">
+                <span class="info_detail"><span class="num">369,000</span>원~</span>
+                </div>
+                <div class="prd_deco">
+                  <span class="bedge_type_1">무료배송</span>
+                  <span class="bedge_type_2">카드할인7%</span>
+                </div>
+              </div>
+            </a>
+					</li>
+					<li>
+            <a href="#a">
+              <div class="thumbnail">
+                <img src="images/product_list_img03.jpg" alt="
+								[한샘] 키친/바스/중문 등 시공 혜택">
+              </div>
+              <div class="product_info">
+                <p class="title">
+                  [한샘] 키친/바스/중문 등 시공 혜택
+                </p>
+                <div class="prd_price">
+									<span class="info_detail">
+										<span class="num">66,640</span>원~<span class="del">68,000원</span>
+									</span>
+									<span class="count">45개 구매</span>
+                </div>
+              </div>
+            </a>
+					</li>
+					<li>
+            <a href="#a">
+              <div class="thumbnail">
+                <img src="images/product_list_img04.jpg" alt="
+								알레르망 펠러 폴란드구스속통 S/Q/K [솜털 90%]">
+              </div>
+              <div class="product_info">
+                <p class="title">
+                  알레르망 펠러 폴란드구스속통 S/Q/K [솜털 90%]
+                </p>
+                <div class="prd_price">
+									<span class="info_detail">
+										<span class="num">430,000</span>원~
+									</span>
+									<span class="count">49개 구매</span>
+                </div>
+                <div class="prd_deco">
+                  <span class="bedge_type_2">최대적립10%</span>
+                  <span class="bedge_type_2">카드할인5%</span>
+                </div>
+              </div>
+            </a>
+					</li>
+					<li>
+            <a href="#a">
+              <div class="thumbnail">
+                <img src="images/product_list_img05.jpg" alt="
+								[청소포 총 46종] 휴스톰 최신 무선 물걸레청소기 HS-10000">
+								<span class="flag">TV</span>
+              </div>
+              <div class="product_info">
+                <p class="title">
+                  [청소포 총 46종] 휴스톰 최신 무선 물걸레청소기 HS-10000
+                </p>
+                <div class="prd_price">
+									<span class="info_detail">
+										<span class="num">199,000</span>원~<span class="del">219,000원</span>
+									</span>
+									<span class="count">700개 구매</span>
+                </div>
+                <div class="prd_deco">
+                  <span class="bedge_type_1">무료배송</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+			</div>
+			<div class="menu_icon">
+				<ul>
+					<li class="icon_home">
+						<a href="#a">
+							홈
+						</a>
+					</li>
+					<li class="icon_menu">
+						<a href="#a">
+							메뉴
+						</a>
+					</li>
+					<li class="icon_table">
+						<a href="#a">
+							편성표
+						</a>
+					</li>
+					<li class="icon_zone">
+						<a href="#a">
+							마이존
+						</a>
+					</li>
+					<li class="icon_prd">
+						<a href="#a">
+							최근본상품
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<div id="footer">
-			
+			<div class="f_gnb">
+				<ul>
+					<li>
+						<a href="#a">
+							고객센터
+						</a>
+					</li>
+					<li>
+						<a href="#a">
+							로그인
+						</a>
+					</li>
+					<li>
+						<a href="#a">
+							APP설치
+						</a>
+					</li>
+					<li>
+						<a href="#a">
+							PC버전
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="f_policy">
+				<div class="f_adress">
+					<p>
+						(주)씨제이이엔엠 대표이사 허민회, 허민호
+					</p>
+					<p>
+						주소 : 06761 서울시 서초구 과천대로 870-13
+					</p>
+					<p>
+						<span>
+							호스팅제공자 : (주)CJ ENM 
+						</span>
+						<span>
+							사업자등록번호 : 106-81-51510
+						</span>
+					</p>
+					<p>
+						<span>
+							통신판매업신고 : 서초 제 000015호 
+						</span>
+						<span>
+							개인정보관리책임자 : IT담당 김유정
+						</span>
+					</p>
+					<p>
+						<span>
+							이메일 : webmaster@cjmall.com 
+						</span>
+						<span>
+							<a href="#a">1644-2525</a>(유료)
+						</span>
+					</p>
+				</div>
+				<div class="f_link f_gap">
+					<a href="#a">
+						회사소개
+					</a>
+					<a href="#a">
+						사업자정보확인
+					</a>
+					<a href="#a" class="f_link_point">
+						개인정보처리방침
+					</a>
+					<a href="#a">
+						정기배송
+					</a>
+					<a href="#a">
+						이용약관
+					</a>
+					<a href="#a">
+						청소년보호정책
+					</a>
+					<a href="#a">
+						법적고지
+					</a>
+					<a href="#a">
+						국민은행구매안전서비스
+					</a>
+					<a href="#a">
+						오픈소스라이선스고지
+					</a>
+				</div>
+				<div class="f_notice f_gap">
+					<p>
+						CJmall 내 판매 상품 중 일부는 개별 판매자의 상품이 포함되어있고, 이 경우
+						CJ ENM 은 통신판매의 당사자가 아니므로 해당 상품, 거래정보 및 거래에
+						대하여는 개별 판매자에 책임이 있습니다.
+					</p>
+				</div>
+				<div class="f_copy">
+					<p>Copyright(C) CJ ENM All Rights Reserved.</p>
+				</div>
+			</div>
 		</div>
+		<button type="button" class="top_scroll">
+			맨 위로
+		</button>
 	</div>
 	<script>
-		$(function(){
-			$(".main_slider").bxSlider({
-				auto:true,
-				controls:false,
-				pager:false
+    $(function(){
+      $(".ad_close").click(function(){
+        $(".app_ads").hide();
+        $("#container").addClass("on")
+      });
+			var win_height = $(document).height();
+			$(window).scroll(function(){
+				var scrollY = $(window).scrollTop();
+				if(win_height/15 < scrollY){
+					$(".top_scroll").addClass("on");
+				}else{
+					$(".top_scroll").removeClass("on");
+				}
 			});
-		});
+			$(".top_scroll").click(function(){
+				$("html,body").animate({scrollTop:0},300);
+			});
+    });
+    var swiper = new Swiper('#swiperGnb', {
+      slidesPerView: 'auto',
+      freeMode: true,
+    });
+    var swiper = new Swiper('#swiperSale', {
+      slidesPerView: 'auto',
+      spaceBetween: 12,
+      freeMode: true,
+    });
+    var swiper = new Swiper('#swiperMain', {
+      autoplay: {
+        delay: 3000,
+      },
+      loop:'true',
+			pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      }    
+    });
+		var swiper = new Swiper('.swiperToday', {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      freeMode: true,
+    });
 	</script>
 </body>
 </html>
