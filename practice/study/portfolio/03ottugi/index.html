@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>삼양맛샵</title>
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/swiper.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/jquery.bxslider.js"></script>	
+	<script src="js/swiper.min.js"></script>	
 </head>
 <body>
 	<div id="wrap">
@@ -70,32 +70,40 @@
 		  		<div class="section_company">
 		  			<ul>
 		  				<li class="mall">
-		  					<a href="#">
-		  						<h4>삼양맛샵</h4>
-		  						<p>바로가기</p>
-		  						<span>more></span>
-		  					</a>
+                <div class="inner">
+                  <a href="#">
+                    <h4>삼양맛샵</h4>
+                    <p>바로가기</p>
+                    <span>more></span>
+                  </a>
+                </div>
 		  				</li>
 		  				<li class="share">
-		  					<a href="#">
-		  						<h4>나눔미학</h4>
-		  						<p>사회공헌</p>
-		  						<span>more></span>
-		  					</a>
+                <div class="inner">
+                  <a href="#">
+                    <h4>나눔미학</h4>
+                    <p>사회공헌</p>
+                    <span>more></span>
+                  </a>
+                </div>
 		  				</li>
 		  				<li class="future">
-		  					<a href="#">
-		  						<h4>미래가치</h4>
-		  						<p>투자정보</p>
-		  						<span>more></span>
-		  					</a>
+                <div class="inner">
+                  <a href="#">
+                    <h4>미래가치</h4>
+                    <p>투자정보</p>
+                    <span>more></span>
+                  </a>
+                </div>
 		  				</li>
 		  				<li class="nature">
-		  					<a href="#">
-		  						<h4>자연과함께</h4>
-		  						<p>환경경영</p>
-		  						<span>more></span>
-		  					</a>
+                <div class="inner">
+                  <a href="#">
+                    <h4>자연과함께</h4>
+                    <p>환경경영</p>
+                    <span>more></span>
+                  </a>
+                </div>
 		  				</li>
 		  			</ul>
 		  		</div>
@@ -144,10 +152,10 @@
 		  			<div class="title_type_a">
 			  			<h3><a href="#">이벤트</a></h3>
 		  			</div>
-		  			<div class="event_banner">
-			  			<ul class="event_slider">
-			  				<li><a href="#"><img src="images/banner_event_01.png" alt="불닭소스 이벤트"></a></li>
-			  				<li><a href="#"><img src="images/banner_event_02.jpg" alt="신규가입 이벤트"></a></li>
+		  			<div class="event_banner swiper-container" id="slideEvent">
+			  			<ul class="event_slider swiper-wrapper">
+			  				<li class="swiper-slide"><a href="#"><img src="images/banner_event_01.png" alt="불닭소스 이벤트"></a></li>
+			  				<li class="swiper-slide"><a href="#"><img src="images/banner_event_02.jpg" alt="신규가입 이벤트"></a></li>
 			  			</ul>
 			  		</div>
 		  		</div>
@@ -157,32 +165,40 @@
 		  			<div class="title_type_a">
 			  			<h3><a href="#">신제품 소개</a></h3>
 		  			</div>
-		  			<div class="new_goods">
-		  				<ul class="new_slider">
-		  					<li>
+		  			<div class="new_goods swiper-container" id="slideGoods">
+		  				<ul class="new_slider swiper-wrapper">
+		  					<li class="swiper-slide">
 		  						<a href="#">
-			  						<img src="images/img_goods_01.jpg" alt="삼양목장 넹인형">
+                    <div class="img_box">
+                      <img src="images/img_goods_01.jpg" alt="삼양목장 넹인형">
+                    </div>
 			  						<p>삼양목장 넹인형</p>
 			  						<div class="icon">NEW</div>
 		  						</a>
 		  					</li>
-		  					<li>
+		  					<li class="swiper-slide">
 		  						<a href="#">
-			  						<img src="images/img_goods_02.jpg" alt="삼양라면 유선노트">
+                    <div class="img_box">
+                      <img src="images/img_goods_02.jpg" alt="삼양라면 유선노트">
+                    </div>
 			  						<p>삼양라면 유선노트</p>
 			  						<div class="icon">NEW</div>
 		  						</a>
 		  					</li>
-		  					<li>
+		  					<li class="swiper-slide">
 		  						<a href="#">
-			  						<img src="images/img_goods_03.jpg" alt="불닭라면기(큰컵)">
+                    <div class="img_box">
+                      <img src="images/img_goods_03.jpg" alt="불닭라면기(큰컵)">
+                    </div>
 			  						<p>불닭라면기(큰컵)</p>
 			  						<div class="icon">NEW</div>
 			  					</a>	
 		  					</li>
-		  					<li>
+		  					<li class="swiper-slide">
 		  						<a href="#">
-			  						<img src="images/img_goods_04.jpg" alt="2080호치치약 100g">
+                    <div class="img_box">
+                      <img src="images/img_goods_04.jpg" alt="2080호치치약 100g">
+                    </div>
 			  						<p>2080 호치치약</p>
 			  						<div class="icon">NEW</div>
 			  					</a>	
@@ -191,7 +207,7 @@
 		  			</div>
 		  			<div class="new_source">
 		  				<a href="#">
-		  					<div class="img">
+		  					<div class="img_box">
 			  					<img src="images/img_product_new.png" alt="불닭소스 4종">
 		  					</div>
 			  				<div class="icon">NEW</div>
@@ -207,299 +223,283 @@
 	  	</div>
 	  	<!-- hot -->
 	  	<div class="section bg_img">
-	  		<div class="section_inner">
-		  		<div class="section_hot">
-		  			<div class="title_type_b">
-				  		<h3>삼양 인기상품</h3>
-				  		<p>삼양의 인기상품들을 소개합니다.</p>
-				  	</div>
-				  	<div class="hot_body">	
-		  				<div class="hot_product">
-		  					<ul class="hot_slider">
-		  						<li>
-		  							<ul class="slider_inner">
-		  								<li>
-		  									<div class="product_box">
-		  										<div class="img">
-				  									<img src="images/img_product_01.png" alt="크림까르보 불닭볶음면">
-			  									</div>
-			  									<div class="hot_txt">
-			  										<p>크림까르보 불닭볶음면</p>
-			  										<span>봉지면</span>
-			  									</div>
-			  									<div class="overlay"><a href="#"></a></div>
-		  									</div>
-		  								</li>
-		  								<li>
-		  									<div class="product_box">
-		  										<div class="img">
-				  									<img src="images/img_product_02.png" alt="바비큐치킨맛 볶음면">
-			  									</div>
-			  									<div class="hot_txt">
-			  										<p>바비큐치킨맛 볶음면</p>
-			  										<span>용기면 </span>
-			  									</div>
-			  									<div class="overlay"><a href="#"></a></div>
-			  								</div>	
-		  								</li>
-		  								<li>
-		  									<div class="product_box">
-		  										<div class="img">
-				  									<img src="images/img_product_03.png" alt="불닭 비빔면">
-				  								</div>
-			  									<div class="hot_txt">
-			  										<p>불닭 비빔면</p>
-			  										<span>봉지면</span>
-			  									</div>
-			  									<div class="overlay"><a href="#"></a></div>
-		  									</div>
-			  							</li>
-			  							<li>
-			  								<div class="product_box">
-			  									<div class="img">
-				  									<img src="images/img_product_04.png" alt="까르보불닭 소스">
-				  								</div>
-			  									<div class="hot_txt">
-			  										<p>까르보불닭 소스</p>
-			  										<span>소스류</span>
-			  									</div>
-				  								<div class="overlay"><a href="#"></a></div>
-				  							</div>	
-		  								</li>
-		  								<li>
-			  								<div class="product_box">
-			  									<div class="img">
-				  									<img src="images/img_product_05.png" alt="크림불닭 파스타소스">
-				  								</div>
-			  									<div class="hot_txt">
-			  										<p>크림불닭 파스타소스</p>
-			  										<span>소스류</span>
-			  									</div>
-				  								<div class="overlay"><a href="#"></a></div>
-				  							</div>	
-		  								</li>
-		  							</ul>
-		  						</li>
-		  						<li>
-		  							<ul class="slider_inner">
-		  								<li>
-		  									<div class="product_box">
-		  										<div class="img">
-				  									<img src="images/img_product_06.png" alt="훈제란">
-				  								</div>
-			  									<div class="hot_txt">
-			  										<p>훈제란</p>
-			  										<span>디저트/간편식</span>
-			  									</div>
-			  									<div class="overlay"><a href="#"></a></div>
-		  									</div>
-		  								</li>
-		  								<li>
-		  									<div class="product_box">
-		  										<div class="img">
-				  									<img src="images/img_product_07.png" alt="사또밥">
-				  								</div>
-			  									<div class="hot_txt">
-			  										<p>사또밥</p>
-			  										<span>스낵</span>
-			  									</div>
-			  									<div class="overlay"><a href="#"></a></div>
-			  								</div>	
-		  								</li>
-		  								<li>
-		  									<div class="product_box">
-		  										<div class="img">
-				  									<img src="images/img_product_08.png" alt="초코 뽀빠이바">
-				  								</div>
-			  									<div class="hot_txt">
-			  										<p>초코 뽀빠이바</p>
-			  										<span>스낵</span>
-			  									</div>
-			  									<div class="overlay"><a href="#"></a></div>
-		  									</div>
-			  							</li>
-			  							<li>
-			  								<div class="product_box">
-			  									<div class="img">
-				  									<img src="images/img_product_09.png" alt="뿌셔먹는 라면스낵 불닭">
-				  								</div>
-			  									<div class="hot_txt">
-			  										<p>뿌셔먹는 라면스낵 불닭</p>
-			  										<span>스낵</span>
-			  									</div>
-				  								<div class="overlay"><a href="#"></a></div>
-				  							</div>	
-		  								</li>
-		  								<li>
-			  								<div class="product_box">
-			  									<div class="img">
-				  									<img src="images/img_product_010.png" alt="삼계탕">
-				  								</div>
-			  									<div class="hot_txt">
-			  										<p>삼계탕</p>
-			  										<span>디저트/간편식</span>
-			  									</div>
-				  								<div class="overlay"><a href="#"></a></div>
-				  							</div>	
-		  								</li>
-		  							</ul>
-		  						</li>
-		  					</ul>
-		  				</div>
-			  			<button type="button" class="hot_btn_prev"></button>
-			  			<button type="button" class="hot_btn_next"></button>
-				  	</div>
-		  		</div>
-		  	</div>	
-	  	</div>
+				<div class="section_inner">
+					<div class="section_hot">
+						<div class="title_type_b">
+							<h3>삼양 인기상품</h3>
+							<p>삼양의 인기상품들을 소개합니다.</p>
+						</div>
+						<div class="hot_prd_wrap">
+							<div class="hot_product swiper-container" id="slideHotItem">
+								<ul class="slider_inner swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_product_01.png" alt="크림까르보 불닭볶음면">
+                      </div>
+                      <div class="prd_txt">
+                        <p>크림까르보 불닭볶음면</p>
+                        <span class="prd_detail">봉지면</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_product_02.png" alt="바비큐치킨맛 볶음면">
+                      </div>
+                      <div class="prd_txt">
+                        <p>바비큐치킨맛 볶음면</p>
+                        <span class="prd_detail">용기면 </span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_product_03.png" alt="불닭 비빔면">
+                      </div>
+                      <div class="prd_txt">
+                        <p>불닭 비빔면</p>
+                        <span class="prd_detail">봉지면</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_product_04.png" alt="까르보불닭 소스">
+                      </div>
+                      <div class="prd_txt">
+                        <p>까르보불닭 소스</p>
+                        <span class="prd_detail">소스류</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_product_05.png" alt="크림불닭 파스타소스">
+                      </div>
+                      <div class="prd_txt">
+                        <p>크림불닭 파스타소스</p>
+                        <span class="prd_detail">소스류</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_product_06.png" alt="훈제란">
+                      </div>
+                      <div class="prd_txt">
+                        <p>훈제란</p>
+                        <span class="prd_detail">디저트/간편식</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_product_07.png" alt="사또밥">
+                      </div>
+                      <div class="prd_txt">
+                        <p>사또밥</p>
+                        <span class="prd_detail">스낵</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_product_08.png" alt="초코 뽀빠이바">
+                      </div>
+                      <div class="prd_txt">
+                        <p>초코 뽀빠이바</p>
+                        <span class="prd_detail">스낵</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_product_09.png" alt="뿌셔먹는 라면스낵 불닭">
+                      </div>
+                      <div class="prd_txt">
+                        <p>뿌셔먹는 라면스낵 불닭</p>
+                        <span class="prd_detail">스낵</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_product_010.png" alt="삼계탕">
+                      </div>
+                      <div class="prd_txt">
+                        <p>삼계탕</p>
+                        <span class="prd_detail">디저트/간편식</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                </ul>
+                <button type="button" class="swiper-button-prev"></button>
+							  <button type="button" class="swiper-button-next"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 	  	<!-- // hot -->
 	  	<!-- cook -->
 	  	<div class="section bg">
-	  		<div class="section_inner">
-		  		<div class="section_cook">
-		  			<div class="title_type_b">
-				  		<h3>쿠킹&스토리</h3>
-				  		<p>삼양 레시피와 활용 팁을 소개합니다.</p>
-				  	</div>
-				  	<div class="cook_body">	
-		  				<div class="cook_product">
-		  					<ul class="cook_slider">
-		  						<li>
-		  							<ul class="slider_inner">
-		  								<li>
-		  									<div class="product_box">
-		  										<div class="img">
-				  									<img src="images/img_cook_01.jpg" alt="멸치장국국수 레시피">
-			  									</div>
-			  									<div class="cook_txt">
-			  										<p>멸치장국 국수</p>
-			  										<span>한식 > 면</span>
-			  									</div>
-			  									<div class="overlay"><a href="#"></a></div>
-		  									</div>
-		  								</li>
-		  								<li>
-		  									<div class="product_box">
-		  										<div class="img">
-				  									<img src="images/img_cook_02.jpg" alt="볶음밥 + 새우꼬치 레시피">
-				  								</div>	
-			  									<div class="cook_txt">
-			  										<p>굴소스 볶음밥 & 새우 꼬치</p>
-			  										<span>양식 > 밥</span>
-			  									</div>
-			  									<div class="overlay"><a href="#"></a></div>
-			  								</div>	
-		  								</li>
-		  								<li>
-		  									<div class="product_box">
-		  										<div class="img">
-				  									<img src="images/img_cook_03.jpg" alt="사천짜장소스 볶음밥 레시피">
-				  								</div>	
-			  									<div class="cook_txt">
-			  										<p>사천짜장소스 볶음밥</p>
-			  										<span>중식 > 밥</span>
-			  									</div>
-			  									<div class="overlay"><a href="#"></a></div>
-		  									</div>
-			  							</li>
-			  							<li>
-			  								<div class="product_box">
-			  									<div class="img">
-				  									<img src="images/img_cook_04.jpg" alt="닭봉튀김 레시피">
-				  								</div>	
-			  									<div class="cook_txt">
-			  										<p>바삭 닭봉튀김</p>
-			  										<span>양식 > 튀김</span>
-			  									</div>
-				  								<div class="overlay"><a href="#"></a></div>
-				  							</div>	
-		  								</li>
-		  								<li>
-			  								<div class="product_box">
-			  									<div class="img">
-				  									<img src="images/img_cook_05.jpg" alt="바나나 핫케이크 레시피">
-				  								</div>	
-			  									<div class="cook_txt">
-			  										<p>바나나 핫케이크</p>
-			  										<span>양식 > 빵</span>
-			  									</div>
-				  								<div class="overlay"><a href="#"></a></div>
-				  							</div>	
-		  								</li>
-		  							</ul>
-		  						</li>
-		  						<li>
-		  							<ul class="slider_inner">
-		  								<li>
-		  									<div class="product_box">
-		  										<div class="img">
-				  									<img src="images/img_cook_06.jpg" alt="닭봉 오븐구이 레시피">
-				  								</div>	
-			  									<div class="cook_txt">
-			  										<p>닭봉 오븐구이</p>
-			  										<span>양식 > 구이</span>
-			  									</div>
-			  									<div class="overlay"><a href="#"></a></div>
-		  									</div>
-		  								</li>
-		  								<li>
-		  									<div class="product_box">
-		  										<div class="img">
-				  									<img src="images/img_cook_07.jpg" alt="호밀빵 참치샌드위치 레시피">
-				  								</div>	
-			  									<div class="cook_txt">
-			  										<p>호밀빵 참치 샌드위치</p>
-			  										<span>양식 > 빵</span>
-			  									</div>
-			  									<div class="overlay"><a href="#"></a></div>
-			  								</div>	
-		  								</li>
-		  								<li>
-		  									<div class="product_box">
-		  										<div class="img">
-				  									<img src="images/img_cook_08.jpg" alt="증편과 송화밀수 레시피">
-				  								</div>	
-			  									<div class="cook_txt">
-			  										<p>증편과 송화밀수</p>
-			  										<span>한식 > 한과</span>
-			  									</div>
-			  									<div class="overlay"><a href="#"></a></div>
-		  									</div>
-			  							</li>
-			  							<li>
-			  								<div class="product_box">
-			  									<div class="img">
-				  									<img src="images/img_cook_09.jpg" alt="당면 콩나물 잡채 레시피">
-				  								</div>	
-			  									<div class="cook_txt">
-			  										<p>당면 콩나물 잡채</p>
-			  										<span>한식 > 무침</span>
-			  									</div>
-				  								<div class="overlay"><a href="#"></a></div>
-				  							</div>	
-		  								</li>
-		  								<li>
-			  								<div class="product_box">
-			  									<div class="img">
-				  									<img src="images/img_cook_010.jpg" alt="크랜베리 셔벗 레시피">
-				  								</div>	
-			  									<div class="cook_txt">
-			  										<p>크랜베리 셔벗</p>
-			  										<span>양식 > 음료</span>
-			  									</div>
-				  								<div class="overlay"><a href="#"></a></div>
-				  							</div>	
-		  								</li>
-		  							</ul>
-		  						</li>
-		  					</ul>
-		  				</div>
-			  			<button type="button" class="cook_btn_prev"></button>
-			  			<button type="button" class="cook_btn_next"></button>
-				  	</div>
-		  		</div>
-		  	</div>	
-	  	</div>
+				<div class="section_inner">
+					<div class="section_cook">
+						<div class="title_type_b">
+							<h3>쿠킹&스토리</h3>
+							<p>삼양 레시피와 활용 팁을 소개합니다.</p>
+						</div>
+						<div class="cook_prd_wrap">
+							<div class="cook_product swiper-container" id="slideCook">
+								<ul class="slider_inner swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_cook_01.jpg" alt="멸치장국국수 레시피">
+                      </div>
+                      <div class="prd_txt">
+                        <p>멸치장국 국수</p>
+                        <span class="prd_detail">한식 > 면</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_cook_02.jpg" alt="볶음밥 + 새우꼬치 레시피">
+                      </div>
+                      <div class="prd_txt">
+                        <p>굴소스 볶음밥 & 새우 꼬치</p>
+                        <span class="prd_detail">양식 > 밥</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_cook_03.jpg" alt="사천짜장소스 볶음밥 레시피">
+                      </div>
+                      <div class="prd_txt">
+                        <p>사천짜장소스 볶음밥</p>
+                        <span class="prd_detail">중식 > 밥</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_cook_04.jpg" alt="닭봉튀김 레시피">
+                      </div>
+                      <div class="prd_txt">
+                        <p>바삭 닭봉튀김</p>
+                        <span class="prd_detail">양식 > 튀김</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_cook_05.jpg" alt="바나나 핫케이크 레시피">
+                      </div>
+                      <div class="prd_txt">
+                        <p>바나나 핫케이크</p>
+                        <span class="prd_detail">양식 > 빵</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_cook_06.jpg" alt="닭봉 오븐구이 레시피">
+                      </div>
+                      <div class="prd_txt">
+                        <p>닭봉 오븐구이</p>
+                        <span class="prd_detail">양식 > 구이</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_cook_07.jpg" alt="호밀빵 참치샌드위치 레시피">
+                      </div>
+                      <div class="prd_txt">
+                        <p>호밀빵 참치 샌드위치</p>
+                        <span class="prd_detail">양식 > 빵</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_cook_08.jpg" alt="증편과 송화밀수 레시피">
+                      </div>
+                      <div class="prd_txt">
+                        <p>증편과 송화밀수</p>
+                        <span class="prd_detail">한식 > 한과</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_cook_09.jpg" alt="당면 콩나물 잡채 레시피">
+                      </div>
+                      <div class="prd_txt">
+                        <p>당면 콩나물 잡채</p>
+                        <span class="prd_detail">한식 > 무침</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="product_box">
+                      <div class="img_box">
+                        <img src="images/img_cook_010.jpg" alt="크랜베리 셔벗 레시피">
+                      </div>
+                      <div class="prd_txt">
+                        <p>크랜베리 셔벗</p>
+                        <span class="prd_detail">양식 > 음료</span>
+                      </div>
+                      <div class="overlay"><a href="#"></a></div>
+                    </div>
+									</li>
+                </ul>
+                <button type="button" class="swiper-button-prev"></button>
+							  <button type="button" class="swiper-button-next"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 	  	<!-- // cook -->
 	  	<!-- middle_banner -->
   		<div class="middle_banner"></div>
@@ -554,40 +554,64 @@
   </div>
   <script>
 		$(function(){
-			$(".main_slider").bxSlider({
-				controls:false
+      var swiperMainBanner = new Swiper('#MainBanner', {
+        loop: true,
+        slidesPerView: 'auto',
+				autoplay: {
+					delay: 4500,
+					disableOnInteraction: false
+				},
 			});
-			$(".event_slider").bxSlider({
-				controls:false,
-				auto: true,
-			  autoControls: true
+
+      var swiperMainBanner = new Swiper('#slideEvent', {
+				loop: true,
+				autoplay: {
+					delay: 4000,
+					disableOnInteraction: false
+				},
 			});
-			$(".new_slider").bxSlider({
-				controls:false,
-				auto: true,
-			  autoControls: true
-			});
-			var hot_slider = $(".hot_slider").bxSlider({
-				controls:false, pager:false
-			});
-			$(".hot_btn_next").click(function(){
-				hot_slider.goToNextSlide();
-			});
-			$(".hot_btn_prev").click(function(){
-				hot_slider.goToPrevSlide();
-			});
-			var cook_slider = $(".cook_slider").bxSlider({
-				controls:false, pager:false
-			});
-			$(".cook_btn_next").click(function(){
-				cook_slider.goToNextSlide();
-			});
-			$(".cook_btn_prev").click(function(){
-				cook_slider.goToPrevSlide();
-			});
+
+      var swiperMainBanner = new Swiper('#slideGoods', {
+				loop: true,
+				autoplay: {
+					delay: 4000,
+					disableOnInteraction: false
+				},
+      });
+
+      var swiperMainBanner = new Swiper('#slideHotItem, #slideCook', {
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          1024 : {
+            slidesPerView: 5, 
+            slidesPerGroup: 5
+          },
+          768 : {
+            slidesPerView: 4,
+            slidesPerGroup: 4
+          },
+          640 : {
+            slidesPerView: 3,
+            slidesPerGroup: 3
+          },
+          414 : {
+            slidesPerView: 2,
+            slidesPerGroup: 2
+          }
+        }
+      });
+			
 			$(".top_scroll").click(function(){
 				$("html,body").animate({scrollTop:0},300);
 			});
+
+      $(".gnb .btn_gnb_on").click(function(){
+        $(".gnb ul").stop().slideToggle();
+      });
 		});
 	</script>
 </body>
