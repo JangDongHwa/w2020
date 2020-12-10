@@ -12,6 +12,7 @@
 .gnb ul li a:before{content:''; display:inline-block; width:2px; height:14px; background:#8f8f8f; position:absolute; left:0; top:5px;}
 .gnb ul li:first-child a:before{display:none;}
 .gnb .btn_gnb_on{display:none;}
+
 /* // gnb */
 /* // header */
 
@@ -184,7 +185,10 @@
     .gnb ul li a:hover:after{color:#ff661b;}
     .gnb ul li a:before{display:none;}
     .gnb ul li a:after{position:absolute; font-size:30px; color:#fff; top:50%; content:'＋'; transform:translateY(-56%); font-weight:bold; right:15px;}
-    .gnb .bt_open{display:block; position:absolute; top:10px; left:10px; cursor:pointer;}
+    .gnb .btn_gnb{display:block; position:absolute; width:50px; height:50px; background:none; top:10px; left:10px; cursor:pointer;}
+    .btn_gnb .line{position:absolute; width:30px; height:3px; background:#ff661b;left:10px;}
+    .btn_gnb .line.top{top:15px;}
+    .btn_gnb .line.bottom{top:35px;}
     .title_type_a h3{padding:0 15px;}
     .main_slider img{max-width:150%; position:relative; left:50%; width:auto; transform:translateX(-50%);}
     .swiper-slide-active{z-index:1;}
